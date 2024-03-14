@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用批处理+VBS阻止电脑休眠</title>
-    <url>/posts/antisleep-script/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中的代码不一定能适应所有种类的Windows系统</p>
-<p>请自行测试后再做出结论，你可以在评论区留言</p>
-</blockquote>
-<br>
-
-<hr>
-<h2 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h2><p>不知道你曾经是否有遇到和我类似的情况：</p>
-<p>想要<strong>暂时禁止</strong>显示屏熄屏或休眠，但又不想去修改系统配置或是下载相关软件</p>
-<p>毕竟只是<strong>暂时</strong>修改配置，不需要了还需要再改回来<br>下载其他软件又感觉没有必要，毕竟谁清楚某些软件是否真的干净呢</p>
-<hr>
-<h3 id="那么，难道就没有简单的脚本能够解决这个问题吗？"><a href="#那么，难道就没有简单的脚本能够解决这个问题吗？" class="headerlink" title="那么，难道就没有简单的脚本能够解决这个问题吗？"></a>那么，难道就没有简单的脚本能够解决这个问题吗？</h3><p>当然是有的，请看以下脚本！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</span><br><span class="line">Dim LoopNum</span><br><span class="line">Dim TimeNow</span><br><span class="line">LoopNum = 1</span><br><span class="line">set wsc = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">Do</span><br><span class="line">    TimeNow = Time</span><br><span class="line">    WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</span><br><span class="line">    WScript.Echo &quot;  &quot; &amp; TimeNow</span><br><span class="line">    WScript.Sleep (60*1000)</span><br><span class="line">    wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</span><br><span class="line">    LoopNum = LoopNum + 1</span><br><span class="line">Loop</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>保存为.bat或.cmd文件</p>
-</blockquote>
-<p>如果你想了解更多，请看：</p>
-<hr>
-<h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
-<p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
-<p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
-<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
-<blockquote>
-<p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
-<p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
-<p><code>&quot;%~f0&quot;</code> 表示当前批处理文件的完整路径名</p>
-</blockquote>
-<p>这意味着告诉<strong>cscript</strong>使用<strong>VBS类型</strong>执行<strong>自己</strong></p>
-<p><code>exit</code> 代表<strong>退出</strong>当前执行批处理的CMD.EXE</p>
-<p>第一行的作用就是在运行时<strong>设置</strong>命令行窗口的<strong>各项属性</strong><br>并将自己<strong>以VBS类型执行</strong>，最后，当执行的VBS(csript.exe)退出后也自行<strong>退出</strong></p>
-<p>接下来是第二到三行:<br><code>Dim LoopNum</code><br><code>Dim TimeNow</code></p>
-<p>从第二行开始的<strong>所有</strong>命令都将以<strong>VBS</strong>脚本而不是<strong>批处理</strong>脚本运行<br><code>Dim</code> 在VBS中用于声明变量<br>其实说白了，这两条代码就是创建了两个变量”<strong>LoopNum</strong>“与”<strong>TimeNow</strong>“</p>
-<p>第四行:<br><code>LoopNum = 1</code></p>
-<p>为提前定义好的变量”<strong>LoopNum</strong>“赋值，值为 <strong>1</strong></p>
-<p>第五行:<br><code>set wsc = CreateObject(&quot;WScript.Shell&quot;)</code></p>
-<p>其中:</p>
-<blockquote>
-<p><code>CreateObject(&quot;WScript.Shell&quot;)</code> 用于创建一个 <strong>WshShell</strong> 对象</p>
-<p><strong>WshShell</strong> 是<strong>VBS</strong>中的一个内置对象，它提供了许多有用的功能，例如运行程序、操作注册表、创建快捷方式</p>
-<p>而<code>set wsc = </code>则是代表设置之后使用<strong>wsc</strong>(字符串)来代表<strong>WshShell</strong></p>
-</blockquote>
-<p>第六行与第<strong>十三</strong>行:<br><code>Do</code><br><code>Loop</code></p>
-<p>Do…Loop 是一种<strong>循环</strong>结构，用于重复执行一组语句，直到满足特定条件，其中: </p>
-<blockquote>
-<p><strong>Do While…Loop</strong>：在条件变为 <strong>False</strong> 之前重复执行语句</p>
-<p><strong>Do Until…Loop</strong>：在条件变为 <strong>True</strong> 之前重复执行语句<br>而在这里，我们只使用了<code>Do</code>与<code>Loop</code>，并没有设置条件，这意味着其中的代码将<strong>一直循环</strong></p>
-</blockquote>
-<p>第七行:<br><code>TimeNow = Time</code></p>
-<p>为提前定义好的变量”<strong>TimeNow</strong>“赋值，值为 <strong>Time</strong>函数<br><strong>Time</strong> 函数用于获取当前系统时间 </p>
-<p>第八到九行:<br><code>WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</code><br><code>WScript.Echo &quot;  &quot; &amp; TimeNow</code></p>
-<p>类似批处理的<code>echo</code>，<code>WScript.Echo</code><strong>输出指定内容</strong><br>这两条代码输出<strong>LoopNum</strong>与当前<strong>时间</strong>(变量TimeNow)</p>
-<p>第十行:<br><code>WScript.Sleep (60*1000)</code></p>
-<p>让脚本<strong>暂停</strong> 60*1000 毫秒，也就是一分钟</p>
-<p>第十一行:<br><code>wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</code></p>
-<p>使用<strong>SendKeys</strong>发送两次<strong>滚动锁定键</strong><br>(Scroll Lock，在HOME上面，笔记本电脑可能没有，但<strong>也能</strong>发送)</p>
-<p>第十二行:<br><code>LoopNum = LoopNum + 1</code></p>
-<p>使变量<strong>LoopNum</strong>的值加 <strong>1</strong></p>
-]]></content>
-      <categories>
-        <category>Script</category>
-      </categories>
-      <tags>
-        <tag>Script</tag>
-        <tag>Batch</tag>
-        <tag>VBS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
     <url>/posts/prompt-injection/</url>
     <content><![CDATA[<blockquote>
@@ -152,6 +82,76 @@
         <tag>LLM</tag>
         <tag>AI</tag>
         <tag>Prompt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用批处理+VBS阻止电脑休眠</title>
+    <url>/posts/antisleep-script/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中的代码不一定能适应所有种类的Windows系统</p>
+<p>请自行测试后再做出结论，你可以在评论区留言</p>
+</blockquote>
+<br>
+
+<hr>
+<h2 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h2><p>不知道你曾经是否有遇到和我类似的情况：</p>
+<p>想要<strong>暂时禁止</strong>显示屏熄屏或休眠，但又不想去修改系统配置或是下载相关软件</p>
+<p>毕竟只是<strong>暂时</strong>修改配置，不需要了还需要再改回来<br>下载其他软件又感觉没有必要，毕竟谁清楚某些软件是否真的干净呢</p>
+<hr>
+<h3 id="那么，难道就没有简单的脚本能够解决这个问题吗？"><a href="#那么，难道就没有简单的脚本能够解决这个问题吗？" class="headerlink" title="那么，难道就没有简单的脚本能够解决这个问题吗？"></a>那么，难道就没有简单的脚本能够解决这个问题吗？</h3><p>当然是有的，请看以下脚本！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</span><br><span class="line">Dim LoopNum</span><br><span class="line">Dim TimeNow</span><br><span class="line">LoopNum = 1</span><br><span class="line">set wsc = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">Do</span><br><span class="line">    TimeNow = Time</span><br><span class="line">    WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</span><br><span class="line">    WScript.Echo &quot;  &quot; &amp; TimeNow</span><br><span class="line">    WScript.Sleep (60*1000)</span><br><span class="line">    wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</span><br><span class="line">    LoopNum = LoopNum + 1</span><br><span class="line">Loop</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>保存为.bat或.cmd文件</p>
+</blockquote>
+<p>如果你想了解更多，请看：</p>
+<hr>
+<h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
+<p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
+<p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
+<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+<blockquote>
+<p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
+<p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
+<p><code>&quot;%~f0&quot;</code> 表示当前批处理文件的完整路径名</p>
+</blockquote>
+<p>这意味着告诉<strong>cscript</strong>使用<strong>VBS类型</strong>执行<strong>自己</strong></p>
+<p><code>exit</code> 代表<strong>退出</strong>当前执行批处理的CMD.EXE</p>
+<p>第一行的作用就是在运行时<strong>设置</strong>命令行窗口的<strong>各项属性</strong><br>并将自己<strong>以VBS类型执行</strong>，最后，当执行的VBS(csript.exe)退出后也自行<strong>退出</strong></p>
+<p>接下来是第二到三行:<br><code>Dim LoopNum</code><br><code>Dim TimeNow</code></p>
+<p>从第二行开始的<strong>所有</strong>命令都将以<strong>VBS</strong>脚本而不是<strong>批处理</strong>脚本运行<br><code>Dim</code> 在VBS中用于声明变量<br>其实说白了，这两条代码就是创建了两个变量”<strong>LoopNum</strong>“与”<strong>TimeNow</strong>“</p>
+<p>第四行:<br><code>LoopNum = 1</code></p>
+<p>为提前定义好的变量”<strong>LoopNum</strong>“赋值，值为 <strong>1</strong></p>
+<p>第五行:<br><code>set wsc = CreateObject(&quot;WScript.Shell&quot;)</code></p>
+<p>其中:</p>
+<blockquote>
+<p><code>CreateObject(&quot;WScript.Shell&quot;)</code> 用于创建一个 <strong>WshShell</strong> 对象</p>
+<p><strong>WshShell</strong> 是<strong>VBS</strong>中的一个内置对象，它提供了许多有用的功能，例如运行程序、操作注册表、创建快捷方式</p>
+<p>而<code>set wsc = </code>则是代表设置之后使用<strong>wsc</strong>(字符串)来代表<strong>WshShell</strong></p>
+</blockquote>
+<p>第六行与第<strong>十三</strong>行:<br><code>Do</code><br><code>Loop</code></p>
+<p>Do…Loop 是一种<strong>循环</strong>结构，用于重复执行一组语句，直到满足特定条件，其中: </p>
+<blockquote>
+<p><strong>Do While…Loop</strong>：在条件变为 <strong>False</strong> 之前重复执行语句</p>
+<p><strong>Do Until…Loop</strong>：在条件变为 <strong>True</strong> 之前重复执行语句<br>而在这里，我们只使用了<code>Do</code>与<code>Loop</code>，并没有设置条件，这意味着其中的代码将<strong>一直循环</strong></p>
+</blockquote>
+<p>第七行:<br><code>TimeNow = Time</code></p>
+<p>为提前定义好的变量”<strong>TimeNow</strong>“赋值，值为 <strong>Time</strong>函数<br><strong>Time</strong> 函数用于获取当前系统时间 </p>
+<p>第八到九行:<br><code>WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</code><br><code>WScript.Echo &quot;  &quot; &amp; TimeNow</code></p>
+<p>类似批处理的<code>echo</code>，<code>WScript.Echo</code><strong>输出指定内容</strong><br>这两条代码输出<strong>LoopNum</strong>与当前<strong>时间</strong>(变量TimeNow)</p>
+<p>第十行:<br><code>WScript.Sleep (60*1000)</code></p>
+<p>让脚本<strong>暂停</strong> 60*1000 毫秒，也就是一分钟</p>
+<p>第十一行:<br><code>wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</code></p>
+<p>使用<strong>SendKeys</strong>发送两次<strong>滚动锁定键</strong><br>(Scroll Lock，在HOME上面，笔记本电脑可能没有，但<strong>也能</strong>发送)</p>
+<p>第十二行:<br><code>LoopNum = LoopNum + 1</code></p>
+<p>使变量<strong>LoopNum</strong>的值加 <strong>1</strong></p>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Script</tag>
+        <tag>Batch</tag>
+        <tag>VBS</tag>
       </tags>
   </entry>
 </search>
