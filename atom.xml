@@ -6,7 +6,7 @@
   <link href="https://illusionlie.github.io/atom.xml" rel="self"/>
   
   <link href="https://illusionlie.github.io/"/>
-  <updated>2024-03-10T09:04:29.000Z</updated>
+  <updated>2024-03-15T10:52:30.000Z</updated>
   <id>https://illusionlie.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络安全运维实训-50道例题</title>
+    <link href="https://illusionlie.github.io/posts/net-security/"/>
+    <id>https://illusionlie.github.io/posts/net-security/</id>
+    <published>2024-03-15T10:52:30.000Z</published>
+    <updated>2024-03-15T10:52:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩&lt;/p&gt;
+&lt;p&gt;如果造成自己或他人损失，虚像谎言概不负责&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;什么是网安？&quot;&gt;&lt;a href=&quot;#什么是网安？&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Security" scheme="https://illusionlie.github.io/categories/Security/"/>
+    
+    
+    <category term="Security" scheme="https://illusionlie.github.io/tags/Security/"/>
+    
+  </entry>
   
   <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
