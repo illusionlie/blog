@@ -6,7 +6,7 @@
   <link href="https://illusionlie.github.io/atom.xml" rel="self"/>
   
   <link href="https://illusionlie.github.io/"/>
-  <updated>2024-03-15T10:52:30.000Z</updated>
+  <updated>2024-03-16T10:32:58.000Z</updated>
   <id>https://illusionlie.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件推荐-无损图片放大-Real-ESRGAN GUI</title>
+    <link href="https://illusionlie.github.io/posts/software-realesr/"/>
+    <id>https://illusionlie.github.io/posts/software-realesr/</id>
+    <published>2024-03-16T10:32:58.000Z</published>
+    <updated>2024-03-16T10:32:58.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;免责声明&lt;/strong&gt;：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式&lt;/p&gt;
+&lt;p&gt;Github&lt;strong&gt;相关页面&lt;/strong&gt;，&lt;strong&gt;下载&lt;/strong&gt;均在文章最底下&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="Software" scheme="https://illusionlie.github.io/categories/Software/"/>
+    
+    
+    <category term="Software" scheme="https://illusionlie.github.io/tags/Software/"/>
+    
+    <category term="Picture" scheme="https://illusionlie.github.io/tags/Picture/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全运维实训-50道例题</title>

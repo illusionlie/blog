@@ -183,4 +183,57 @@
         <tag>Prompt</tag>
       </tags>
   </entry>
+  <entry>
+    <title>软件推荐-无损图片放大-Real-ESRGAN GUI</title>
+    <url>/posts/software-realesr/</url>
+    <content><![CDATA[<blockquote>
+<p><strong>免责声明</strong>：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式</p>
+<p>Github<strong>相关页面</strong>，<strong>下载</strong>均在文章最底下</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/realesrgan-intro.webp" alt="realesrgan-intro" loading="lazy"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在数字图像处理领域，图像的放大和增强一直是一个挑战。随着深度学习技术的发展，我们现在有了更多的工具来改善图像质量<br><strong>realesrgan-gui</strong>就是这样一款工具，它能够将图像放大而不失真，非常适合需要处理高分辨率图像的用户</p>
+<p>realesrgan-gui是一个跨平台的图形界面软件，用于图像放大和增强。它是基于 <strong>Real-ESRGAN</strong> 的命令行程序 <a href="https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan">Real-ESRGAN-ncnn-vulkan</a> 的图形界面，支持Windows、Ubuntu和macOS平台。这款软件提供了一个实用且美观的界面，使得图像放大变得简单快捷</p>
+<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><p>在原版支持的功能的基础上，增加了以下功能：</p>
+<ul>
+<li>任意尺寸放大<ul>
+<li>Real-ESRGAN 只能将输入的图片以固定的 2-4x 倍率（和选用的模型有关）放大。</li>
+<li>这一功能通过多次调用 Real-ESRGAN 后使用常规缩放算法降采样实现。</li>
+<li>例如将 640x360 的图片使用 2x 的模型放大到宽度 1600，实际操作为先放大到 1280x720，再放大到 2560x1440，最后降采样到 1600x900。</li>
+<li>默认使用 Lanczos 进行降采样，也可以选择其它算法。</li>
+</ul>
+</li>
+<li>对 GIF 的处理<ul>
+<li>将 GIF 的各个帧拆分出来并记录时长，逐个放大后再进行合并。</li>
+</ul>
+</li>
+<li>拖拽支持<ul>
+<li>将图片文件或目录拖拽到窗口的任意位置上，即可自动将它的路径设定为输入和输出路径。</li>
+<li>根据拖拽时选择的放大尺寸计算方式，在输出路径中会自动添加形如 x4、w1280、h1080 的后缀。</li>
+</ul>
+</li>
+<li>深色模式界面<ul>
+<li>使用 <a href="https://github.com/albertosottile/darkdetect">darkdetect</a> 实现。</li>
+<li>在启动时根据系统设定选择使用浅色或深色模式界面，支持在修改系统设定时自动切换。</li>
+<li>在 macOS 上不适用（？）</li>
+</ul>
+</li>
+<li>多语言支持<ul>
+<li>界面语言和系统语言（使用 <code>locale.getdefaultlocale</code> 获取）一致。</li>
+<li>目前支持简繁中文和英语。在缺少某个语言的翻译文本的情况下，默认会回退到英语。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/realesrgan-prview.webp" alt="realesrgan-prview" loading="lazy"></p>
+<h2 id="软件页面"><a href="#软件页面" class="headerlink" title="软件页面"></a>软件页面</h2><p>Github: <a href="https://github.com/TransparentLC/realesrgan-gui">https://github.com/TransparentLC/realesrgan-gui</a><br>Github Release: <a href="https://github.com/TransparentLC/realesrgan-gui/releases">https://github.com/TransparentLC/realesrgan-gui/releases</a></p>
+<p>你也可以在相关Github页面看到更多信息，包括更新情况，对比等</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
+        <tag>Picture</tag>
+      </tags>
+  </entry>
 </search>
