@@ -72,33 +72,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网络安全运维实训-50道例题</title>
-    <url>/posts/net-security/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
-<p>如果造成自己或他人损失，虚像谎言概不负责</p>
-</blockquote>
-<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
-<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
-<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
-<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
-<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
-<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
-<br>
-<br>
-
-<hr>
-<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
     <url>/posts/prompt-injection/</url>
     <content><![CDATA[<blockquote>
@@ -184,13 +157,40 @@
       </tags>
   </entry>
   <entry>
+    <title>网络安全运维实训-50道例题</title>
+    <url>/posts/net-security/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
+<p>如果造成自己或他人损失，虚像谎言概不负责</p>
+</blockquote>
+<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
+<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
+<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
+<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
+<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
+<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
+<br>
+<br>
+
+<hr>
+<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件推荐-无损图片放大-Real-ESRGAN GUI</title>
     <url>/posts/software-realesr/</url>
     <content><![CDATA[<blockquote>
 <p><strong>免责声明</strong>：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式</p>
 <p>Github<strong>相关页面</strong>，<strong>下载</strong>均在文章最底下</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/realesrgan-intro.webp" alt="realesrgan-intro" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp" alt="realesrgan-intro" loading="lazy"></p>
 <p><strong>This page also have: <a href="/i18n/en/software-realesr">English</a> version</strong></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>你是否还在网上寻找图片放大工具？你是否还在使用网页版的放大工具？<br>在数字图像处理领域，图像的放大和增强一直是一个挑战。随着深度学习技术的发展，我们现在有了更多的工具来改善图像质量<br><strong>realesrgan-gui</strong>就是这样一款工具，它能够将图像放大而不失真，非常适合需要处理高分辨率图像的用户</p>
 <p>realesrgan-gui是一个跨平台的图形界面软件，用于图像放大和增强。它是基于 <strong>Real-ESRGAN</strong> 的命令行程序 <a href="https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan">Real-ESRGAN-ncnn-vulkan</a> 的图形界面，支持Windows、Ubuntu和macOS平台。这款软件提供了一个实用且美观的界面，使得图像放大变得简单快捷</p>
@@ -225,7 +225,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/realesrgan-prview.webp" alt="realesrgan-prview" loading="lazy"></p>
+<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-prview.webp" alt="realesrgan-prview" loading="lazy"></p>
 <h2 id="软件页面"><a href="#软件页面" class="headerlink" title="软件页面"></a>软件页面</h2><p>Github: <a href="https://github.com/TransparentLC/realesrgan-gui">https://github.com/TransparentLC/realesrgan-gui</a><br>Github Release: <a href="https://github.com/TransparentLC/realesrgan-gui/releases">https://github.com/TransparentLC/realesrgan-gui/releases</a></p>
 <p>你也可以在相关Github页面看到更多信息，包括更新情况，对比等</p>
 ]]></content>
