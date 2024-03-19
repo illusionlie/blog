@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用批处理+VBS阻止电脑休眠</title>
+    <url>/posts/antisleep-script/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中的代码不一定能适应所有种类的Windows系统</p>
+<p>请自行测试后再做出结论，你可以在评论区留言</p>
+</blockquote>
+<br>
+
+<hr>
+<p><strong>This page also have: <a href="/i18n/en/antisleep-script">English</a> version</strong></p>
+<h2 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h2><p>不知道你曾经是否有遇到和我类似的情况：</p>
+<p>想要<strong>暂时禁止</strong>显示屏熄屏或休眠，但又不想去修改系统配置或是下载相关软件</p>
+<p>毕竟只是<strong>暂时</strong>修改配置，不需要了还需要再改回来<br>下载其他软件又感觉没有必要，毕竟谁清楚某些软件是否真的干净呢</p>
+<hr>
+<h3 id="那么，难道就没有简单的脚本能够解决这个问题吗？"><a href="#那么，难道就没有简单的脚本能够解决这个问题吗？" class="headerlink" title="那么，难道就没有简单的脚本能够解决这个问题吗？"></a>那么，难道就没有简单的脚本能够解决这个问题吗？</h3><p>当然是有的，请看以下脚本！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</span><br><span class="line">Dim LoopNum</span><br><span class="line">Dim TimeNow</span><br><span class="line">LoopNum = 1</span><br><span class="line">set wsc = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">Do</span><br><span class="line">    TimeNow = Time</span><br><span class="line">    WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</span><br><span class="line">    WScript.Echo &quot;  &quot; &amp; TimeNow</span><br><span class="line">    WScript.Sleep (60*1000)</span><br><span class="line">    wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</span><br><span class="line">    LoopNum = LoopNum + 1</span><br><span class="line">Loop</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>保存为.bat或.cmd文件</p>
+</blockquote>
+<p>如果你想了解更多，请看：</p>
+<hr>
+<h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
+<p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
+<p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
+<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+<blockquote>
+<p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
+<p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
+<p><code>&quot;%~f0&quot;</code> 表示当前批处理文件的完整路径名</p>
+</blockquote>
+<p>这意味着告诉<strong>cscript</strong>使用<strong>VBS类型</strong>执行<strong>自己</strong></p>
+<p><code>exit</code> 代表<strong>退出</strong>当前执行批处理的CMD.EXE</p>
+<p>第一行的作用就是在运行时<strong>设置</strong>命令行窗口的<strong>各项属性</strong><br>并将自己<strong>以VBS类型执行</strong>，最后，当执行的VBS(csript.exe)退出后也自行<strong>退出</strong></p>
+<p>接下来是第二到三行:<br><code>Dim LoopNum</code><br><code>Dim TimeNow</code></p>
+<p>从第二行开始的<strong>所有</strong>命令都将以<strong>VBS</strong>脚本而不是<strong>批处理</strong>脚本运行<br><code>Dim</code> 在VBS中用于声明变量<br>其实说白了，这两条代码就是创建了两个变量”<strong>LoopNum</strong>“与”<strong>TimeNow</strong>“</p>
+<p>第四行:<br><code>LoopNum = 1</code></p>
+<p>为提前定义好的变量”<strong>LoopNum</strong>“赋值，值为 <strong>1</strong></p>
+<p>第五行:<br><code>set wsc = CreateObject(&quot;WScript.Shell&quot;)</code></p>
+<p>其中:</p>
+<blockquote>
+<p><code>CreateObject(&quot;WScript.Shell&quot;)</code> 用于创建一个 <strong>WshShell</strong> 对象</p>
+<p><strong>WshShell</strong> 是<strong>VBS</strong>中的一个内置对象，它提供了许多有用的功能，例如运行程序、操作注册表、创建快捷方式</p>
+<p>而<code>set wsc = </code>则是代表设置之后使用<strong>wsc</strong>(字符串)来代表<strong>WshShell</strong></p>
+</blockquote>
+<p>第六行与第<strong>十三</strong>行:<br><code>Do</code><br><code>Loop</code></p>
+<p>Do…Loop 是一种<strong>循环</strong>结构，用于重复执行一组语句，直到满足特定条件，其中: </p>
+<blockquote>
+<p><strong>Do While…Loop</strong>：在条件变为 <strong>False</strong> 之前重复执行语句</p>
+<p><strong>Do Until…Loop</strong>：在条件变为 <strong>True</strong> 之前重复执行语句<br>而在这里，我们只使用了<code>Do</code>与<code>Loop</code>，并没有设置条件，这意味着其中的代码将<strong>一直循环</strong></p>
+</blockquote>
+<p>第七行:<br><code>TimeNow = Time</code></p>
+<p>为提前定义好的变量”<strong>TimeNow</strong>“赋值，值为 <strong>Time</strong>函数<br><strong>Time</strong> 函数用于获取当前系统时间 </p>
+<p>第八到九行:<br><code>WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</code><br><code>WScript.Echo &quot;  &quot; &amp; TimeNow</code></p>
+<p>类似批处理的<code>echo</code>，<code>WScript.Echo</code><strong>输出指定内容</strong><br>这两条代码输出<strong>LoopNum</strong>与当前<strong>时间</strong>(变量TimeNow)</p>
+<p>第十行:<br><code>WScript.Sleep (60*1000)</code></p>
+<p>让脚本<strong>暂停</strong> 60*1000 毫秒，也就是一分钟</p>
+<p>第十一行:<br><code>wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</code></p>
+<p>使用<strong>SendKeys</strong>发送两次<strong>滚动锁定键</strong><br>(Scroll Lock，在HOME上面，笔记本电脑可能没有，但<strong>也能</strong>发送)</p>
+<p>第十二行:<br><code>LoopNum = LoopNum + 1</code></p>
+<p>使变量<strong>LoopNum</strong>的值加 <strong>1</strong></p>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Script</tag>
+        <tag>Batch</tag>
+        <tag>VBS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络安全运维实训-50道例题</title>
+    <url>/posts/net-security/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
+<p>如果造成自己或他人损失，虚像谎言概不负责</p>
+</blockquote>
+<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
+<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
+<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
+<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
+<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
+<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
+<br>
+<br>
+
+<hr>
+<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
     <url>/posts/prompt-injection/</url>
     <content><![CDATA[<blockquote>
@@ -86,74 +184,159 @@
       </tags>
   </entry>
   <entry>
-    <title>使用批处理+VBS阻止电脑休眠</title>
-    <url>/posts/antisleep-script/</url>
+    <title>在线大语言模型平台推荐-主观意见</title>
+    <url>/posts/online-llm/</url>
     <content><![CDATA[<blockquote>
-<p>本文中的代码不一定能适应所有种类的Windows系统</p>
-<p>请自行测试后再做出结论，你可以在评论区留言</p>
+<p>对于其中部分网站平台，请自行准备科学上网工具</p>
+<p>本文中的推荐不分排名前后，这篇文章会持续更新</p>
+</blockquote>
+<hr>
+<h2 id="国外平台推荐"><a href="#国外平台推荐" class="headerlink" title="国外平台推荐"></a>国外平台推荐</h2><h3 id="ChatGPT-3-5-4"><a href="#ChatGPT-3-5-4" class="headerlink" title="ChatGPT 3.5&#x2F;4"></a>ChatGPT 3.5&#x2F;4</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/chatgpt.webp" alt="chatgpt" loading="lazy"><br>最经典的当然就是<strong>ChatGPT</strong>了，ChatGPT 3.5 是一个革命性的里程碑，我相信不少人对于AI语言模型的最早接触就是来自ChatGPT了<br>而 GPT-4 则在此基础上更进一步，不仅在语言理解和生成方面有所提升，还增加了对图像的理解能力，使其能够在更广泛的应用场景中发挥作用GPT-4的多模态能力意味着它可以处理文本和图像输入，为用户提供更丰富的交互体验<br>GPT-4 还拥有联网搜索的能力，尽管现在看起来联网搜索的模型已经不是什么稀罕之物了，但目前根据不少人的反馈来看，GPT-4在当今的局势中仍然有很大的立足之地</p>
+<p>其中GPT-4是收费的，20USD每个月，贵确实贵，不过我们当然还有其他选择</p>
+<p><a href="https://chat.openai.com/">[ChatGPT]</a></p>
+<br>
+
+<h3 id="Bing-Chat-New-Bing-Copilot"><a href="#Bing-Chat-New-Bing-Copilot" class="headerlink" title="Bing Chat (New Bing&#x2F;Copilot)"></a>Bing Chat (New Bing&#x2F;Copilot)</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat.webp" alt="bingchat" loading="lazy"><br>Bing Chat现在已经改名为<strong>Copilot</strong>了，但我还是喜欢叫它的旧名字，尽管我不是最早一批使用Bing Chat的，但是它也是我使用的最久的语言模型平台了<br>Bing Chat基于OpenAI的GPT-4模型，但现在的Copilot是否还是基于GPT-4方面有些存疑，在最早的时候，Bing Chat闻名与它的聪明与个性<br>在那个时期，Bing Chat(更有创造力)模式甚至被称为傲娇大小姐，但微软很快就因为安全性方面而对其个性砍了一刀<br>在那之后，Bing Chat就变得和其他模型一样冷冰冰的了，不过抛开这些不谈，它在当时直接联网搜索并给出具体网址也是它的一张王牌</p>
+<p>尽管现在很多语言模型都能够联网搜索，但能给出具体网址的仍然是少数，Bing Chat就是其中之一<br>只能说微软一手好牌打的稀烂，现在为了盈利推出了<strong>Copilot Pro</strong>后又对Bing Chat(Copilot)进行了削弱，包括分析，总结等各方面(这点主要是我个人的主观感受)<br>而以前给出具体网址Bing Chat能够直接访问并查看内容(存疑)，现在它只会拒绝你并告诉你它做不到(现在的Bing Chat直接搜索你给的网址或者网址中的关键词)，如果搜不到就告诉你它访问不到(证实)<br>不过我认为，在日常使用的各方面，Bing Chat仍然是够格的，你甚至可以将其作为一个大号的搜索引擎，尽管它容易被搜索结果误导(这是它的内部提示词的问题)</p>
+<p><a href="https://bing.com/chat">[Bing Chat]</a> or <a href="https://copilot.microsoft.com/">[Microsoft Copilot]</a></p>
+<blockquote>
+<p>Ps: (不要小看微软的检测，微软的检测实际上比谷歌<strong>聪明</strong>的多)</p>
 </blockquote>
 <br>
 
-<hr>
-<p><strong>This page also have: <a href="/i18n/en/antisleep-script">English</a> version</strong></p>
-<h2 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h2><p>不知道你曾经是否有遇到和我类似的情况：</p>
-<p>想要<strong>暂时禁止</strong>显示屏熄屏或休眠，但又不想去修改系统配置或是下载相关软件</p>
-<p>毕竟只是<strong>暂时</strong>修改配置，不需要了还需要再改回来<br>下载其他软件又感觉没有必要，毕竟谁清楚某些软件是否真的干净呢</p>
-<hr>
-<h3 id="那么，难道就没有简单的脚本能够解决这个问题吗？"><a href="#那么，难道就没有简单的脚本能够解决这个问题吗？" class="headerlink" title="那么，难道就没有简单的脚本能够解决这个问题吗？"></a>那么，难道就没有简单的脚本能够解决这个问题吗？</h3><p>当然是有的，请看以下脚本！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</span><br><span class="line">Dim LoopNum</span><br><span class="line">Dim TimeNow</span><br><span class="line">LoopNum = 1</span><br><span class="line">set wsc = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">Do</span><br><span class="line">    TimeNow = Time</span><br><span class="line">    WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</span><br><span class="line">    WScript.Echo &quot;  &quot; &amp; TimeNow</span><br><span class="line">    WScript.Sleep (60*1000)</span><br><span class="line">    wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</span><br><span class="line">    LoopNum = LoopNum + 1</span><br><span class="line">Loop</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>保存为.bat或.cmd文件</p>
+<h3 id="Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5"><a href="#Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5" class="headerlink" title="Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]"></a>Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]</h3><p>谷歌的Gemini的关系可比Bing Chat乱多了，总之听我一一道来：</p>
+<p>一般来说，首先要先区分Gemini(平台)与Gemini(模型)</p>
+<ul>
+<li>Gemini(平台)<blockquote>
+<ul>
+<li><p>Gemini（前称：Bard）是由Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。是应对OpenAI公司开发的ChatGPT聊天机器人的崛起而开发的。其在2023年3月以有限的规模推出，2023年5月扩展到更多个国家。2024年2月8日更名为Gemini</p>
+</li>
+<li><p>最初基于LaMDA系列大型语言模型（LLM），后来基于PaLM2（LLM），现基于Gemini系列大型语言模型</p>
+</li>
+</ul>
 </blockquote>
-<p>如果你想了解更多，请看：</p>
-<hr>
-<h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
-<p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
-<p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
-<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bard.webp" alt="bard" loading="lazy"></p>
 <blockquote>
-<p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
-<p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
-<p><code>&quot;%~f0&quot;</code> 表示当前批处理文件的完整路径名</p>
+<p>Bard</p>
 </blockquote>
-<p>这意味着告诉<strong>cscript</strong>使用<strong>VBS类型</strong>执行<strong>自己</strong></p>
-<p><code>exit</code> 代表<strong>退出</strong>当前执行批处理的CMD.EXE</p>
-<p>第一行的作用就是在运行时<strong>设置</strong>命令行窗口的<strong>各项属性</strong><br>并将自己<strong>以VBS类型执行</strong>，最后，当执行的VBS(csript.exe)退出后也自行<strong>退出</strong></p>
-<p>接下来是第二到三行:<br><code>Dim LoopNum</code><br><code>Dim TimeNow</code></p>
-<p>从第二行开始的<strong>所有</strong>命令都将以<strong>VBS</strong>脚本而不是<strong>批处理</strong>脚本运行<br><code>Dim</code> 在VBS中用于声明变量<br>其实说白了，这两条代码就是创建了两个变量”<strong>LoopNum</strong>“与”<strong>TimeNow</strong>“</p>
-<p>第四行:<br><code>LoopNum = 1</code></p>
-<p>为提前定义好的变量”<strong>LoopNum</strong>“赋值，值为 <strong>1</strong></p>
-<p>第五行:<br><code>set wsc = CreateObject(&quot;WScript.Shell&quot;)</code></p>
-<p>其中:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-chatbot.webp" alt="gemini-chatbot" loading="lazy"></p>
 <blockquote>
-<p><code>CreateObject(&quot;WScript.Shell&quot;)</code> 用于创建一个 <strong>WshShell</strong> 对象</p>
-<p><strong>WshShell</strong> 是<strong>VBS</strong>中的一个内置对象，它提供了许多有用的功能，例如运行程序、操作注册表、创建快捷方式</p>
-<p>而<code>set wsc = </code>则是代表设置之后使用<strong>wsc</strong>(字符串)来代表<strong>WshShell</strong></p>
+<p>Gemini</p>
 </blockquote>
-<p>第六行与第<strong>十三</strong>行:<br><code>Do</code><br><code>Loop</code></p>
-<p>Do…Loop 是一种<strong>循环</strong>结构，用于重复执行一组语句，直到满足特定条件，其中: </p>
+<p><a href="https://zh.wikipedia.org/wiki/Gemini_(%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)">[Wikipedia上的Gemini(聊天机器人)]</a></p>
+<ul>
+<li>Gemini(模型)<blockquote>
+<ul>
+<li><p>Gemini是一个多模式语言模型的系列，由谷歌DeepMind开发，是LaMDA的后继，属于PaLM2系列的新一代</p>
+</li>
+<li><p>Gemini包含Gemini Ultra、Gemini Pro和Gemini Nano，于2023年12月6日面世，被定位为与OpenAI的GPT-4抗衡的产品系列</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-model.webp" alt="gemini-model" loading="lazy"></p>
+<p><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)">[Wikipedia上的Gemini(语言模型)]</a></p>
+<p>其他复杂的我们暂且不提，总之如果想使用在线的Gemini(平台)的话一般有两个选择<br>一是Gemini(Bard)的官网: <a href="https://gemini.google.com/">https://gemini.google.com</a><br>二是谷歌的AI工作室: <a href="https://aistudio.google.com/">https://aistudio.google.com/</a>  (Gemini 1&#x2F;1.5)</p>
+<p>根据我个人的使用，我主观的评价是；</p>
+<ul>
+<li>Gemini(Bard)<blockquote>
+<ul>
+<li><p>相比之前基于PaLM2的Bard(Bard也有基于过Gemini的一段时间)，它对于中文的理解和处理确实比之前更好，但是和Bing Chat比还是差一些(存疑)</p>
+</li>
+<li><p>然而谷歌对用户问题的检测越发离谱，可以说有些时候问一些正常问题也可能被(平台)掐断</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-refuse.webp" alt="gemini-refuse" loading="lazy"></p>
 <blockquote>
-<p><strong>Do While…Loop</strong>：在条件变为 <strong>False</strong> 之前重复执行语句</p>
-<p><strong>Do Until…Loop</strong>：在条件变为 <strong>True</strong> 之前重复执行语句<br>而在这里，我们只使用了<code>Do</code>与<code>Loop</code>，并没有设置条件，这意味着其中的代码将<strong>一直循环</strong></p>
+<p>Gemini拒绝回答问题，谷歌通过<strong>关键词检测</strong>阻止了模型</p>
 </blockquote>
-<p>第七行:<br><code>TimeNow = Time</code></p>
-<p>为提前定义好的变量”<strong>TimeNow</strong>“赋值，值为 <strong>Time</strong>函数<br><strong>Time</strong> 函数用于获取当前系统时间 </p>
-<p>第八到九行:<br><code>WScript.Echo &quot;  Send successfully_Loop:&quot; &amp; LoopNum</code><br><code>WScript.Echo &quot;  &quot; &amp; TimeNow</code></p>
-<p>类似批处理的<code>echo</code>，<code>WScript.Echo</code><strong>输出指定内容</strong><br>这两条代码输出<strong>LoopNum</strong>与当前<strong>时间</strong>(变量TimeNow)</p>
-<p>第十行:<br><code>WScript.Sleep (60*1000)</code></p>
-<p>让脚本<strong>暂停</strong> 60*1000 毫秒，也就是一分钟</p>
-<p>第十一行:<br><code>wsc.SendKeys (&quot;&#123;SCROLLLOCK 2&#125;&quot;)</code></p>
-<p>使用<strong>SendKeys</strong>发送两次<strong>滚动锁定键</strong><br>(Scroll Lock，在HOME上面，笔记本电脑可能没有，但<strong>也能</strong>发送)</p>
-<p>第十二行:<br><code>LoopNum = LoopNum + 1</code></p>
-<p>使变量<strong>LoopNum</strong>的值加 <strong>1</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat-accept.webp" alt="bingchat-accept" loading="lazy"></p>
+<blockquote>
+<p>Bing Chat理解这是在<strong>询问知识</strong>，而不是什么违规行为</p>
+</blockquote>
+<br>
+
+<ul>
+<li><blockquote>
+<ul>
+<li>并且Gemini虽然可以搜索网络，但对于搜索(Google搜索)不到的内容会<del><strong>直接硬编(证实)</strong></del> 你现在甚至不能<strong>要求Gemini搜索网页</strong></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-web.webp" alt="gemini-web" loading="lazy"></p>
+<blockquote>
+<p>实际上要求它搜索<strong>网页</strong>也会被掐断，例如<a href="https://xxxxxx/">https://xxxxxx</a> <a href="http://www.xxxx.com/">www.xxxx.com</a> xxxx.com</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-il.webp" alt="gemini-il" loading="lazy"></p>
+<blockquote>
+<p>实际上还是会虚构</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-il.webp" alt="bing-il" loading="lazy"></p>
+<blockquote>
+<p>横向对比</p>
+</blockquote>
+<p>看看这个: <a href="https://g.co/gemini/share/3d20e3c3fde3">https://g.co/gemini/share/3d20e3c3fde3</a></p>
+<p>看起来…Gemini(Bard)还是老样子，使用英文才能得到比较好的回答和体验</p>
+<ul>
+<li><p>Google AI Studio</p>
+<blockquote>
+<ul>
+<li><p>部分层面的使用体验会好一些，但是这里面的模型不能搜索网络，(而且如果你登录了不止一个谷歌账号可能会串号然后报内部错误)</p>
+</li>
+<li><p>部分参数可以微调(Gemini 1.5 Pro不可以)</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><blockquote>
+<ul>
+<li><p>在之前我使用的时候，模型很听话，平台检测也不严，结果第二天，谷歌就加强了平台的检测(这是真事，原本有效果的提示词第二天就不能用了)</p>
+</li>
+<li><p>现在来看，谷歌的检测严格很多，你的输入一旦有一点敏感词模型就直接No Content (Gemini 1&#x2F;1.5)，但是对于部分方面的要求反而放宽了，例如角色扮演(Gemini 1.5)</p>
+</li>
+<li><p>我当时和现在最欣赏的实际是它的语言组织与大多数情况的语言分析，事实上在这些方面它真的很出色，然而Gemini(Bard)却总是说一些乱七八糟的东西</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-gal.webp" alt="gemini1.5-gal" loading="lazy"></p>
+<blockquote>
+<p>Gemini1.5的逆天判定(所有安全措施已经是Few了)</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-love.webp" alt="gemini1-love" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-love.webp" alt="gemini1.5-love" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1.5</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-google.webp" alt="gemini1-google" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1与Gemini 1.5在这方面相像，Gemini 1略胜一筹</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-google.webp" alt="bing-google" loading="lazy"></p>
+<blockquote>
+<p>与Bing Chat横向对比</p>
+</blockquote>
+<p>只能说在不少方面(例如中文)的表现实际上比Gemini(Bard)好很多，在个性化方面值得尝试！</p>
+<p><a href="https://gemini.google.com/">[Gemini(Bard)]</a> and <a href="https://aistudio.google.com/">[Google AI Studio]</a></p>
+<h2 id="Llama-2"><a href="#Llama-2" class="headerlink" title="Llama 2"></a>Llama 2</h2><p>持续更新中…</p>
 ]]></content>
       <categories>
-        <category>Script</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>Script</tag>
-        <tag>Batch</tag>
-        <tag>VBS</tag>
+        <tag>LLM</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -208,33 +391,6 @@
       <tags>
         <tag>Software</tag>
         <tag>Picture</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络安全运维实训-50道例题</title>
-    <url>/posts/net-security/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
-<p>如果造成自己或他人损失，虚像谎言概不负责</p>
-</blockquote>
-<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
-<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
-<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
-<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
-<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
-<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
-<br>
-<br>
-
-<hr>
-<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>Security</tag>
       </tags>
   </entry>
 </search>
