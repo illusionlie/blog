@@ -176,13 +176,6 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/Security/</loc>
-    <lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://illusionlie.github.io/tags/LLM/</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,6 +184,13 @@
   
   <url>
     <loc>https://illusionlie.github.io/tags/AI/</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://illusionlie.github.io/tags/Security/</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -227,14 +227,14 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/categories/Security/</loc>
+    <loc>https://illusionlie.github.io/categories/AI/</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/categories/AI/</loc>
+    <loc>https://illusionlie.github.io/categories/Security/</loc>
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
