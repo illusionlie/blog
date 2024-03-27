@@ -6,7 +6,7 @@
   <link href="https://illusionlie.github.io/atom.xml" rel="self"/>
   
   <link href="https://illusionlie.github.io/"/>
-  <updated>2024-03-26T13:12:12.000Z</updated>
+  <updated>2024-03-27T10:21:13.000Z</updated>
   <id>https://illusionlie.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用批处理+PowerShell计算日期的相隔天数</title>
+    <link href="https://illusionlie.github.io/posts/date-calculate-script/"/>
+    <id>https://illusionlie.github.io/posts/date-calculate-script/</id>
+    <published>2024-03-27T10:21:13.000Z</published>
+    <updated>2024-03-27T10:21:13.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文中的代码不一定能适应所有种类的Windows系统&lt;/p&gt;
+&lt;p&gt;请自行测试后再做出结论，你可以在评论区留言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;This page also have: &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Script" scheme="https://illusionlie.github.io/categories/Script/"/>
+    
+    
+    <category term="Batch" scheme="https://illusionlie.github.io/tags/Batch/"/>
+    
+    <category term="PowerShell" scheme="https://illusionlie.github.io/tags/PowerShell/"/>
+    
+  </entry>
   
   <entry>
     <title>免费使用的AI语言模型对话平台-主观意见评价推荐</title>
