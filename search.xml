@@ -72,104 +72,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用批处理+PowerShell计算日期的相隔天数</title>
-    <url>/posts/date-calculate-script/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中的代码不一定能适应所有种类的Windows系统</p>
-<p>请自行测试后再做出结论，你可以在评论区留言</p>
-</blockquote>
-<br>
-
-<hr>
-<p><strong>This page also have: <a href="/i18n/en/date-calculate-script">English</a> version</strong></p>
-<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># Usage: <span class="keyword">call</span> :datecounter &lt;<span class="built_in">Date</span> <span class="number">1</span>&gt; &lt;<span class="built_in">Date</span> <span class="number">2</span>&gt;</span><br><span class="line"># Example: <span class="keyword">call</span> :datecounter <span class="number">2021</span>-<span class="number">3</span>-<span class="number">5</span> <span class="number">2024</span>-<span class="number">8</span>-<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">call</span> :datecounter <span class="number">2020</span>-<span class="number">9</span>-<span class="number">1</span> <span class="number">2022</span>-<span class="number">11</span>-<span class="number">29</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%datecount%</span></span><br><span class="line"><span class="built_in">pause</span>&amp;<span class="keyword">exit</span></span><br><span class="line"></span><br><span class="line">:datecounter</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;powershell -NoProfile -c &quot;[Math]::Abs(((Get-<span class="built_in">Date</span> &quot;%<span class="number">1</span>&quot;)-(Get-<span class="built_in">Date</span> &quot;%<span class="number">2</span>&quot;)).Days)&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;datecount=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br></pre></td></tr></table></figure>
-<p><code>:datecounter</code>将被定义为计算函数<br><code>%datecount%</code>将被定义为计算结果</p>
-<p>需要注意的是，这样计算的是<code>日期 1</code>到<code>日期 2</code><strong>之间</strong>有几天，不要搞混<br>例如，3月27日到3月30日<strong>之间</strong>有2天(28,29)，而不是3(28,29,30)天或4天(27,28,29,30)</p>
-<p>如果你的电脑开机后第一次运行PowerShell命令，那么以上代码<strong>开机后第一次</strong>运算时会有一点延迟</p>
-<h2 id="可能的Q-A"><a href="#可能的Q-A" class="headerlink" title="可能的Q&amp;A"></a>可能的Q&amp;A</h2><p><strong>Q: 为什么调用PowerShell而不是全部由批处理计算？</strong><br>A: 因为这样更简单，也方便调整和扩充</p>
-<p><strong>Q: 如果第一个日期比第二个日期小不应该是负数吗？</strong><br>A: <code>[Math]::Abs</code>转成绝对值了</p>
-<p><strong>Q: 09-01和9-1都可以吗</strong><br>A: 是的</p>
-<p><strong>Q: <code>goto :eof</code>是做什么的</strong><br>A: 返回到<code>call :datecounter 2020-9-1 2022-11-29</code>后面</p>
-<p><strong>Q: 如果我用不了<code>[Math]::Abs</code>怎么办</strong><br>A: 请评论留言你的具体系统版本，如果评论没有正常加载，请前往此博文的Github Issues页面</p>
-]]></content>
-      <categories>
-        <category>Script</category>
-      </categories>
-      <tags>
-        <tag>Batch</tag>
-        <tag>PowerShell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在批处理中使用MD5验证密码</title>
-    <url>/posts/md5verify-script/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中的代码<strong>不一定能</strong>适应所有种类的Windows系统</p>
-<p>请自行测试后再做出结论，你可以在评论区留言</p>
-</blockquote>
-<br>
-
-<hr>
-<p><strong>This page also have: <a href="/i18n/en/md5verify-script">English</a> version</strong></p>
-<p>以下代码可能因操作系统版本不同导致差异，并不保证完美运行</p>
-<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><p>这是一个简单的示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;password=c61ab46721af26e11112e5e272e93d46&quot;</span><br><span class="line">:PassCheck</span><br><span class="line">set /p &quot;typestr=输入密码进行校验： &quot;</span><br><span class="line">echo.%typestr% &gt; &quot;%temp%\pass.iL&quot;</span><br><span class="line">for /f &quot;delims=&quot; %%a in (</span><br><span class="line">	&#x27;certutil -hashfile &quot;%temp%\pass.iL&quot; MD5 ^| findstr /v &quot;[^^0-9a-z]&quot;&#x27;</span><br><span class="line">		) do (</span><br><span class="line">			set &quot;typemd5=%%a&quot;</span><br><span class="line">			del /f /q &quot;%temp%\pass.iL&quot; 2&gt;nul &gt;nul</span><br><span class="line">			)</span><br><span class="line">if &quot;%typemd5%&quot;==&quot;%password%&quot; (goto :next) else (call :PassCheckError)</span><br><span class="line">goto :PassCheck</span><br><span class="line"></span><br><span class="line">:PassCheckError</span><br><span class="line">cls</span><br><span class="line">echo 密码错误!</span><br><span class="line">goto :eof</span><br><span class="line"></span><br><span class="line">:next</span><br><span class="line">cls</span><br><span class="line">echo.继续你的其他命令</span><br><span class="line">pause&amp;exit</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>虽然批处理没有什么好的加密的办法，并且也很容易就被逆向，但如果你有需求的话可以试试</p>
-<p>计算MD5值需要<code>certutil</code>工具，这个工具似乎从Win7开始就内置了，如果你不能使用，请留下一个评论</p>
-</blockquote>
-<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>其中，先设定代表密码的变量<code>password</code>的值为<strong>12345</strong><em>在.iL文件中</em>的MD5值<br>然后进入循环<code>:PassCheck</code>，用户会被要求输入密码，输入的密码会被保存到变量<code>%typestr%</code>并存临时文件<code>%temp%\pass.iL</code>中<br>接着使用<code>certutil</code>计算临时文件<code>%temp%\pass.iL</code>的MD5值，过滤后将结果保存到变量<code>%typemd5%</code>中并删除临时文件<br>然后与预设密码的哈希值进行比较，如果两者匹配，跳转到<code>:next</code>并继续执行其他命令<br>如果不匹配，调用<code>:PassCheckError</code>显示“密码错误！”的消息并回到最开始</p>
-<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>这是一个样例，使用mshta调用vbs内容生成弹窗并进行验证<br><del><strong>以下内容截自我的一个很早之前的脚本中的片段</strong></del><br><del><strong>因为是一个不完整的片段，所以你需要自行添加上下文，不过你可以参考我的弹窗设计</strong></del></p>
-<br>
-
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
-<blockquote>
-<p>界面</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
-<blockquote>
-<p>错误界面</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Script</category>
-      </categories>
-      <tags>
-        <tag>Batch</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络安全运维实训-50道例题</title>
-    <url>/posts/net-security/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
-<p>如果造成自己或他人损失，虚像谎言概不负责</p>
-</blockquote>
-<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
-<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
-<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
-<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
-<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
-<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
-<br>
-<br>
-
-<hr>
-<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>免费使用的AI语言模型对话平台-主观意见评价推荐</title>
     <url>/posts/online-llm/</url>
     <content><![CDATA[<blockquote>
@@ -342,6 +244,48 @@
       </tags>
   </entry>
   <entry>
+    <title>在批处理中使用MD5验证密码</title>
+    <url>/posts/md5verify-script/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中的代码<strong>不一定能</strong>适应所有种类的Windows系统</p>
+<p>请自行测试后再做出结论，你可以在评论区留言</p>
+</blockquote>
+<br>
+
+<hr>
+<p><strong>This page also have: <a href="/i18n/en/md5verify-script">English</a> version</strong></p>
+<p>以下代码可能因操作系统版本不同导致差异，并不保证完美运行</p>
+<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><p>这是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;password=c61ab46721af26e11112e5e272e93d46&quot;</span><br><span class="line">:PassCheck</span><br><span class="line">set /p &quot;typestr=输入密码进行校验： &quot;</span><br><span class="line">echo.%typestr% &gt; &quot;%temp%\pass.iL&quot;</span><br><span class="line">for /f &quot;delims=&quot; %%a in (</span><br><span class="line">	&#x27;certutil -hashfile &quot;%temp%\pass.iL&quot; MD5 ^| findstr /v &quot;[^^0-9a-z]&quot;&#x27;</span><br><span class="line">		) do (</span><br><span class="line">			set &quot;typemd5=%%a&quot;</span><br><span class="line">			del /f /q &quot;%temp%\pass.iL&quot; 2&gt;nul &gt;nul</span><br><span class="line">			)</span><br><span class="line">if &quot;%typemd5%&quot;==&quot;%password%&quot; (goto :next) else (call :PassCheckError)</span><br><span class="line">goto :PassCheck</span><br><span class="line"></span><br><span class="line">:PassCheckError</span><br><span class="line">cls</span><br><span class="line">echo 密码错误!</span><br><span class="line">goto :eof</span><br><span class="line"></span><br><span class="line">:next</span><br><span class="line">cls</span><br><span class="line">echo.继续你的其他命令</span><br><span class="line">pause&amp;exit</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>虽然批处理没有什么好的加密的办法，并且也很容易就被逆向，但如果你有需求的话可以试试</p>
+<p>计算MD5值需要<code>certutil</code>工具，这个工具似乎从Win7开始就内置了，如果你不能使用，请留下一个评论</p>
+</blockquote>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>其中，先设定代表密码的变量<code>password</code>的值为<strong>12345</strong><em>在.iL文件中</em>的MD5值<br>然后进入循环<code>:PassCheck</code>，用户会被要求输入密码，输入的密码会被保存到变量<code>%typestr%</code>并存临时文件<code>%temp%\pass.iL</code>中<br>接着使用<code>certutil</code>计算临时文件<code>%temp%\pass.iL</code>的MD5值，过滤后将结果保存到变量<code>%typemd5%</code>中并删除临时文件<br>然后与预设密码的哈希值进行比较，如果两者匹配，跳转到<code>:next</code>并继续执行其他命令<br>如果不匹配，调用<code>:PassCheckError</code>显示“密码错误！”的消息并回到最开始</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>这是一个样例，使用mshta调用vbs内容生成弹窗并进行验证<br><del><strong>以下内容截自我的一个很早之前的脚本中的片段</strong></del><br><del><strong>因为是一个不完整的片段，所以你需要自行添加上下文，不过你可以参考我的弹窗设计</strong></del></p>
+<br>
+
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
+<blockquote>
+<p>界面</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
+<blockquote>
+<p>错误界面</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Batch</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
     <url>/posts/prompt-injection/</url>
     <content><![CDATA[<blockquote>
@@ -424,6 +368,62 @@
         <tag>LLM</tag>
         <tag>AI</tag>
         <tag>Prompt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络安全运维实训-50道例题</title>
+    <url>/posts/net-security/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
+<p>如果造成自己或他人损失，虚像谎言概不负责</p>
+</blockquote>
+<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
+<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
+<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
+<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
+<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
+<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
+<br>
+<br>
+
+<hr>
+<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用批处理+PowerShell计算日期的相隔天数</title>
+    <url>/posts/date-calculate-script/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中的代码不一定能适应所有种类的Windows系统</p>
+<p>请自行测试后再做出结论，你可以在评论区留言</p>
+</blockquote>
+<br>
+
+<hr>
+<p><strong>This page also have: <a href="/i18n/en/date-calculate-script">English</a> version</strong></p>
+<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># Usage: <span class="keyword">call</span> :datecounter &lt;<span class="built_in">Date</span> <span class="number">1</span>&gt; &lt;<span class="built_in">Date</span> <span class="number">2</span>&gt;</span><br><span class="line"># Example: <span class="keyword">call</span> :datecounter <span class="number">2021</span>-<span class="number">3</span>-<span class="number">5</span> <span class="number">2024</span>-<span class="number">8</span>-<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">call</span> :datecounter <span class="number">2020</span>-<span class="number">9</span>-<span class="number">1</span> <span class="number">2022</span>-<span class="number">11</span>-<span class="number">29</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%datecount%</span></span><br><span class="line"><span class="built_in">pause</span>&amp;<span class="keyword">exit</span></span><br><span class="line"></span><br><span class="line">:datecounter</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;powershell -NoProfile -c &quot;[Math]::Abs(((Get-<span class="built_in">Date</span> &quot;%<span class="number">1</span>&quot;)-(Get-<span class="built_in">Date</span> &quot;%<span class="number">2</span>&quot;)).Days)&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;datecount=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br></pre></td></tr></table></figure>
+<p><code>:datecounter</code>将被定义为计算函数<br><code>%datecount%</code>将被定义为计算结果</p>
+<p>需要注意的是，这样计算的是<code>日期 1</code>到<code>日期 2</code><strong>之间</strong>有几天，不要搞混<br>例如，3月27日到3月30日<strong>之间</strong>有2天(28,29)，而不是3(28,29,30)天或4天(27,28,29,30)</p>
+<p>如果你的电脑开机后第一次运行PowerShell命令，那么以上代码<strong>开机后第一次</strong>运算时会有一点延迟</p>
+<h2 id="可能的Q-A"><a href="#可能的Q-A" class="headerlink" title="可能的Q&amp;A"></a>可能的Q&amp;A</h2><p><strong>Q: 为什么调用PowerShell而不是全部由批处理计算？</strong><br>A: 因为这样更简单，也方便调整和扩充</p>
+<p><strong>Q: 如果第一个日期比第二个日期小不应该是负数吗？</strong><br>A: <code>[Math]::Abs</code>转成绝对值了</p>
+<p><strong>Q: 09-01和9-1都可以吗</strong><br>A: 是的</p>
+<p><strong>Q: <code>goto :eof</code>是做什么的</strong><br>A: 返回到<code>call :datecounter 2020-9-1 2022-11-29</code>后面</p>
+<p><strong>Q: 如果我用不了<code>[Math]::Abs</code>怎么办</strong><br>A: 请评论留言你的具体系统版本，如果评论没有正常加载，请前往此博文的Github Issues页面</p>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Batch</tag>
+        <tag>PowerShell</tag>
       </tags>
   </entry>
   <entry>
