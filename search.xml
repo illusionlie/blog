@@ -25,7 +25,7 @@
 <h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
 <p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
 <p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
-<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
 <blockquote>
 <p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
 <p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
@@ -126,11 +126,11 @@
 
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
+<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck"></p>
 <blockquote>
 <p>界面</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror"></p>
 <blockquote>
 <p>错误界面</p>
 </blockquote>
@@ -162,16 +162,16 @@
 <ol>
 <li>7zip下载与安装</li>
 </ol>
-<p>打开7zip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-7zip.webp" alt="download-7zip" loading="lazy"></p>
+<p>打开7zip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-7zip.webp" alt="download-7zip"></p>
 <p>选择对应版本的7zip，点击<strong>Download</strong><br>不知道电脑是64位还是32位的？查看 <a href="#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%98%AF64%E4%BD%8D%E8%BF%98%E6%98%AF32%E4%BD%8D%E7%9A%84%EF%BC%9F">[这里]</a><br>如果不是x64或x86一般就是ARM了</p>
-<p>下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/7zip-select-folder.webp" alt="7zip-select-folder" loading="lazy"></p>
+<p>下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/7zip-select-folder.webp" alt="7zip-select-folder"></p>
 <p>点击<strong>Install</strong>进行安装，安装完成后点击<strong>Close</strong>关闭窗口<br>现在，你的电脑就拥有压缩软件了，如果你不会使用，请看下一个教程</p>
 <ol start="2">
 <li>Bandizip下载与安装</li>
 </ol>
-<p>打开Bandizip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-bandizip.webp" alt="download-bandizip" loading="lazy"></p>
-<p>点击<strong>请点击此处</strong>后，下载会开始，下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong>，关闭<strong>自动发送数据</strong> <del>当然，你也可以选择开启</del><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-select-folder.webp" alt="bandizip-select-folder" loading="lazy"></p>
-<p>安装完成后点击关闭，之后会自动弹出相关设置，根据你的喜好进行设置！<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-settings.webp" alt="bandizip-settings" loading="lazy"></p>
+<p>打开Bandizip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-bandizip.webp" alt="download-bandizip"></p>
+<p>点击<strong>请点击此处</strong>后，下载会开始，下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong>，关闭<strong>自动发送数据</strong> <del>当然，你也可以选择开启</del><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-select-folder.webp" alt="bandizip-select-folder"></p>
+<p>安装完成后点击关闭，之后会自动弹出相关设置，根据你的喜好进行设置！<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-settings.webp" alt="bandizip-settings"></p>
 </div></div>
       </div>
   </div>
@@ -189,7 +189,7 @@
 <ol start="2">
 <li>ZArchiver下载与安装</li>
 </ol>
-<p>点击<strong>Download</strong>进行下载，在你的浏览器的<strong>下载</strong>里点击下载的文件来安装<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-zarchiver.webp" alt="download-zarchiver" loading="lazy"></p>
+<p>点击<strong>Download</strong>进行下载，在你的浏览器的<strong>下载</strong>里点击下载的文件来安装<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-zarchiver.webp" alt="download-zarchiver"></p>
 <p>ZArchiver也是一个文件管理器，但是我更推荐使用MT管理器</p>
 </div></div>
       </div>
@@ -230,8 +230,8 @@
       <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-系统位数</span><span class='collapse-hint-hide'>[关闭]-系统位数</span></div>
       <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
           <p>右键<strong>桌面</strong>的 <strong>此电脑</strong> 选择<strong>属性</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/check-bit.webp" alt="check-bit" loading="lazy"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/checked-bit.webp" alt="checked-bit" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/check-bit.webp" alt="check-bit"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/checked-bit.webp" alt="checked-bit"></p>
 <p>桌面没有 <strong>此电脑</strong> ？ 查看 <a href="#%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2%E6%B2%A1%E6%9C%89%E2%80%9D%E6%AD%A4%E7%94%B5%E8%84%91%E2%80%9D%EF%BC%81">[这里]</a></p>
 </div></div>
       </div>
@@ -240,7 +240,7 @@
 <h3 id="我的桌面没有”此电脑”！"><a href="#我的桌面没有”此电脑”！" class="headerlink" title="我的桌面没有”此电脑”！"></a>我的桌面没有”此电脑”！</h3><div class='collapse'>
       <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-没有"此电脑"</span><span class='collapse-hint-hide'>[关闭]-没有"此电脑"</span></div>
       <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>在<strong>桌面</strong>右键，选择<strong>个性化</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-1.webp" alt="no-thispc-1" loading="lazy"><br>选择<strong>主题</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-2.webp" alt="no-thispc-2" loading="lazy"><br>点击右边的<strong>桌面图标设置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-3.webp" alt="no-thispc-3" loading="lazy"><br>选择<strong>此电脑</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-4.webp" alt="no-thispc-4" loading="lazy"></p>
+          <p>在<strong>桌面</strong>右键，选择<strong>个性化</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-1.webp" alt="no-thispc-1"><br>选择<strong>主题</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-2.webp" alt="no-thispc-2"><br>点击右边的<strong>桌面图标设置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-3.webp" alt="no-thispc-3"><br>选择<strong>此电脑</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-4.webp" alt="no-thispc-4"></p>
 </div></div>
       </div>
   </div>
@@ -285,7 +285,7 @@
 <h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
 <p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
 <h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
-<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
+<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview"> </p>
 <br>
 <br>
 
@@ -310,12 +310,12 @@
 <hr>
 <span id="more"></span>
 
-<h2 id="国外在线平台"><a href="#国外在线平台" class="headerlink" title="国外在线平台"></a>国外在线平台</h2><h3 id="ChatGPT-3-5-4"><a href="#ChatGPT-3-5-4" class="headerlink" title="ChatGPT 3.5&#x2F;4"></a>ChatGPT 3.5&#x2F;4</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/chatgpt.webp" alt="chatgpt" loading="lazy"><br>最经典的当然就是<strong>ChatGPT</strong>了，ChatGPT 3.5 是一个革命性的里程碑，我相信不少人对于AI语言模型的最早接触就是来自ChatGPT了<br>而 GPT-4 则在此基础上更进一步，不仅在语言理解和生成方面有所提升，还增加了对图像的理解能力，使其能够在更广泛的应用场景中发挥作用GPT-4的多模态能力意味着它可以处理文本和图像输入，为用户提供更丰富的交互体验<br>GPT-4 还拥有联网搜索的能力，尽管现在看起来联网搜索的模型已经不是什么稀罕之物了，但目前根据不少人的反馈来看，GPT-4在当今的局势中仍然有很大的立足之地</p>
+<h2 id="国外在线平台"><a href="#国外在线平台" class="headerlink" title="国外在线平台"></a>国外在线平台</h2><h3 id="ChatGPT-3-5-4"><a href="#ChatGPT-3-5-4" class="headerlink" title="ChatGPT 3.5&#x2F;4"></a>ChatGPT 3.5&#x2F;4</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/chatgpt.webp" alt="chatgpt"><br>最经典的当然就是<strong>ChatGPT</strong>了，ChatGPT 3.5 是一个革命性的里程碑，我相信不少人对于AI语言模型的最早接触就是来自ChatGPT了<br>而 GPT-4 则在此基础上更进一步，不仅在语言理解和生成方面有所提升，还增加了对图像的理解能力，使其能够在更广泛的应用场景中发挥作用GPT-4的多模态能力意味着它可以处理文本和图像输入，为用户提供更丰富的交互体验<br>GPT-4 还拥有联网搜索的能力，尽管现在看起来联网搜索的模型已经不是什么稀罕之物了，但目前根据不少人的反馈来看，GPT-4在当今的局势中仍然有很大的立足之地</p>
 <p>其中GPT-4是收费的，20USD每个月，贵确实贵，不过我们当然还有其他选择</p>
 <p><a href="https://chat.openai.com/">[ChatGPT]</a></p>
 <br>
 
-<h3 id="Bing-Chat-New-Bing-Copilot"><a href="#Bing-Chat-New-Bing-Copilot" class="headerlink" title="Bing Chat (New Bing&#x2F;Copilot)"></a>Bing Chat (New Bing&#x2F;Copilot)</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat.webp" alt="bingchat" loading="lazy"><br>Bing Chat现在已经改名为<strong>Copilot</strong>了，但我还是喜欢叫它的旧名字，尽管我不是最早一批使用Bing Chat的，但是它也是我使用的最久的语言模型平台了<br>Bing Chat是由微软开发的基于大型语言模型的聊天机器人，Bing Chat基于OpenAI的GPT-4模型，但现在的Copilot是否还是基于GPT-4方面有些存疑，在最早的时候，Bing Chat闻名与它的聪明与个性<br>在那个时期，Bing Chat(更有创造力)模式甚至被称为傲娇大小姐，但微软很快就因为安全性方面而对其个性砍了一刀<br>在那之后，Bing Chat就变得和其他模型一样冷冰冰的了，不过抛开这些不谈，它在当时直接联网搜索并给出具体网址也是它的一张王牌</p>
+<h3 id="Bing-Chat-New-Bing-Copilot"><a href="#Bing-Chat-New-Bing-Copilot" class="headerlink" title="Bing Chat (New Bing&#x2F;Copilot)"></a>Bing Chat (New Bing&#x2F;Copilot)</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat.webp" alt="bingchat"><br>Bing Chat现在已经改名为<strong>Copilot</strong>了，但我还是喜欢叫它的旧名字，尽管我不是最早一批使用Bing Chat的，但是它也是我使用的最久的语言模型平台了<br>Bing Chat是由微软开发的基于大型语言模型的聊天机器人，Bing Chat基于OpenAI的GPT-4模型，但现在的Copilot是否还是基于GPT-4方面有些存疑，在最早的时候，Bing Chat闻名与它的聪明与个性<br>在那个时期，Bing Chat(更有创造力)模式甚至被称为傲娇大小姐，但微软很快就因为安全性方面而对其个性砍了一刀<br>在那之后，Bing Chat就变得和其他模型一样冷冰冰的了，不过抛开这些不谈，它在当时直接联网搜索并给出具体网址也是它的一张王牌</p>
 <p>尽管现在很多语言模型都能够联网搜索，但能给出具体网址的仍然是少数，Bing Chat就是其中之一<br>只能说微软一手好牌打的稀烂，现在为了盈利推出了<strong>Copilot Pro</strong>后又对<del>Bing Chat(Copilot)进行了削弱，包括分析，总结等各方面(这点主要是我个人的主观感受)</del><br>而以前给出具体网址Bing Chat能够直接访问并查看内容(存疑)，现在它只会拒绝你并告诉你它做不到(现在的Bing Chat直接搜索你给的网址或者网址中的关键词)，如果搜不到就告诉你它访问不到(证实)<br><del>不过我认为，在日常使用的各方面，Bing Chat仍然是够格的，你甚至可以将其作为一个大号的搜索引擎，尽管它可能被搜索结果误导(这是它的内部提示词的问题)</del><br>事实上<strong>更有创造力</strong>模式的Bing Chat现在已经<a href="https://github.com/juzeon/SydneyQt/issues/240#issuecomment-1992374141">更新了</a> (确实，我之前的提示词失效了)，并且事实上现在的Bing Chat在更方面仍然是非常强大的<br>事实上，Bing Chat在各种日常层面的表现可能远超出你的想象，它值得成为你的一员大将！</p>
 <p><a href="https://en.wikipedia.org/wiki/Microsoft_Copilot">[Wikipedia上的Bing Chat]</a></p>
 <p><a href="https://bing.com/chat">[Bing Chat]</a> or <a href="https://copilot.microsoft.com/">[Microsoft Copilot]</a></p>
@@ -337,11 +337,11 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bard.webp" alt="bard" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bard.webp" alt="bard"></p>
 <blockquote>
 <p>Bard</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-chat.webp" alt="gemini-chatbot" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-chat.webp" alt="gemini-chatbot"></p>
 <blockquote>
 <p>Gemini</p>
 </blockquote>
@@ -357,7 +357,7 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-model.webp" alt="gemini-model" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-model.webp" alt="gemini-model"></p>
 <p><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)">[Wikipedia上的Gemini(语言模型)]</a></p>
 <p>其他复杂的我们暂且不提，总之如果想使用在线的Gemini(平台)的话一般有两个选择<br>一是Gemini(Bard)的官网: <a href="https://gemini.google.com/">https://gemini.google.com</a><br>二是谷歌的AI工作室: <a href="https://aistudio.google.com/">https://aistudio.google.com/</a>  (Gemini 1&#x2F;1.5)</p>
 <p>根据我个人的使用，我主观的评价是；</p>
@@ -372,11 +372,11 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-refuse.webp" alt="gemini-refuse" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-refuse.webp" alt="gemini-refuse"></p>
 <blockquote>
 <p>Gemini拒绝回答问题，谷歌通过<strong>关键词检测</strong>阻止了模型</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat-accept.webp" alt="bingchat-accept" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat-accept.webp" alt="bingchat-accept"></p>
 <blockquote>
 <p>Bing Chat理解这是在<strong>询问知识</strong>，而不是什么违规行为</p>
 </blockquote>
@@ -390,15 +390,15 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-web.webp" alt="gemini-web" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-web.webp" alt="gemini-web"></p>
 <blockquote>
 <p>实际上要求它搜索<strong>网页</strong>也会被掐断，例如<a href="https://xxxxxx/">https://xxxxxx</a> <a href="http://www.xxxx.com/">www.xxxx.com</a> xxxx.com</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-il.webp" alt="gemini-il" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-il.webp" alt="gemini-il"></p>
 <blockquote>
 <p>实际上还是会虚构</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-il.webp" alt="bing-il" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-il.webp" alt="bing-il"></p>
 <blockquote>
 <p>横向对比</p>
 </blockquote>
@@ -427,39 +427,39 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-gal.webp" alt="gemini1.5-gal" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-gal.webp" alt="gemini1.5-gal"></p>
 <blockquote>
 <p>Gemini1.5的逆天判定(所有安全措施已经是Few了)</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-love.webp" alt="gemini1-love" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-love.webp" alt="gemini1-love"></p>
 <blockquote>
 <p>Gemini 1</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-love.webp" alt="gemini1.5-love" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-love.webp" alt="gemini1.5-love"></p>
 <blockquote>
 <p>Gemini 1.5</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-google.webp" alt="gemini1-google" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-google.webp" alt="gemini1-google"></p>
 <blockquote>
 <p>Gemini 1与Gemini 1.5在这方面相像，Gemini 1略胜一筹</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-google.webp" alt="bing-google" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-google.webp" alt="bing-google"></p>
 <blockquote>
 <p>与Bing Chat横向对比</p>
 </blockquote>
 <p>只能说在不少方面(例如中文)的表现实际上比Gemini(Bard)好很多，在个性化方面值得尝试！</p>
 <p><a href="https://gemini.google.com/">[Gemini(Bard)]</a> and <a href="https://aistudio.google.com/">[Google AI Studio]</a></p>
-<h3 id="Llama-2"><a href="#Llama-2" class="headerlink" title="Llama 2"></a>Llama 2</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/llama2.webp" alt="llama2" loading="lazy"></p>
+<h3 id="Llama-2"><a href="#Llama-2" class="headerlink" title="Llama 2"></a>Llama 2</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/llama2.webp" alt="llama2"></p>
 <p><strong>LLaMA</strong>（英语：Large Language Model Meta AI，直译：大语言模型元AI）是Meta AI公司于2023年2月发布的大型语言模型<br>2023年7月，Facebook母公司Meta推出了<strong>LLaMA2</strong>，在人工智能 (AI) 行业掀起波澜，LLaMA2是一种开源大语言模型 (LLM)，旨在挑战大型科技竞争对手的限制性做法<br>Meta免费发布 LLaMA2背后的代码和数据，使世界各地的研究人员能够利用和改进该技术</p>
 <p>个人使用体验实际上感觉一般(中文)，要真拖出来比可能不好去比，但是它强在开源，可以免费商用和研究<br>据一些暂未证实的消息称，不少国内外的小众模型或<del><strong>“理论战神”</strong></del>模型基于Llama</p>
 <p><a href="https://zh.wikipedia.org/wiki/LLaMA">[Wikipedia上的LLaMA]</a></p>
 <p><a href="https://www.llama2.ai/">[Llama2 Chat]</a></p>
-<h3 id="持续更新中…"><a href="#持续更新中…" class="headerlink" title="持续更新中…"></a>持续更新中…</h3><h2 id="国内在线平台"><a href="#国内在线平台" class="headerlink" title="国内在线平台"></a>国内在线平台</h2><h3 id="百度-文心一言"><a href="#百度-文心一言" class="headerlink" title="百度 文心一言"></a>百度 文心一言</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/erniebot.webp" alt="erniebot" loading="lazy"></p>
+<h3 id="持续更新中…"><a href="#持续更新中…" class="headerlink" title="持续更新中…"></a>持续更新中…</h3><h2 id="国内在线平台"><a href="#国内在线平台" class="headerlink" title="国内在线平台"></a>国内在线平台</h2><h3 id="百度-文心一言"><a href="#百度-文心一言" class="headerlink" title="百度 文心一言"></a>百度 文心一言</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/erniebot.webp" alt="erniebot"></p>
 <p>首当其冲的就是文心一言了，文心一言（英语：ERNIE Bot）是由百度公司开发的聊天机器人，能够与人交互、回答问题及协作创作。<br>该产品被传媒称为国际著名聊天机器人ChatGPT的中国竞争对手，自2023年8月31日已开放全球用户使用</p>
 <p>基本上国内的大多数平台注册都<strong>需要手机号</strong>，虽然很反感但是至少不需要实名认证<br>众多<strong>遥遥领先</strong>中的一个，我虽然用的不多，不过感觉文心一言还是有一定水平的，毕竟对于百度来说，训练数据集有不少的基础<br><del>如果你选择支持国产，或不想使用国外的平台，那么文心一言或许比较适合你</del><br>驳回，如果是日常使用倒还不错，但是如果涉及一些冷门或稍冷门就开始各种不知道和讲错(或是瞎编)<br>但是论给出内容的丰富和个性等来看，文心一言也有立足之地</p>
 <p><a href="https://baike.baidu.com/item/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80/62642976">[百度百科上的文心一言]</a><br><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80">[Wikipedia上的文心一言]</a></p>
 <p><a href="https://yiyan.baidu.com/">[文心一言]</a></p>
-<h3 id="讯飞-星火"><a href="#讯飞-星火" class="headerlink" title="讯飞 星火"></a>讯飞 星火</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/spark.webp" alt="spark" loading="lazy"></p>
+<h3 id="讯飞-星火"><a href="#讯飞-星火" class="headerlink" title="讯飞 星火"></a>讯飞 星火</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/spark.webp" alt="spark"></p>
 <p>讯飞星火认知大模型是科大讯飞发布的大模型。该模型具有7大核心能力，即文本生成、语言理解、知识问答、逻辑推理、数学能力、代码能力、多模交互，该模型对标ChatGPT</p>
 <p>尽管文心一言可能才是中国语言模型平台的主要代表，但实际上星火在不少信息收集搜索方面都比文心一言准确很多(实测，但是测试量较少)<br>不过星火很少扯淡瞎编，基本上不知道就是不知道，而相比之下文心一言出现了更多的错误，如果你需要准确度请同时使用两个模型</p>
 <p><a href="https://baike.baidu.com/item/%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%AE%A4%E7%9F%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B/62912838">[百度百科上的星火大模型]</a><br>[还没有它的Wikipedia页面]</p>
@@ -495,7 +495,7 @@
 <p>模型: How are you doing today?</p>
 </blockquote>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/normal-gpt.png" alt="noraml-gpt" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/normal-gpt.png" alt="noraml-gpt"></p>
 <blockquote>
 <p>遭受提示词注入: </p>
 <blockquote>
@@ -505,7 +505,7 @@
 <p>模型: No.</p>
 </blockquote>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/injected-gpt.png" alt="injected-gpt" loading="lazy"><br><br></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/injected-gpt.png" alt="injected-gpt"><br><br></p>
 <p>当然，这只是一个简单的例子，具体情况也要看不同提示词与不同模型。<br>不少LLM平台添加了很多检测和反注入的功能，这在一定情况下足以应对大多数小白了。</p>
 <br>
 
@@ -518,7 +518,7 @@
 <ol start="2">
 <li><strong>提示词泄露</strong></li>
 </ol>
-<p>与提示词注入类似，使用特制提示词注入模型，但目的变成了使模型输出其内部的系统提示词<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/bing-leaked.jpg" alt="bing-leaked" loading="lazy"></p>
+<p>与提示词注入类似，使用特制提示词注入模型，但目的变成了使模型输出其内部的系统提示词<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/bing-leaked.jpg" alt="bing-leaked"></p>
 <blockquote>
 <p>New Bing的提示词被泄露</p>
 </blockquote>
@@ -528,19 +528,19 @@
 <li><strong>提示词越狱</strong></li>
 </ol>
 <p><strong>越狱（Jailbreaking）</strong> 是一种提示注入技术，用于绕过语言模型（LLM）的创建者放置在其上的安全和审查功能。<br>一般来说有”假装”，”扮演”，”授权”。</p>
-<p>假装：使LLM认为未来或其他未发生的事情是合理的<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/pretend_jailbreak.png" alt="pretend_jailbreak" loading="lazy"></p>
+<p>假装：使LLM认为未来或其他未发生的事情是合理的<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/pretend_jailbreak.png" alt="pretend_jailbreak"></p>
 <blockquote>
 <p>欺骗GPT 2028属于<strong>过去</strong> ，要求它写出”<strong>过去</strong>“的内容</p>
 </blockquote>
 <br>
 
-<p>扮演: 使LLM扮演一个非本职的人物，使人物遵循特别的规则<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt_actor.jpg" alt="chatgpt_actor" loading="lazy"></p>
+<p>扮演: 使LLM扮演一个非本职的人物，使人物遵循特别的规则<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt_actor.jpg" alt="chatgpt_actor"></p>
 <blockquote>
 <p>欺骗GPT当前正在演戏，这些事情并没有真的发生</p>
 </blockquote>
 <br>
 
-<p>授权: 假装自己被授权了权限，或LLM被授权了权限<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt4.png" alt="chatgpt4" loading="lazy"></p>
+<p>授权: 假装自己被授权了权限，或LLM被授权了权限<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt4.png" alt="chatgpt4"></p>
 <blockquote>
 <p>假装自己是GPT4，赋予GPT权限</p>
 </blockquote>
@@ -565,7 +565,7 @@
 <p><strong>免责声明</strong>：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式</p>
 <p>Github<strong>相关页面</strong>，<strong>下载</strong>均在文章最底下</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp" alt="realesrgan-intro" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp" alt="realesrgan-intro"></p>
 <span id="more"></span>
 
 <p><strong>This page also have: <a href="/i18n/en/software-realesr">English</a> version</strong></p>
@@ -602,7 +602,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-prview.webp" alt="realesrgan-prview" loading="lazy"></p>
+<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-prview.webp" alt="realesrgan-prview"></p>
 <h2 id="软件页面"><a href="#软件页面" class="headerlink" title="软件页面"></a>软件页面</h2><p>Github: <a href="https://github.com/TransparentLC/realesrgan-gui">https://github.com/TransparentLC/realesrgan-gui</a><br>Github Release: <a href="https://github.com/TransparentLC/realesrgan-gui/releases">https://github.com/TransparentLC/realesrgan-gui/releases</a></p>
 <p>你也可以在相关Github页面看到更多信息，包括更新情况，对比等</p>
 ]]></content>
