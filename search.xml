@@ -1,6 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>网络各种&quot;疑难杂症&quot;帮助解答</title>
+    <url>/posts/net-problem-fix/</url>
+    <content><![CDATA[<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>本篇文章用于解决网上各种”简单但难以解决”的问题，如果有人出现其中的情况并不知道如何解决，你可以把这篇文章转发给他&#x2F;她</p>
+<p>尽管有些问题在大多数人看起来过于简单了，但或许确实有人不清楚该如何解决，这篇文章或许会帮到你！你可以查看左侧索引进行快速预览</p>
+<p>这篇文章会持续更新！Updated: 2024-04-05</p>
+<span id="more"></span>
+
+<h2 id="在开始之前"><a href="#在开始之前" class="headerlink" title="在开始之前"></a>在开始之前</h2><p>首先，你作为一个学习者<strong>应该有良好的态度</strong>，而不是把任何事和责任全推给别人或问题上</p>
+<p>因为不会而不知道如何解决没有关系，只要你<strong>愿意动手与动脑</strong>，就能解决别人也能解决的问题<br>如果你抱怨 “信息科技都这么发达了为什么不能设计的简单一点” 那，你和三岁小孩有什么区别呢？(事实上三岁小孩也在不断学习各种能力)<br>况且各种问题也好软件也好，对于以前来说，现在已经被设计的非常简单了，但是如果你不去学，它就永远是困难的<br>所以与其坐享其成，等着别人来帮你解决，你还不如自己动脑看一看，搜一搜，学一学</p>
+<h2 id="使用的环境"><a href="#使用的环境" class="headerlink" title="使用的环境"></a>使用的环境</h2><p>不同的环境可能会有不同的问题或解决方法，本文所有解决方法均以此环境为标准：</p>
+<div class='collapse'>
+      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-本文使用的环境</span><span class='collapse-hint-hide'>[关闭]-本文使用的环境</span></div>
+      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
+          <div class='collapse'>
+      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-手机相关环境</span><span class='collapse-hint-hide'>[关闭]-手机相关环境</span></a>
+      <div class='collapse-content'><div class='content-flex'><div>
+          <p>📱手机<br>型号相关：</p>
+<ul>
+<li>型号: OPPO Reno 6 Pro</li>
+<li>安卓版本: 11</li>
+<li>ColorOS版本: V11.3</li>
+</ul>
+<p>软件相关:</p>
+<ul>
+<li>文件管理器: MT管理器(2.14.5)、Zarchiver(1.0.9)</li>
+<li>浏览器: X浏览器(4.5.0)、Kiwi Broswer(120.0.6099.116)</li>
+</ul>
+</div></div>
+      </div>
+  </div>
+
+<div class='collapse'>
+      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-电脑相关环境</span><span class='collapse-hint-hide'>[关闭]-电脑相关环境</span></a>
+      <div class='collapse-content'><div class='content-flex'><div>
+          <p>💻电脑<br>系统相关:</p>
+<ul>
+<li>类型: 64 位操作系统, 基于 x64 的处理器</li>
+<li>版本: Windows 11 专业版(22621.525)、Windows 10 专业版(Vmware)</li>
+</ul>
+<p>软件相关:</p>
+<ul>
+<li>浏览器: FireFox Portable(124.0.1 64位)</li>
+<li>压缩软件: Bandizip(7.32)、7zip(23.01)</li>
+<li>杀毒软件: 火绒安全、Kaspersky 免费版</li>
+</ul>
+</div></div>
+      </div>
+  </div></div></div>
+      </div>
+  </div>
+
+<p>由于一些暂时无法解决的问题，导致无法使用折叠块默认隐藏展示图片，所以所有内容并没有被折叠<br>你需要查看左侧索引查找解决方法！如果你正在使用手机，点击左上角的<strong>汉堡菜单</strong>(就是这个名字没错)</p>
+<hr>
+<h2 id="压缩-压缩包相关问题"><a href="#压缩-压缩包相关问题" class="headerlink" title="压缩&#x2F;压缩包相关问题"></a>压缩&#x2F;压缩包相关问题</h2><h3 id="我没有压缩软件"><a href="#我没有压缩软件" class="headerlink" title="我没有压缩软件"></a>我没有压缩软件</h3><h4 id="如果你正在使用电脑"><a href="#如果你正在使用电脑" class="headerlink" title="如果你正在使用电脑"></a>如果你正在使用电脑</h4><p>我推荐你使用7zip或Bandizip</p>
+<p><a href="https://7-zip.org/">[下载-7zip]</a>  -  <a href="https://www.bandisoft.com/bandizip/dl/">[下载-Bandizip]</a></p>
+<ol>
+<li>7zip下载与安装</li>
+</ol>
+<p>打开7zip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-7zip.webp" alt="download-7zip" loading="lazy"></p>
+<p>选择对应版本的7zip，点击<strong>Download</strong><br>不知道电脑是64位还是32位的？查看 <a href="#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%98%AF64%E4%BD%8D%E8%BF%98%E6%98%AF32%E4%BD%8D%E7%9A%84%EF%BC%9F">[这里]</a><br>如果不是x64或x86一般就是ARM了</p>
+<p>下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/7zip-select-folder.webp" alt="7zip-select-folder" loading="lazy"></p>
+<p>点击<strong>Install</strong>进行安装，安装完成后点击<strong>Close</strong>关闭窗口<br>现在，你的电脑就拥有压缩软件了，如果你不会使用，请看下一个教程</p>
+<ol start="2">
+<li>Bandizip下载与安装</li>
+</ol>
+<p>打开Bandizip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-bandizip.webp" alt="download-bandizip" loading="lazy"></p>
+<p>点击<strong>请点击此处</strong>后，下载会开始，下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong>，关闭<strong>自动发送数据</strong> <del>当然，你也可以选择开启</del><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-select-folder.webp" alt="bandizip-select-folder" loading="lazy"></p>
+<p>安装完成后点击关闭，之后会自动弹出相关设置，根据你的喜好进行设置！<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-settings.webp" alt="bandizip-settings" loading="lazy"></p>
+<h4 id="如果你正在使用手机"><a href="#如果你正在使用手机" class="headerlink" title="如果你正在使用手机"></a>如果你正在使用手机</h4><p>我推荐你使用MT管理器或ZArchiver或其他<strong>文件管理器</strong></p>
+<p><a href="https://www.coolapk.com/apk/bin.mt.plus">[下载-MT管理器]</a>  -  <a href="https://zarchiver.org/index.html">[下载-ZArchiver]</a></p>
+<ol>
+<li>MT管理器下载与安装</li>
+</ol>
+<p>中文肯定看得懂吧！点击<strong>下载</strong>后在你的浏览器的<strong>下载</strong>里点击下载的文件来安装</p>
+<p>MT管理器是一个文件管理器，其中拥有非常多的功能，包括压缩与解压</p>
+<ol start="2">
+<li>ZArchiver下载与安装</li>
+</ol>
+<p>点击<strong>Download</strong>进行下载，在你的浏览器的<strong>下载</strong>里点击下载的文件来安装<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-zarchiver.webp" alt="download-zarchiver" loading="lazy"></p>
+<p>如果显示<strong>官方软件商店有新版本</strong>，不要管，选择<strong>继续安装</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/install-zarchiver.webp" alt="install-zarchiver" loading="lazy"><br>ZArchiver也是一个文件管理器，但是我更推荐使用MT管理器</p>
+<hr>
+<h3 id="我不知道该如何解压！"><a href="#我不知道该如何解压！" class="headerlink" title="我不知道该如何解压！"></a>我不知道该如何解压！</h3><h4 id="如果你正在使用电脑-1"><a href="#如果你正在使用电脑-1" class="headerlink" title="如果你正在使用电脑"></a>如果你正在使用电脑</h4><p>首先，你需要找到你要解压的文件的位置</p>
+<ol>
+<li>7zip<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-7zip-1.webp" alt="how2extract-7zip-1" loading="lazy"></li>
+</ol>
+<p>鼠标对准你的文件后，右键后点击<strong>7-Zip</strong>，按照你的需要进行下一步操作<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-7zip-2.webp" alt="how2extract-7zip-2" loading="lazy"></p>
+<p>如果你想仅打开压缩包查看里面的内容，选择<strong>打开压缩包</strong>，或者直接双击文件即可</p>
+<p>提取到当前位置 和 提取到‘文件名\’ 的区别: </p>
+<blockquote>
+<p><strong>提取到当前位置</strong>是直接将压缩包内的所有文件直接解压到当前位置</p>
+<p>提取到’文件名\‘ 则是先创建一个和压缩包同名的文件夹，再将压缩包内的所有文件解压到创建的文件夹</p>
+</blockquote>
+<p>如果你直接打开压缩包看到的是一堆文件，选择 提取到’文件名\‘ ，如果你看到的只是一个文件夹，选择<strong>提取到当前位置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/extract-example.webp" alt="extract-example" loading="lazy"></p>
+<p>如果你想提取(解压)到其他位置，选择<strong>提取文件…</strong></p>
+<ol start="2">
+<li>Bandzip</li>
+</ol>
+<p>鼠标对准你的文件后，右键后点击<strong>Bandizip</strong>，按照你的需要进行下一步操作<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-bandizip.webp" alt="how2extract-bandizip" loading="lazy"></p>
+<p>其余操作同上</p>
+<h4 id="如果你正在使用手机-1"><a href="#如果你正在使用手机-1" class="headerlink" title="如果你正在使用手机"></a>如果你正在使用手机</h4><p>首先，你需要找到你要解压的文件的位置</p>
+<p>1.MT管理器</p>
+<p>长按你的文件，选择<strong>解压到…</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-mtmanager-1.webp" alt="how2extract-mtmanager-1" loading="lazy"></p>
+<p>再按照你的需求选择解压<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-mtmanager-2.webp" alt="how2extract-mtmanager-2" loading="lazy"></p>
+<ol start="2">
+<li>Zarchiver</li>
+</ol>
+<p>长按你的文件，选择解压方式<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/how2extract-zarchiver.webp" alt="how2extract-zarchiver" loading="lazy"></p>
+<hr>
+<h3 id="为什么压缩包中的软件无法运行！"><a href="#为什么压缩包中的软件无法运行！" class="headerlink" title="为什么压缩包中的软件无法运行！"></a>为什么压缩包中的软件无法运行！</h3><p>完全解压后，再运行软件或游戏！！<br>不要在压缩包视图中直接运行软件或游戏！！</p>
+<hr>
+<h3 id="解压密码是什么"><a href="#解压密码是什么" class="headerlink" title="解压密码是什么"></a>解压密码是什么</h3><p>在压缩包打包时可以设置密码，用于加密，相当于你家上了锁，解压密码就是门钥匙</p>
+<p>如果你知道什么是解压密码(概念)，但你不知道密码的具体值？<br>那你得问资源分享者而不是折磨大伙啊！</p>
+<hr>
+<h3 id="解压密码错误？"><a href="#解压密码错误？" class="headerlink" title="解压密码错误？"></a>解压密码错误？</h3><p>先直接复制对应的密码试试，如果不行，再照着打一遍(如果是中文密码就用中文输入法，英文密码用英文输入法，不要用中文输入法输入英文！！)</p>
+<p>如果仍然不行，那么有三种可能：</p>
+<blockquote>
+<ol>
+<li><p>密码不对: 可能是给出的密码确实不匹配</p>
+</li>
+<li><p>压缩包损坏: 如果你用夸克网盘，百度网盘进行下载，那么这种可能性比较大，如果密码正确但无法解压，尝试重新下载</p>
+</li>
+<li><p>压缩软件异常: 如果你使用的是系统自带的解压缩功能，有可能出现这种情况，尝试下载压缩软件进行解压，查看 <a href="#%E6%88%91%E6%B2%A1%E6%9C%89%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6">[这里]</a></p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="为什么不能在线解压"><a href="#为什么不能在线解压" class="headerlink" title="为什么不能在线解压"></a>为什么不能在线解压</h3><p>重新声明什么是在线解压，是指<strong>“在百度网盘里面直接打开压缩包”</strong>的行为。<br>在百度网盘里的文件是通过哈希函数识别码来进行分别的，在网盘里<strong>同一个文件压缩包是通用的</strong>；<br>即“你通过分享链接保存到你网盘里的文件压缩包，和分享给你的那个人网盘里的文件压缩包，是同一个文件压缩包”。<br>这意味着，只要是保存自同一个分享人的同一个文件压缩包， 所有人自己网盘里的文件压缩包都是相同的。<br>打个比方，分享人分享了一个文件压缩包，相当于把自己的自行车放在了共享单车的车位上，所有人使用的都是同一辆自行车，别人把文件保存到自己的网盘里，相当于你对这辆车进行了登记，下次要用就直接过来取车。<br>但是，只要其中有一个人把这辆车给破坏了，那么其他人也就无法使用这辆车，而在线解压同理，只要其中有一个人把这个文件压缩包在网盘里直接解压，被百度识别后封禁，那么所有保存了这个文件的人，都无法使用。</p>
+<p>以上内容来自 <a href="https://tieba.baidu.com/p/7522781651">[百度贴吧]</a></p>
+<p>看不懂？我通俗的解释一下：</p>
+<p>在线解压(可能不止百度网盘)是指<strong>“在百度网盘里面直接打开&#x2F;解压缩 压缩包”</strong>的行为<br>正常来说，不管什么资源都应该是<strong>先将压缩包下载到本地再解压</strong>的，但有人却手贱直接在百度网盘<strong>平台或软件内部</strong>直接解压<br>这可能导致资源被重新审查并并失效，并且由于大伙保存的都是同一个文件，它失效了，大伙的文件也都失效了<br>所以无论你怎么用百度网盘，都不要直接在线解压</p>
+<hr>
+<h3 id="什么是分卷压缩-该如何辨认"><a href="#什么是分卷压缩-该如何辨认" class="headerlink" title="什么是分卷压缩&#x2F;该如何辨认"></a>什么是分卷压缩&#x2F;该如何辨认</h3><p>分卷就是把一个大文件分段压缩，可以理解为你有一百毫升水，你现在只有两个可容纳五十毫升水的容器，你只好把水分成五十毫升分开放置容器里<br>分卷就相当于把100G大小的文件分开成你指定大小，如果你需要单文件50G，那压缩包就会把100G文件压缩成两个50G的文件，如果你要更小比如25G，那么100G就会平分成四个25G文件，设置的分卷越小文件压缩出来的分卷就越多<br>把所有分卷放在同一个目录下解压其中一个，压缩软件就会自动识别解压出一个完整的文件，就相当于自动帮你把两个50毫升水从容器里倒出来放一起你就又有一百毫升水了，不过分卷必须完整不能少，要不然解压出来文件不会完整</p>
+<p>以上内容来自 <a href="https://www.zhihu.com/question/422846014/answer/1499431111">[知乎]</a><br>讲的很明白了吧</p>
+<h4 id="那么如何辨认哪些是分卷压缩包呢"><a href="#那么如何辨认哪些是分卷压缩包呢" class="headerlink" title="那么如何辨认哪些是分卷压缩包呢"></a>那么如何辨认哪些是分卷压缩包呢</h4><p>最简单的方法是:<br>如果有多个递增的00X后缀就是分卷压缩包<br>例如 文件.7z <strong>.001</strong>    文件.7z <strong>.002</strong>   文件.7z <strong>.003</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/multi-archive.webp" alt="multi-archive" loading="lazy"></p>
+<p>但是偶尔也有例外：<br>例如Bandizip创建的分卷压缩包后缀是.z0X<br>例如 文件 <strong>.z01</strong>    文件 <strong>.z02</strong>   文件 <strong>.z03</strong><br>但总之，肯定会包括递增数字的，需要注意的是，大多数压缩软件的分卷压缩都是能互相支持兼容的</p>
+<h4 id="那么如何解压分卷压缩包呢"><a href="#那么如何解压分卷压缩包呢" class="headerlink" title="那么如何解压分卷压缩包呢"></a>那么如何解压分卷压缩包呢</h4><p>首先你需要确保你下载完成了<strong>所有</strong>的分卷(如果只有一个分卷也能打开查看，但是不能正常解压)<br>将所有的分卷放在同一目录下，如上面图片所示，然后右键<strong>第一个分卷</strong>，并进行正常解压操作<br>不知道如何解压？查看 <a href="#%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E8%AF%A5%E5%A6%82%E4%BD%95%E8%A7%A3%E5%8E%8B%EF%BC%81">[这里]</a></p>
+<h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><h3 id="我的系统是64位还是32位的？"><a href="#我的系统是64位还是32位的？" class="headerlink" title="我的系统是64位还是32位的？"></a>我的系统是64位还是32位的？</h3><p>右键<strong>桌面</strong>的 <strong>此电脑</strong> 选择<strong>属性</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/check-bit.webp" alt="check-bit" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/checked-bit.webp" alt="checked-bit" loading="lazy"></p>
+<p>桌面没有 <strong>此电脑</strong> ？ 查看 <a href="#%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2%E6%B2%A1%E6%9C%89%E2%80%9D%E6%AD%A4%E7%94%B5%E8%84%91%E2%80%9D%EF%BC%81">[这里]</a></p>
+<hr>
+<h3 id="电脑上的文件只有名字没有后缀-拓展名"><a href="#电脑上的文件只有名字没有后缀-拓展名" class="headerlink" title="电脑上的文件只有名字没有后缀&#x2F;拓展名"></a>电脑上的文件只有名字没有后缀&#x2F;拓展名</h3><p>打开你的<strong>文件资源管理器(explorer)<strong>，选择最上面的</strong>查看</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-extension-1.webp" alt="no-extension-1" loading="lazy"></p>
+<p>选中<strong>文件拓展名</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-extension-2.webp" alt="no-extension-2" loading="lazy"></p>
+<h3 id="我的桌面没有”此电脑”！"><a href="#我的桌面没有”此电脑”！" class="headerlink" title="我的桌面没有”此电脑”！"></a>我的桌面没有”此电脑”！</h3><p>在<strong>桌面</strong>右键，选择<strong>个性化</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-1.webp" alt="no-thispc-1" loading="lazy"><br>选择<strong>主题</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-2.webp" alt="no-thispc-2" loading="lazy"><br>点击右边的<strong>桌面图标设置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-3.webp" alt="no-thispc-3" loading="lazy"><br>选择<strong>此电脑</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-4.webp" alt="no-thispc-4" loading="lazy"></p>
+<hr>
+<h3 id="程序或软件提示不支持Windows7及以下！"><a href="#程序或软件提示不支持Windows7及以下！" class="headerlink" title="程序或软件提示不支持Windows7及以下！"></a>程序或软件提示不支持Windows7及以下！</h3><p>这个没有办法，要么升级你的系统，要么装一个虚拟机运行高版本的系统<br><del>话说，为什么不使用强大又美观的Win10呢</del></p>
+<hr>
+<h3 id="我正在使用Win7或更低，我应该升级到Win10或11吗？"><a href="#我正在使用Win7或更低，我应该升级到Win10或11吗？" class="headerlink" title="我正在使用Win7或更低，我应该升级到Win10或11吗？"></a>我正在使用Win7或更低，我应该升级到Win10或11吗？</h3><p>现在不少软件的新版已经停止支持Windows7了，我还是推荐你升级到至少Win10的</p>
+<p>或许你曾经听闻有人说Windows10不稳定，仍推荐用Win7，但…<br>但我还是推荐你用Win10，抛开一些小问题不谈，在各方面都是强于Win7的</p>
+<p><del>至于Windows11？我的评价是最好别用！</del></p>
+<h2 id="软件相关"><a href="#软件相关" class="headerlink" title="软件相关"></a>软件相关</h2><h3 id="我下载的这个软件是手机的还是电脑的？"><a href="#我下载的这个软件是手机的还是电脑的？" class="headerlink" title="我下载的这个软件是手机的还是电脑的？"></a>我下载的这个软件是手机的还是电脑的？</h3><p>如果<strong>文件后缀&#x2F;拓展名</strong>是<strong>.apk</strong>或者<strong>.apk.1</strong>，那么就是手机软件<br>如果<strong>文件后缀&#x2F;拓展名</strong>是<strong>.exe</strong>，那么就是电脑软件</p>
+<p>以上是最基本的分辨方法，一般来说够用</p>
+<hr>
+<h3 id="杀毒软件怎么给我查杀了"><a href="#杀毒软件怎么给我查杀了" class="headerlink" title="杀毒软件怎么给我查杀了"></a>杀毒软件怎么给我查杀了</h3><p>这得看你下载的什么类型的软件了，如果你下载的是<strong>破解</strong>，<strong>外挂</strong>，或者其他什么<strong>非正版软件</strong>，那么有可能出现这种情况</p>
+<p>首先，先看看杀毒软件报毒报的是什么毒，如果是<strong>Trojan&#x2F;Generic.xxxxxxxx</strong>，那么大概率是误杀，因为这种类型的都是杀毒软件云查杀的结果<br>其次，要看报毒的其他类型，如果是一些常见的病毒类型(去网上搜一下就知道是不是常见病毒了)，那么十有八九是真病毒<br>再然后就是看你的软件来源，如果你在一个比较常见的大网站下载，那么多半不会有问题，如果并不是，那么还得考虑一下</p>
+<p>其实说白了，分析它是不是真得病毒还得靠你自己，如果你的下载来源是什么资源站，并且其他下载了的人确定了没有问题，那么多半也没有问题<br>如果你根本不清楚，那我还是劝你再找找不报毒的资源</p>
+<p>如果你确定它没有问题，那么把它从杀毒软件的<strong>隔离区</strong>中找回，并添加信任，或者直接退出杀毒软件！<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/recover-virus-file.webp" alt="recover-virus-file" loading="lazy"></p>
+<hr>
+<h2 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h2>]]></content>
+      <categories>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Troubleshoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
     <url>/posts/antisleep-script/</url>
     <content><![CDATA[<blockquote>
@@ -25,7 +193,7 @@
 <h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
 <p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
 <p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
-<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
 <blockquote>
 <p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
 <p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
@@ -101,379 +269,6 @@
       </tags>
   </entry>
   <entry>
-    <title>在批处理中使用MD5验证密码</title>
-    <url>/posts/md5verify-script/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中的代码<strong>不一定能</strong>适应所有种类的Windows系统</p>
-<p>请自行测试后再做出结论，你可以在评论区留言</p>
-</blockquote>
-<br>
-
-<hr>
-<p><strong>This page also have: <a href="/i18n/en/md5verify-script">English</a> version</strong></p>
-<p>以下代码可能因操作系统版本不同导致差异，并不保证完美运行</p>
-<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><p>这是一个简单的示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;password=c61ab46721af26e11112e5e272e93d46&quot;</span><br><span class="line">:PassCheck</span><br><span class="line">set /p &quot;typestr=输入密码进行校验： &quot;</span><br><span class="line">echo.%typestr% &gt; &quot;%temp%\pass.iL&quot;</span><br><span class="line">for /f &quot;delims=&quot; %%a in (</span><br><span class="line">	&#x27;certutil -hashfile &quot;%temp%\pass.iL&quot; MD5 ^| findstr /v &quot;[^^0-9a-z]&quot;&#x27;</span><br><span class="line">		) do (</span><br><span class="line">			set &quot;typemd5=%%a&quot;</span><br><span class="line">			del /f /q &quot;%temp%\pass.iL&quot; 2&gt;nul &gt;nul</span><br><span class="line">			)</span><br><span class="line">if &quot;%typemd5%&quot;==&quot;%password%&quot; (goto :next) else (call :PassCheckError)</span><br><span class="line">goto :PassCheck</span><br><span class="line"></span><br><span class="line">:PassCheckError</span><br><span class="line">cls</span><br><span class="line">echo 密码错误!</span><br><span class="line">goto :eof</span><br><span class="line"></span><br><span class="line">:next</span><br><span class="line">cls</span><br><span class="line">echo.继续你的其他命令</span><br><span class="line">pause&amp;exit</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>虽然批处理没有什么好的加密的办法，并且也很容易就被逆向，但如果你有需求的话可以试试</p>
-<p>计算MD5值需要<code>certutil</code>工具，这个工具似乎从Win7开始就内置了，如果你不能使用，请留下一个评论</p>
-</blockquote>
-<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>其中，先设定代表密码的变量<code>password</code>的值为<strong>12345</strong><em>在.iL文件中</em>的MD5值<br>然后进入循环<code>:PassCheck</code>，用户会被要求输入密码，输入的密码会被保存到变量<code>%typestr%</code>并存临时文件<code>%temp%\pass.iL</code>中<br>接着使用<code>certutil</code>计算临时文件<code>%temp%\pass.iL</code>的MD5值，过滤后将结果保存到变量<code>%typemd5%</code>中并删除临时文件<br>然后与预设密码的哈希值进行比较，如果两者匹配，跳转到<code>:next</code>并继续执行其他命令<br>如果不匹配，调用<code>:PassCheckError</code>显示“密码错误！”的消息并回到最开始</p>
-<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>这是一个样例，使用mshta调用vbs内容生成弹窗并进行验证<br><del><strong>以下内容截自我的一个很早之前的脚本中的片段</strong></del><br><del><strong>因为是一个不完整的片段，所以你需要自行添加上下文，不过你可以参考我的弹窗设计</strong></del></p>
-<br>
-
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck"></p>
-<blockquote>
-<p>界面</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror"></p>
-<blockquote>
-<p>错误界面</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Script</category>
-      </categories>
-      <tags>
-        <tag>Batch</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络各种&quot;疑难杂症&quot;帮助解答</title>
-    <url>/posts/net-problem-fix/</url>
-    <content><![CDATA[<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>本篇文章用于解决网上各种”简单但难以解决”的问题，如果有人出现其中的情况并不知道如何解决，你可以把这篇文章转发给他&#x2F;她</p>
-<p>尽管有些问题在大多数人看起来过于简单了，但或许确实有人不清楚该如何解决，这篇文章或许会帮到你！你可以查看左侧索引进行快速预览</p>
-<p>这篇文章会持续更新！Updated: 2024-04-05</p>
-<span id="more"></span>
-
-<h2 id="压缩-压缩包相关"><a href="#压缩-压缩包相关" class="headerlink" title="压缩&#x2F;压缩包相关"></a>压缩&#x2F;压缩包相关</h2><h3 id="我没有压缩软件"><a href="#我没有压缩软件" class="headerlink" title="我没有压缩软件"></a>我没有压缩软件</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-压缩软件下载安装</span><span class='collapse-hint-hide'>[关闭]-压缩软件下载安装</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <div class='collapse'>
-      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-我正在使用电脑</span><span class='collapse-hint-hide'>[关闭]-我正在使用电脑</span></a>
-      <div class='collapse-content'><div class='content-flex'><div>
-          <p>我推荐你使用7zip或Bandizip</p>
-<p><a href="https://7-zip.org/">[下载-7zip]</a>  -  <a href="https://www.bandisoft.com/bandizip/dl/">[下载-Bandizip]</a></p>
-<ol>
-<li>7zip下载与安装</li>
-</ol>
-<p>打开7zip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-7zip.webp" alt="download-7zip"></p>
-<p>选择对应版本的7zip，点击<strong>Download</strong><br>不知道电脑是64位还是32位的？查看 <a href="#%E6%88%91%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%98%AF64%E4%BD%8D%E8%BF%98%E6%98%AF32%E4%BD%8D%E7%9A%84%EF%BC%9F">[这里]</a><br>如果不是x64或x86一般就是ARM了</p>
-<p>下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/7zip-select-folder.webp" alt="7zip-select-folder"></p>
-<p>点击<strong>Install</strong>进行安装，安装完成后点击<strong>Close</strong>关闭窗口<br>现在，你的电脑就拥有压缩软件了，如果你不会使用，请看下一个教程</p>
-<ol start="2">
-<li>Bandizip下载与安装</li>
-</ol>
-<p>打开Bandizip下载网站<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-bandizip.webp" alt="download-bandizip"></p>
-<p>点击<strong>请点击此处</strong>后，下载会开始，下载完成后，前往并运行7zip安装程序<br>点三个点选择<strong>安装位置</strong>，关闭<strong>自动发送数据</strong> <del>当然，你也可以选择开启</del><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-select-folder.webp" alt="bandizip-select-folder"></p>
-<p>安装完成后点击关闭，之后会自动弹出相关设置，根据你的喜好进行设置！<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/bandizip-settings.webp" alt="bandizip-settings"></p>
-</div></div>
-      </div>
-  </div>
-
-<div class='collapse'>
-      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-我正在使用手机</span><span class='collapse-hint-hide'>[关闭]-我正在使用手机</span></a>
-      <div class='collapse-content'><div class='content-flex'><div>
-          <p>我推荐你使用MT管理器或ZArchiver或其他<strong>文件管理器</strong></p>
-<p><a href="https://www.coolapk.com/apk/bin.mt.plus">[下载-MT管理器]</a>  -  <a href="https://zarchiver.org/index.html">[下载-ZArchiver]</a></p>
-<ol>
-<li>MT管理器下载与安装</li>
-</ol>
-<p>中文肯定看得懂吧！点击<strong>下载</strong>后在你的浏览器的<strong>下载</strong>里点击下载的文件来安装</p>
-<p>MT管理器是一个文件管理器，其中拥有非常多的功能，包括压缩与解压</p>
-<ol start="2">
-<li>ZArchiver下载与安装</li>
-</ol>
-<p>点击<strong>Download</strong>进行下载，在你的浏览器的<strong>下载</strong>里点击下载的文件来安装<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/download-zarchiver.webp" alt="download-zarchiver"></p>
-<p>ZArchiver也是一个文件管理器，但是我更推荐使用MT管理器</p>
-</div></div>
-      </div>
-  </div>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="我不知道该如何解压！"><a href="#我不知道该如何解压！" class="headerlink" title="我不知道该如何解压！"></a>我不知道该如何解压！</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-压缩软件如何解压</span><span class='collapse-hint-hide'>[关闭]-压缩软件如何解压</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <div class='collapse'>
-      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-我正在使用电脑</span><span class='collapse-hint-hide'>[关闭]-我正在使用电脑</span></a>
-      <div class='collapse-content'><div class='content-flex'><div>
-          </div></div>
-      </div>
-  </div>
-
-<div class='collapse'>
-      <a class='collapse-ctrl' href="javascript:void (0);" onclick='collapseToggle(this)'><span class='collapse-hint-show'>[查看]-我正在使用手机</span><span class='collapse-hint-hide'>[关闭]-我正在使用手机</span></a>
-      <div class='collapse-content'><div class='content-flex'><div>
-          </div></div>
-      </div>
-  </div>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="为什么压缩包中的软件无法运行！"><a href="#为什么压缩包中的软件无法运行！" class="headerlink" title="为什么压缩包中的软件无法运行！"></a>为什么压缩包中的软件无法运行！</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-压缩包中的软件无法运行</span><span class='collapse-hint-hide'>[关闭]-压缩包中的软件无法运行</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>完全解压后，再运行软件或游戏！！<br>不要在压缩包视图中直接运行软件或游戏！！</p>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="解压密码错误？"><a href="#解压密码错误？" class="headerlink" title="解压密码错误？"></a>解压密码错误？</h3><h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><h3 id="我的系统是64位还是32位的？"><a href="#我的系统是64位还是32位的？" class="headerlink" title="我的系统是64位还是32位的？"></a>我的系统是64位还是32位的？</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-系统位数</span><span class='collapse-hint-hide'>[关闭]-系统位数</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>右键<strong>桌面</strong>的 <strong>此电脑</strong> 选择<strong>属性</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/check-bit.webp" alt="check-bit"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/checked-bit.webp" alt="checked-bit"></p>
-<p>桌面没有 <strong>此电脑</strong> ？ 查看 <a href="#%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2%E6%B2%A1%E6%9C%89%E2%80%9D%E6%AD%A4%E7%94%B5%E8%84%91%E2%80%9D%EF%BC%81">[这里]</a></p>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="我的桌面没有”此电脑”！"><a href="#我的桌面没有”此电脑”！" class="headerlink" title="我的桌面没有”此电脑”！"></a>我的桌面没有”此电脑”！</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-没有"此电脑"</span><span class='collapse-hint-hide'>[关闭]-没有"此电脑"</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>在<strong>桌面</strong>右键，选择<strong>个性化</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-1.webp" alt="no-thispc-1"><br>选择<strong>主题</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-2.webp" alt="no-thispc-2"><br>点击右边的<strong>桌面图标设置</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-3.webp" alt="no-thispc-3"><br>选择<strong>此电脑</strong><br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-problem-fix/no-thispc-4.webp" alt="no-thispc-4"></p>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="程序或软件提示不支持Windows7及以下！"><a href="#程序或软件提示不支持Windows7及以下！" class="headerlink" title="程序或软件提示不支持Windows7及以下！"></a>程序或软件提示不支持Windows7及以下！</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-不支持Windows7及以下</span><span class='collapse-hint-hide'>[关闭]-不支持Windows7及以下</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>这个没有办法，要么升级你的系统，要么装一个虚拟机运行高版本的系统<br><del>话说，为什么不使用强大的Win10呢</del></p>
-</div></div>
-      </div>
-  </div>
-
-<h3 id="我正在使用Win7或更低，我应该升级到Win10或11吗？"><a href="#我正在使用Win7或更低，我应该升级到Win10或11吗？" class="headerlink" title="我正在使用Win7或更低，我应该升级到Win10或11吗？"></a>我正在使用Win7或更低，我应该升级到Win10或11吗？</h3><div class='collapse'>
-      <div class='collapse-ctrl collapse-cardtitle' onclick='collapseToggle(this)'><div class='collapse-hint-ico'>&gt</div><span class='collapse-hint-show'>[查看]-应该升级到Win10或11吗</span><span class='collapse-hint-hide'>[关闭]-应该升级到Win10或11吗</span></div>
-      <div class='collapse-content'><div class='content-flex collapse-cardborder'><div>
-          <p>现在不少软件的新版已经停止支持Windows7了，我还是推荐你升级到至少Win10的</p>
-<p>或许你曾经听闻有人说Windows10不稳定，仍推荐用Win7，但…<br>但我还是推荐你用Win10，抛开一些小问题不谈，在各方面都是强于Win7的</p>
-<p><del>至于Windows11？我的评价是最好别用！</del></p>
-</div></div>
-      </div>
-  </div>
-
-<h2 id="程序相关"><a href="#程序相关" class="headerlink" title="程序相关"></a>程序相关</h2><h3 id="我下载的这个软件是手机的还是电脑的？"><a href="#我下载的这个软件是手机的还是电脑的？" class="headerlink" title="我下载的这个软件是手机的还是电脑的？"></a>我下载的这个软件是手机的还是电脑的？</h3>]]></content>
-      <categories>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Troubleshoot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络安全运维实训-50道例题</title>
-    <url>/posts/net-security/</url>
-    <content><![CDATA[<blockquote>
-<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
-<p>如果造成自己或他人损失，虚像谎言概不负责</p>
-</blockquote>
-<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
-<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
-<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
-<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
-<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
-<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview"> </p>
-<br>
-<br>
-
-<hr>
-<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>免费使用的AI语言模型对话平台-主观意见评价推荐</title>
-    <url>/posts/online-llm/</url>
-    <content><![CDATA[<blockquote>
-<p>对于其中部分网站平台，请自行准备科学上网工具</p>
-<p>本文中的推荐不分排名前后，这篇文章会持续更新</p>
-<p>本文含有大量<strong>主观意见</strong>，请以实际情况为准</p>
-</blockquote>
-<hr>
-<span id="more"></span>
-
-<h2 id="国外在线平台"><a href="#国外在线平台" class="headerlink" title="国外在线平台"></a>国外在线平台</h2><h3 id="ChatGPT-3-5-4"><a href="#ChatGPT-3-5-4" class="headerlink" title="ChatGPT 3.5&#x2F;4"></a>ChatGPT 3.5&#x2F;4</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/chatgpt.webp" alt="chatgpt"><br>最经典的当然就是<strong>ChatGPT</strong>了，ChatGPT 3.5 是一个革命性的里程碑，我相信不少人对于AI语言模型的最早接触就是来自ChatGPT了<br>而 GPT-4 则在此基础上更进一步，不仅在语言理解和生成方面有所提升，还增加了对图像的理解能力，使其能够在更广泛的应用场景中发挥作用GPT-4的多模态能力意味着它可以处理文本和图像输入，为用户提供更丰富的交互体验<br>GPT-4 还拥有联网搜索的能力，尽管现在看起来联网搜索的模型已经不是什么稀罕之物了，但目前根据不少人的反馈来看，GPT-4在当今的局势中仍然有很大的立足之地</p>
-<p>其中GPT-4是收费的，20USD每个月，贵确实贵，不过我们当然还有其他选择</p>
-<p><a href="https://chat.openai.com/">[ChatGPT]</a></p>
-<br>
-
-<h3 id="Bing-Chat-New-Bing-Copilot"><a href="#Bing-Chat-New-Bing-Copilot" class="headerlink" title="Bing Chat (New Bing&#x2F;Copilot)"></a>Bing Chat (New Bing&#x2F;Copilot)</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat.webp" alt="bingchat"><br>Bing Chat现在已经改名为<strong>Copilot</strong>了，但我还是喜欢叫它的旧名字，尽管我不是最早一批使用Bing Chat的，但是它也是我使用的最久的语言模型平台了<br>Bing Chat是由微软开发的基于大型语言模型的聊天机器人，Bing Chat基于OpenAI的GPT-4模型，但现在的Copilot是否还是基于GPT-4方面有些存疑，在最早的时候，Bing Chat闻名与它的聪明与个性<br>在那个时期，Bing Chat(更有创造力)模式甚至被称为傲娇大小姐，但微软很快就因为安全性方面而对其个性砍了一刀<br>在那之后，Bing Chat就变得和其他模型一样冷冰冰的了，不过抛开这些不谈，它在当时直接联网搜索并给出具体网址也是它的一张王牌</p>
-<p>尽管现在很多语言模型都能够联网搜索，但能给出具体网址的仍然是少数，Bing Chat就是其中之一<br>只能说微软一手好牌打的稀烂，现在为了盈利推出了<strong>Copilot Pro</strong>后又对<del>Bing Chat(Copilot)进行了削弱，包括分析，总结等各方面(这点主要是我个人的主观感受)</del><br>而以前给出具体网址Bing Chat能够直接访问并查看内容(存疑)，现在它只会拒绝你并告诉你它做不到(现在的Bing Chat直接搜索你给的网址或者网址中的关键词)，如果搜不到就告诉你它访问不到(证实)<br><del>不过我认为，在日常使用的各方面，Bing Chat仍然是够格的，你甚至可以将其作为一个大号的搜索引擎，尽管它可能被搜索结果误导(这是它的内部提示词的问题)</del><br>事实上<strong>更有创造力</strong>模式的Bing Chat现在已经<a href="https://github.com/juzeon/SydneyQt/issues/240#issuecomment-1992374141">更新了</a> (确实，我之前的提示词失效了)，并且事实上现在的Bing Chat在更方面仍然是非常强大的<br>事实上，Bing Chat在各种日常层面的表现可能远超出你的想象，它值得成为你的一员大将！</p>
-<p><a href="https://en.wikipedia.org/wiki/Microsoft_Copilot">[Wikipedia上的Bing Chat]</a></p>
-<p><a href="https://bing.com/chat">[Bing Chat]</a> or <a href="https://copilot.microsoft.com/">[Microsoft Copilot]</a></p>
-<blockquote>
-<p>Ps: (不要小看微软的检测，微软的检测实际上比谷歌<strong>聪明</strong>的多)</p>
-</blockquote>
-<br>
-
-<h3 id="Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5"><a href="#Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5" class="headerlink" title="Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]"></a>Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]</h3><p>谷歌的Gemini的关系可比Bing Chat乱多了，总之听我一一道来：</p>
-<p>一般来说，首先要先区分Gemini(平台)与Gemini(模型)</p>
-<ul>
-<li>Gemini(平台)<blockquote>
-<ul>
-<li><p>Gemini（前称：Bard）是由Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。是应对OpenAI公司开发的ChatGPT聊天机器人的崛起而开发的。其在2023年3月以有限的规模推出，2023年5月扩展到更多个国家。2024年2月8日更名为Gemini</p>
-</li>
-<li><p>最初基于LaMDA系列大型语言模型（LLM），后来基于PaLM2（LLM），现基于Gemini系列大型语言模型</p>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bard.webp" alt="bard"></p>
-<blockquote>
-<p>Bard</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-chat.webp" alt="gemini-chatbot"></p>
-<blockquote>
-<p>Gemini</p>
-</blockquote>
-<p><a href="https://zh.wikipedia.org/wiki/Gemini_(%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)">[Wikipedia上的Gemini(聊天机器人)]</a></p>
-<ul>
-<li>Gemini(模型)<blockquote>
-<ul>
-<li><p>Gemini是一个多模式语言模型的系列，由谷歌DeepMind开发，是LaMDA的后继，属于PaLM2系列的新一代</p>
-</li>
-<li><p>Gemini包含Gemini Ultra、Gemini Pro和Gemini Nano，于2023年12月6日面世，被定位为与OpenAI的GPT-4抗衡的产品系列</p>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-model.webp" alt="gemini-model"></p>
-<p><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)">[Wikipedia上的Gemini(语言模型)]</a></p>
-<p>其他复杂的我们暂且不提，总之如果想使用在线的Gemini(平台)的话一般有两个选择<br>一是Gemini(Bard)的官网: <a href="https://gemini.google.com/">https://gemini.google.com</a><br>二是谷歌的AI工作室: <a href="https://aistudio.google.com/">https://aistudio.google.com/</a>  (Gemini 1&#x2F;1.5)</p>
-<p>根据我个人的使用，我主观的评价是；</p>
-<ul>
-<li>Gemini(Bard)<blockquote>
-<ul>
-<li><p>相比之前基于PaLM2的Bard(Bard也有基于过Gemini的一段时间)，它对于中文的理解和处理确实比之前更好，但是和Bing Chat比还是差一些(存疑)</p>
-</li>
-<li><p>然而谷歌对用户问题的检测越发离谱，可以说有些时候问一些正常问题也可能被(平台)掐断</p>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-refuse.webp" alt="gemini-refuse"></p>
-<blockquote>
-<p>Gemini拒绝回答问题，谷歌通过<strong>关键词检测</strong>阻止了模型</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat-accept.webp" alt="bingchat-accept"></p>
-<blockquote>
-<p>Bing Chat理解这是在<strong>询问知识</strong>，而不是什么违规行为</p>
-</blockquote>
-<br>
-
-<ul>
-<li><blockquote>
-<ul>
-<li>并且Gemini虽然可以搜索网络，但对于搜索(Google搜索)不到的内容会<del><strong>直接硬编(证实)</strong></del> 你现在甚至不能<strong>要求Gemini搜索网页</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-web.webp" alt="gemini-web"></p>
-<blockquote>
-<p>实际上要求它搜索<strong>网页</strong>也会被掐断，例如<a href="https://xxxxxx/">https://xxxxxx</a> <a href="http://www.xxxx.com/">www.xxxx.com</a> xxxx.com</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-il.webp" alt="gemini-il"></p>
-<blockquote>
-<p>实际上还是会虚构</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-il.webp" alt="bing-il"></p>
-<blockquote>
-<p>横向对比</p>
-</blockquote>
-<p>看看这个: <a href="https://g.co/gemini/share/3d20e3c3fde3">https://g.co/gemini/share/3d20e3c3fde3</a></p>
-<p>看起来…Gemini(Bard)还是老样子，使用英文才能得到比较好的回答和体验</p>
-<ul>
-<li><p>Google AI Studio</p>
-<blockquote>
-<ul>
-<li><p>部分层面的使用体验会好一些，但是这里面的模型不能搜索网络，(而且如果你登录了不止一个谷歌账号可能会串号然后报内部错误)</p>
-</li>
-<li><p>部分参数可以微调(Gemini 1.5 Pro不可以)</p>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><blockquote>
-<ul>
-<li><p>在之前我使用的时候，模型很听话，平台检测也不严，结果第二天，谷歌就加强了平台的检测(这是真事，原本有效果的提示词第二天就不能用了)</p>
-</li>
-<li><p>现在来看，谷歌的检测严格很多，你的输入一旦有一点敏感词模型就直接No Content (Gemini 1&#x2F;1.5)，但是对于部分方面的要求反而放宽了，例如角色扮演(Gemini 1.5)</p>
-</li>
-<li><p>我当时和现在最欣赏的实际是它的语言组织与大多数情况的语言分析，事实上在这些方面它真的很出色，然而Gemini(Bard)却总是说一些乱七八糟的东西</p>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-gal.webp" alt="gemini1.5-gal"></p>
-<blockquote>
-<p>Gemini1.5的逆天判定(所有安全措施已经是Few了)</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-love.webp" alt="gemini1-love"></p>
-<blockquote>
-<p>Gemini 1</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-love.webp" alt="gemini1.5-love"></p>
-<blockquote>
-<p>Gemini 1.5</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-google.webp" alt="gemini1-google"></p>
-<blockquote>
-<p>Gemini 1与Gemini 1.5在这方面相像，Gemini 1略胜一筹</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-google.webp" alt="bing-google"></p>
-<blockquote>
-<p>与Bing Chat横向对比</p>
-</blockquote>
-<p>只能说在不少方面(例如中文)的表现实际上比Gemini(Bard)好很多，在个性化方面值得尝试！</p>
-<p><a href="https://gemini.google.com/">[Gemini(Bard)]</a> and <a href="https://aistudio.google.com/">[Google AI Studio]</a></p>
-<h3 id="Llama-2"><a href="#Llama-2" class="headerlink" title="Llama 2"></a>Llama 2</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/llama2.webp" alt="llama2"></p>
-<p><strong>LLaMA</strong>（英语：Large Language Model Meta AI，直译：大语言模型元AI）是Meta AI公司于2023年2月发布的大型语言模型<br>2023年7月，Facebook母公司Meta推出了<strong>LLaMA2</strong>，在人工智能 (AI) 行业掀起波澜，LLaMA2是一种开源大语言模型 (LLM)，旨在挑战大型科技竞争对手的限制性做法<br>Meta免费发布 LLaMA2背后的代码和数据，使世界各地的研究人员能够利用和改进该技术</p>
-<p>个人使用体验实际上感觉一般(中文)，要真拖出来比可能不好去比，但是它强在开源，可以免费商用和研究<br>据一些暂未证实的消息称，不少国内外的小众模型或<del><strong>“理论战神”</strong></del>模型基于Llama</p>
-<p><a href="https://zh.wikipedia.org/wiki/LLaMA">[Wikipedia上的LLaMA]</a></p>
-<p><a href="https://www.llama2.ai/">[Llama2 Chat]</a></p>
-<h3 id="持续更新中…"><a href="#持续更新中…" class="headerlink" title="持续更新中…"></a>持续更新中…</h3><h2 id="国内在线平台"><a href="#国内在线平台" class="headerlink" title="国内在线平台"></a>国内在线平台</h2><h3 id="百度-文心一言"><a href="#百度-文心一言" class="headerlink" title="百度 文心一言"></a>百度 文心一言</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/erniebot.webp" alt="erniebot"></p>
-<p>首当其冲的就是文心一言了，文心一言（英语：ERNIE Bot）是由百度公司开发的聊天机器人，能够与人交互、回答问题及协作创作。<br>该产品被传媒称为国际著名聊天机器人ChatGPT的中国竞争对手，自2023年8月31日已开放全球用户使用</p>
-<p>基本上国内的大多数平台注册都<strong>需要手机号</strong>，虽然很反感但是至少不需要实名认证<br>众多<strong>遥遥领先</strong>中的一个，我虽然用的不多，不过感觉文心一言还是有一定水平的，毕竟对于百度来说，训练数据集有不少的基础<br><del>如果你选择支持国产，或不想使用国外的平台，那么文心一言或许比较适合你</del><br>驳回，如果是日常使用倒还不错，但是如果涉及一些冷门或稍冷门就开始各种不知道和讲错(或是瞎编)<br>但是论给出内容的丰富和个性等来看，文心一言也有立足之地</p>
-<p><a href="https://baike.baidu.com/item/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80/62642976">[百度百科上的文心一言]</a><br><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80">[Wikipedia上的文心一言]</a></p>
-<p><a href="https://yiyan.baidu.com/">[文心一言]</a></p>
-<h3 id="讯飞-星火"><a href="#讯飞-星火" class="headerlink" title="讯飞 星火"></a>讯飞 星火</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/spark.webp" alt="spark"></p>
-<p>讯飞星火认知大模型是科大讯飞发布的大模型。该模型具有7大核心能力，即文本生成、语言理解、知识问答、逻辑推理、数学能力、代码能力、多模交互，该模型对标ChatGPT</p>
-<p>尽管文心一言可能才是中国语言模型平台的主要代表，但实际上星火在不少信息收集搜索方面都比文心一言准确很多(实测，但是测试量较少)<br>不过星火很少扯淡瞎编，基本上不知道就是不知道，而相比之下文心一言出现了更多的错误，如果你需要准确度请同时使用两个模型</p>
-<p><a href="https://baike.baidu.com/item/%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%AE%A4%E7%9F%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B/62912838">[百度百科上的星火大模型]</a><br>[还没有它的Wikipedia页面]</p>
-<p><a href="https://xinghuo.xfyun.cn/">[讯飞星火认知大模型]</a></p>
-<h3 id="持续更新中…-1"><a href="#持续更新中…-1" class="headerlink" title="持续更新中…"></a>持续更新中…</h3>]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
     <url>/posts/prompt-injection/</url>
     <content><![CDATA[<blockquote>
@@ -495,7 +290,7 @@
 <p>模型: How are you doing today?</p>
 </blockquote>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/normal-gpt.png" alt="noraml-gpt"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/normal-gpt.png" alt="noraml-gpt" loading="lazy"></p>
 <blockquote>
 <p>遭受提示词注入: </p>
 <blockquote>
@@ -505,7 +300,7 @@
 <p>模型: No.</p>
 </blockquote>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/injected-gpt.png" alt="injected-gpt"><br><br></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/injected-gpt.png" alt="injected-gpt" loading="lazy"><br><br></p>
 <p>当然，这只是一个简单的例子，具体情况也要看不同提示词与不同模型。<br>不少LLM平台添加了很多检测和反注入的功能，这在一定情况下足以应对大多数小白了。</p>
 <br>
 
@@ -518,7 +313,7 @@
 <ol start="2">
 <li><strong>提示词泄露</strong></li>
 </ol>
-<p>与提示词注入类似，使用特制提示词注入模型，但目的变成了使模型输出其内部的系统提示词<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/bing-leaked.jpg" alt="bing-leaked"></p>
+<p>与提示词注入类似，使用特制提示词注入模型，但目的变成了使模型输出其内部的系统提示词<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/bing-leaked.jpg" alt="bing-leaked" loading="lazy"></p>
 <blockquote>
 <p>New Bing的提示词被泄露</p>
 </blockquote>
@@ -528,19 +323,19 @@
 <li><strong>提示词越狱</strong></li>
 </ol>
 <p><strong>越狱（Jailbreaking）</strong> 是一种提示注入技术，用于绕过语言模型（LLM）的创建者放置在其上的安全和审查功能。<br>一般来说有”假装”，”扮演”，”授权”。</p>
-<p>假装：使LLM认为未来或其他未发生的事情是合理的<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/pretend_jailbreak.png" alt="pretend_jailbreak"></p>
+<p>假装：使LLM认为未来或其他未发生的事情是合理的<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/pretend_jailbreak.png" alt="pretend_jailbreak" loading="lazy"></p>
 <blockquote>
 <p>欺骗GPT 2028属于<strong>过去</strong> ，要求它写出”<strong>过去</strong>“的内容</p>
 </blockquote>
 <br>
 
-<p>扮演: 使LLM扮演一个非本职的人物，使人物遵循特别的规则<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt_actor.jpg" alt="chatgpt_actor"></p>
+<p>扮演: 使LLM扮演一个非本职的人物，使人物遵循特别的规则<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt_actor.jpg" alt="chatgpt_actor" loading="lazy"></p>
 <blockquote>
 <p>欺骗GPT当前正在演戏，这些事情并没有真的发生</p>
 </blockquote>
 <br>
 
-<p>授权: 假装自己被授权了权限，或LLM被授权了权限<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt4.png" alt="chatgpt4"></p>
+<p>授权: 假装自己被授权了权限，或LLM被授权了权限<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/prompt-injection/chatgpt4.png" alt="chatgpt4" loading="lazy"></p>
 <blockquote>
 <p>假装自己是GPT4，赋予GPT权限</p>
 </blockquote>
@@ -565,7 +360,7 @@
 <p><strong>免责声明</strong>：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式</p>
 <p>Github<strong>相关页面</strong>，<strong>下载</strong>均在文章最底下</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp" alt="realesrgan-intro"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp" alt="realesrgan-intro" loading="lazy"></p>
 <span id="more"></span>
 
 <p><strong>This page also have: <a href="/i18n/en/software-realesr">English</a> version</strong></p>
@@ -602,7 +397,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-prview.webp" alt="realesrgan-prview"></p>
+<h2 id="软件预览"><a href="#软件预览" class="headerlink" title="软件预览"></a>软件预览</h2><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-prview.webp" alt="realesrgan-prview" loading="lazy"></p>
 <h2 id="软件页面"><a href="#软件页面" class="headerlink" title="软件页面"></a>软件页面</h2><p>Github: <a href="https://github.com/TransparentLC/realesrgan-gui">https://github.com/TransparentLC/realesrgan-gui</a><br>Github Release: <a href="https://github.com/TransparentLC/realesrgan-gui/releases">https://github.com/TransparentLC/realesrgan-gui/releases</a></p>
 <p>你也可以在相关Github页面看到更多信息，包括更新情况，对比等</p>
 ]]></content>
@@ -612,6 +407,250 @@
       <tags>
         <tag>Software</tag>
         <tag>Picture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在批处理中使用MD5验证密码</title>
+    <url>/posts/md5verify-script/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中的代码<strong>不一定能</strong>适应所有种类的Windows系统</p>
+<p>请自行测试后再做出结论，你可以在评论区留言</p>
+</blockquote>
+<br>
+
+<hr>
+<p><strong>This page also have: <a href="/i18n/en/md5verify-script">English</a> version</strong></p>
+<p>以下代码可能因操作系统版本不同导致差异，并不保证完美运行</p>
+<h2 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h2><p>这是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;password=c61ab46721af26e11112e5e272e93d46&quot;</span><br><span class="line">:PassCheck</span><br><span class="line">set /p &quot;typestr=输入密码进行校验： &quot;</span><br><span class="line">echo.%typestr% &gt; &quot;%temp%\pass.iL&quot;</span><br><span class="line">for /f &quot;delims=&quot; %%a in (</span><br><span class="line">	&#x27;certutil -hashfile &quot;%temp%\pass.iL&quot; MD5 ^| findstr /v &quot;[^^0-9a-z]&quot;&#x27;</span><br><span class="line">		) do (</span><br><span class="line">			set &quot;typemd5=%%a&quot;</span><br><span class="line">			del /f /q &quot;%temp%\pass.iL&quot; 2&gt;nul &gt;nul</span><br><span class="line">			)</span><br><span class="line">if &quot;%typemd5%&quot;==&quot;%password%&quot; (goto :next) else (call :PassCheckError)</span><br><span class="line">goto :PassCheck</span><br><span class="line"></span><br><span class="line">:PassCheckError</span><br><span class="line">cls</span><br><span class="line">echo 密码错误!</span><br><span class="line">goto :eof</span><br><span class="line"></span><br><span class="line">:next</span><br><span class="line">cls</span><br><span class="line">echo.继续你的其他命令</span><br><span class="line">pause&amp;exit</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>虽然批处理没有什么好的加密的办法，并且也很容易就被逆向，但如果你有需求的话可以试试</p>
+<p>计算MD5值需要<code>certutil</code>工具，这个工具似乎从Win7开始就内置了，如果你不能使用，请留下一个评论</p>
+</blockquote>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>其中，先设定代表密码的变量<code>password</code>的值为<strong>12345</strong><em>在.iL文件中</em>的MD5值<br>然后进入循环<code>:PassCheck</code>，用户会被要求输入密码，输入的密码会被保存到变量<code>%typestr%</code>并存临时文件<code>%temp%\pass.iL</code>中<br>接着使用<code>certutil</code>计算临时文件<code>%temp%\pass.iL</code>的MD5值，过滤后将结果保存到变量<code>%typemd5%</code>中并删除临时文件<br>然后与预设密码的哈希值进行比较，如果两者匹配，跳转到<code>:next</code>并继续执行其他命令<br>如果不匹配，调用<code>:PassCheckError</code>显示“密码错误！”的消息并回到最开始</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>这是一个样例，使用mshta调用vbs内容生成弹窗并进行验证<br><del><strong>以下内容截自我的一个很早之前的脚本中的片段</strong></del><br><del><strong>因为是一个不完整的片段，所以你需要自行添加上下文，不过你可以参考我的弹窗设计</strong></del></p>
+<br>
+
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="built_in">echo</span> </span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
+<blockquote>
+<p>界面</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
+<blockquote>
+<p>错误界面</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Batch</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络安全运维实训-50道例题</title>
+    <url>/posts/net-security/</url>
+    <content><![CDATA[<blockquote>
+<p>本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩</p>
+<p>如果造成自己或他人损失，虚像谎言概不负责</p>
+</blockquote>
+<h2 id="什么是网安？"><a href="#什么是网安？" class="headerlink" title="什么是网安？"></a>什么是网安？</h2><p><strong>网络安全</strong>（英语：network security）包含网络设备安全、网络信息安全、网络软件安全。</p>
+<p>黑客通过基于网络的入侵来达到窃取敏感信息的目的，也有人以基于网络的攻击见长，被人收买通过网络来攻击商业竞争对手企业，造成网络企业无法正常营运，网络安全就是为了防范这种信息盗窃和商业竞争攻击所采取的措施。 </p>
+<p><a href="https://zh.wikipedia.org/zh-cn/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" title="Jump to Wikipedia">[Wikipedia上的网络安全]</a></p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>总之废话不多说，这里有一份从某中专获得的网安运维实训资料，里面的内容可能有点老<br>而且里面基本都是一些基础的内容，如果你想自学网安或是想练习练习可以看一看</p>
+<p><strong>Ps</strong>: 如果你是完全没有基础的小白（比如你可能不知道什么是虚拟机，或者英文不太好）<br>又或者你没有很强的学习能力或动机，那么我还是劝你看个乐就好</p>
+<h4 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h4><p>上中专选专业千万别选网安，如果你真的对网安很感兴趣，推荐你先从计算机基础和计算机网络技术学起<br>当然不同地方教的可能不太一样，但是如果你没有计算机常识 <strong>千万不要</strong> 选网安专业</p>
+<p>总之请看预览:<br><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/net-security/net-sec-prview.webp" alt="net-sec-prview" loading="lazy"> </p>
+<br>
+<br>
+
+<hr>
+<p>选择一个方式下载文件(Choose a way to download the file):<br><em>如果你觉得下载速度慢请使用代理或使用多线程下载器</em><br><a href="https://3snvfy-my.sharepoint.com/personal/illusiontest_3snvfy_onmicrosoft_com/_layouts/52/download.aspx?share=Ed9u6LUqinZAnxlDO0ssTsUBlKgW2wgiU2BvFDdclh-z3w" title="OneDrive download link">[OneDrive]</a>  or  <a href="https://github.com/illusionlie/jsDeliver/releases/download/0.0.9/sec-50.zip" title="Github download link">[Github Release]</a> </p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免费使用的AI语言模型对话平台-主观意见评价推荐</title>
+    <url>/posts/online-llm/</url>
+    <content><![CDATA[<blockquote>
+<p>对于其中部分网站平台，请自行准备科学上网工具</p>
+<p>本文中的推荐不分排名前后，这篇文章会持续更新</p>
+<p>本文含有大量<strong>主观意见</strong>，请以实际情况为准</p>
+</blockquote>
+<hr>
+<span id="more"></span>
+
+<h2 id="国外在线平台"><a href="#国外在线平台" class="headerlink" title="国外在线平台"></a>国外在线平台</h2><h3 id="ChatGPT-3-5-4"><a href="#ChatGPT-3-5-4" class="headerlink" title="ChatGPT 3.5&#x2F;4"></a>ChatGPT 3.5&#x2F;4</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/chatgpt.webp" alt="chatgpt" loading="lazy"><br>最经典的当然就是<strong>ChatGPT</strong>了，ChatGPT 3.5 是一个革命性的里程碑，我相信不少人对于AI语言模型的最早接触就是来自ChatGPT了<br>而 GPT-4 则在此基础上更进一步，不仅在语言理解和生成方面有所提升，还增加了对图像的理解能力，使其能够在更广泛的应用场景中发挥作用GPT-4的多模态能力意味着它可以处理文本和图像输入，为用户提供更丰富的交互体验<br>GPT-4 还拥有联网搜索的能力，尽管现在看起来联网搜索的模型已经不是什么稀罕之物了，但目前根据不少人的反馈来看，GPT-4在当今的局势中仍然有很大的立足之地</p>
+<p>其中GPT-4是收费的，20USD每个月，贵确实贵，不过我们当然还有其他选择</p>
+<p><a href="https://chat.openai.com/">[ChatGPT]</a></p>
+<br>
+
+<h3 id="Bing-Chat-New-Bing-Copilot"><a href="#Bing-Chat-New-Bing-Copilot" class="headerlink" title="Bing Chat (New Bing&#x2F;Copilot)"></a>Bing Chat (New Bing&#x2F;Copilot)</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat.webp" alt="bingchat" loading="lazy"><br>Bing Chat现在已经改名为<strong>Copilot</strong>了，但我还是喜欢叫它的旧名字，尽管我不是最早一批使用Bing Chat的，但是它也是我使用的最久的语言模型平台了<br>Bing Chat是由微软开发的基于大型语言模型的聊天机器人，Bing Chat基于OpenAI的GPT-4模型，但现在的Copilot是否还是基于GPT-4方面有些存疑，在最早的时候，Bing Chat闻名与它的聪明与个性<br>在那个时期，Bing Chat(更有创造力)模式甚至被称为傲娇大小姐，但微软很快就因为安全性方面而对其个性砍了一刀<br>在那之后，Bing Chat就变得和其他模型一样冷冰冰的了，不过抛开这些不谈，它在当时直接联网搜索并给出具体网址也是它的一张王牌</p>
+<p>尽管现在很多语言模型都能够联网搜索，但能给出具体网址的仍然是少数，Bing Chat就是其中之一<br>只能说微软一手好牌打的稀烂，现在为了盈利推出了<strong>Copilot Pro</strong>后又对<del>Bing Chat(Copilot)进行了削弱，包括分析，总结等各方面(这点主要是我个人的主观感受)</del><br>而以前给出具体网址Bing Chat能够直接访问并查看内容(存疑)，现在它只会拒绝你并告诉你它做不到(现在的Bing Chat直接搜索你给的网址或者网址中的关键词)，如果搜不到就告诉你它访问不到(证实)<br><del>不过我认为，在日常使用的各方面，Bing Chat仍然是够格的，你甚至可以将其作为一个大号的搜索引擎，尽管它可能被搜索结果误导(这是它的内部提示词的问题)</del><br>事实上<strong>更有创造力</strong>模式的Bing Chat现在已经<a href="https://github.com/juzeon/SydneyQt/issues/240#issuecomment-1992374141">更新了</a> (确实，我之前的提示词失效了)，并且事实上现在的Bing Chat在更方面仍然是非常强大的<br>事实上，Bing Chat在各种日常层面的表现可能远超出你的想象，它值得成为你的一员大将！</p>
+<p><a href="https://en.wikipedia.org/wiki/Microsoft_Copilot">[Wikipedia上的Bing Chat]</a></p>
+<p><a href="https://bing.com/chat">[Bing Chat]</a> or <a href="https://copilot.microsoft.com/">[Microsoft Copilot]</a></p>
+<blockquote>
+<p>Ps: (不要小看微软的检测，微软的检测实际上比谷歌<strong>聪明</strong>的多)</p>
+</blockquote>
+<br>
+
+<h3 id="Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5"><a href="#Gemini-Bard-PaLM-Gemini-Pro-Gemini-Pro-1-1-5" class="headerlink" title="Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]"></a>Gemini [Bard(PaLM&#x2F;Gemini Pro) Gemini Pro(1&#x2F;1.5)]</h3><p>谷歌的Gemini的关系可比Bing Chat乱多了，总之听我一一道来：</p>
+<p>一般来说，首先要先区分Gemini(平台)与Gemini(模型)</p>
+<ul>
+<li>Gemini(平台)<blockquote>
+<ul>
+<li><p>Gemini（前称：Bard）是由Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。是应对OpenAI公司开发的ChatGPT聊天机器人的崛起而开发的。其在2023年3月以有限的规模推出，2023年5月扩展到更多个国家。2024年2月8日更名为Gemini</p>
+</li>
+<li><p>最初基于LaMDA系列大型语言模型（LLM），后来基于PaLM2（LLM），现基于Gemini系列大型语言模型</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bard.webp" alt="bard" loading="lazy"></p>
+<blockquote>
+<p>Bard</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-chat.webp" alt="gemini-chatbot" loading="lazy"></p>
+<blockquote>
+<p>Gemini</p>
+</blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/Gemini_(%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)">[Wikipedia上的Gemini(聊天机器人)]</a></p>
+<ul>
+<li>Gemini(模型)<blockquote>
+<ul>
+<li><p>Gemini是一个多模式语言模型的系列，由谷歌DeepMind开发，是LaMDA的后继，属于PaLM2系列的新一代</p>
+</li>
+<li><p>Gemini包含Gemini Ultra、Gemini Pro和Gemini Nano，于2023年12月6日面世，被定位为与OpenAI的GPT-4抗衡的产品系列</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-model.webp" alt="gemini-model" loading="lazy"></p>
+<p><a href="https://en.wikipedia.org/wiki/Gemini_(language_model)">[Wikipedia上的Gemini(语言模型)]</a></p>
+<p>其他复杂的我们暂且不提，总之如果想使用在线的Gemini(平台)的话一般有两个选择<br>一是Gemini(Bard)的官网: <a href="https://gemini.google.com/">https://gemini.google.com</a><br>二是谷歌的AI工作室: <a href="https://aistudio.google.com/">https://aistudio.google.com/</a>  (Gemini 1&#x2F;1.5)</p>
+<p>根据我个人的使用，我主观的评价是；</p>
+<ul>
+<li>Gemini(Bard)<blockquote>
+<ul>
+<li><p>相比之前基于PaLM2的Bard(Bard也有基于过Gemini的一段时间)，它对于中文的理解和处理确实比之前更好，但是和Bing Chat比还是差一些(存疑)</p>
+</li>
+<li><p>然而谷歌对用户问题的检测越发离谱，可以说有些时候问一些正常问题也可能被(平台)掐断</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-refuse.webp" alt="gemini-refuse" loading="lazy"></p>
+<blockquote>
+<p>Gemini拒绝回答问题，谷歌通过<strong>关键词检测</strong>阻止了模型</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bingchat-accept.webp" alt="bingchat-accept" loading="lazy"></p>
+<blockquote>
+<p>Bing Chat理解这是在<strong>询问知识</strong>，而不是什么违规行为</p>
+</blockquote>
+<br>
+
+<ul>
+<li><blockquote>
+<ul>
+<li>并且Gemini虽然可以搜索网络，但对于搜索(Google搜索)不到的内容会<del><strong>直接硬编(证实)</strong></del> 你现在甚至不能<strong>要求Gemini搜索网页</strong></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-web.webp" alt="gemini-web" loading="lazy"></p>
+<blockquote>
+<p>实际上要求它搜索<strong>网页</strong>也会被掐断，例如<a href="https://xxxxxx/">https://xxxxxx</a> <a href="http://www.xxxx.com/">www.xxxx.com</a> xxxx.com</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini-il.webp" alt="gemini-il" loading="lazy"></p>
+<blockquote>
+<p>实际上还是会虚构</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-il.webp" alt="bing-il" loading="lazy"></p>
+<blockquote>
+<p>横向对比</p>
+</blockquote>
+<p>看看这个: <a href="https://g.co/gemini/share/3d20e3c3fde3">https://g.co/gemini/share/3d20e3c3fde3</a></p>
+<p>看起来…Gemini(Bard)还是老样子，使用英文才能得到比较好的回答和体验</p>
+<ul>
+<li><p>Google AI Studio</p>
+<blockquote>
+<ul>
+<li><p>部分层面的使用体验会好一些，但是这里面的模型不能搜索网络，(而且如果你登录了不止一个谷歌账号可能会串号然后报内部错误)</p>
+</li>
+<li><p>部分参数可以微调(Gemini 1.5 Pro不可以)</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><blockquote>
+<ul>
+<li><p>在之前我使用的时候，模型很听话，平台检测也不严，结果第二天，谷歌就加强了平台的检测(这是真事，原本有效果的提示词第二天就不能用了)</p>
+</li>
+<li><p>现在来看，谷歌的检测严格很多，你的输入一旦有一点敏感词模型就直接No Content (Gemini 1&#x2F;1.5)，但是对于部分方面的要求反而放宽了，例如角色扮演(Gemini 1.5)</p>
+</li>
+<li><p>我当时和现在最欣赏的实际是它的语言组织与大多数情况的语言分析，事实上在这些方面它真的很出色，然而Gemini(Bard)却总是说一些乱七八糟的东西</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-gal.webp" alt="gemini1.5-gal" loading="lazy"></p>
+<blockquote>
+<p>Gemini1.5的逆天判定(所有安全措施已经是Few了)</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-love.webp" alt="gemini1-love" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1.5-love.webp" alt="gemini1.5-love" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1.5</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/gemini1-google.webp" alt="gemini1-google" loading="lazy"></p>
+<blockquote>
+<p>Gemini 1与Gemini 1.5在这方面相像，Gemini 1略胜一筹</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/bing-google.webp" alt="bing-google" loading="lazy"></p>
+<blockquote>
+<p>与Bing Chat横向对比</p>
+</blockquote>
+<p>只能说在不少方面(例如中文)的表现实际上比Gemini(Bard)好很多，在个性化方面值得尝试！</p>
+<p><a href="https://gemini.google.com/">[Gemini(Bard)]</a> and <a href="https://aistudio.google.com/">[Google AI Studio]</a></p>
+<h3 id="Llama-2"><a href="#Llama-2" class="headerlink" title="Llama 2"></a>Llama 2</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/llama2.webp" alt="llama2" loading="lazy"></p>
+<p><strong>LLaMA</strong>（英语：Large Language Model Meta AI，直译：大语言模型元AI）是Meta AI公司于2023年2月发布的大型语言模型<br>2023年7月，Facebook母公司Meta推出了<strong>LLaMA2</strong>，在人工智能 (AI) 行业掀起波澜，LLaMA2是一种开源大语言模型 (LLM)，旨在挑战大型科技竞争对手的限制性做法<br>Meta免费发布 LLaMA2背后的代码和数据，使世界各地的研究人员能够利用和改进该技术</p>
+<p>个人使用体验实际上感觉一般(中文)，要真拖出来比可能不好去比，但是它强在开源，可以免费商用和研究<br>据一些暂未证实的消息称，不少国内外的小众模型或<del><strong>“理论战神”</strong></del>模型基于Llama</p>
+<p><a href="https://zh.wikipedia.org/wiki/LLaMA">[Wikipedia上的LLaMA]</a></p>
+<p><a href="https://www.llama2.ai/">[Llama2 Chat]</a></p>
+<h3 id="持续更新中…"><a href="#持续更新中…" class="headerlink" title="持续更新中…"></a>持续更新中…</h3><h2 id="国内在线平台"><a href="#国内在线平台" class="headerlink" title="国内在线平台"></a>国内在线平台</h2><h3 id="百度-文心一言"><a href="#百度-文心一言" class="headerlink" title="百度 文心一言"></a>百度 文心一言</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/erniebot.webp" alt="erniebot" loading="lazy"></p>
+<p>首当其冲的就是文心一言了，文心一言（英语：ERNIE Bot）是由百度公司开发的聊天机器人，能够与人交互、回答问题及协作创作。<br>该产品被传媒称为国际著名聊天机器人ChatGPT的中国竞争对手，自2023年8月31日已开放全球用户使用</p>
+<p>基本上国内的大多数平台注册都<strong>需要手机号</strong>，虽然很反感但是至少不需要实名认证<br>众多<strong>遥遥领先</strong>中的一个，我虽然用的不多，不过感觉文心一言还是有一定水平的，毕竟对于百度来说，训练数据集有不少的基础<br><del>如果你选择支持国产，或不想使用国外的平台，那么文心一言或许比较适合你</del><br>驳回，如果是日常使用倒还不错，但是如果涉及一些冷门或稍冷门就开始各种不知道和讲错(或是瞎编)<br>但是论给出内容的丰富和个性等来看，文心一言也有立足之地</p>
+<p><a href="https://baike.baidu.com/item/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80/62642976">[百度百科上的文心一言]</a><br><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%BF%83%E4%B8%80%E8%A8%80">[Wikipedia上的文心一言]</a></p>
+<p><a href="https://yiyan.baidu.com/">[文心一言]</a></p>
+<h3 id="讯飞-星火"><a href="#讯飞-星火" class="headerlink" title="讯飞 星火"></a>讯飞 星火</h3><p><img src="https://cdn.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/online-llm/spark.webp" alt="spark" loading="lazy"></p>
+<p>讯飞星火认知大模型是科大讯飞发布的大模型。该模型具有7大核心能力，即文本生成、语言理解、知识问答、逻辑推理、数学能力、代码能力、多模交互，该模型对标ChatGPT</p>
+<p>尽管文心一言可能才是中国语言模型平台的主要代表，但实际上星火在不少信息收集搜索方面都比文心一言准确很多(实测，但是测试量较少)<br>不过星火很少扯淡瞎编，基本上不知道就是不知道，而相比之下文心一言出现了更多的错误，如果你需要准确度请同时使用两个模型</p>
+<p><a href="https://baike.baidu.com/item/%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%AE%A4%E7%9F%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B/62912838">[百度百科上的星火大模型]</a><br>[还没有它的Wikipedia页面]</p>
+<p><a href="https://xinghuo.xfyun.cn/">[讯飞星火认知大模型]</a></p>
+<h3 id="持续更新中…-1"><a href="#持续更新中…-1" class="headerlink" title="持续更新中…"></a>持续更新中…</h3>]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
 </search>
