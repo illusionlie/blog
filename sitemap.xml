@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://illusionlie.github.io/sentences/teamtsf.json</loc>
+    <loc>https://illusionlie.github.io/blog/.github/workflows/deploy.json</loc>
     
-    <lastmod>2024-05-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/site-portableapps/</loc>
-    
-    <lastmod>2024-05-27</lastmod>
+    <lastmod>2024-07-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/comment/index.html</loc>
+    <loc>https://illusionlie.github.io/blog/sentences/teamtsf.json</loc>
+    
+    <lastmod>2024-06-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://illusionlie.github.io/blog/comment/index.html</loc>
     
     <lastmod>2024-04-25</lastmod>
     
@@ -29,25 +29,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/posts/net-problem-fix/</loc>
-    
-    <lastmod>2024-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/online-llm/</loc>
-    
-    <lastmod>2024-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/md5verify-script/</loc>
+    <loc>https://illusionlie.github.io/blog/posts/md5verify-script/</loc>
     
     <lastmod>2024-03-29</lastmod>
     
@@ -56,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/posts/date-calculate-script/</loc>
+    <loc>https://illusionlie.github.io/blog/posts/date-calculate-script/</loc>
     
     <lastmod>2024-03-28</lastmod>
     
@@ -65,16 +47,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/posts/prompt-injection/</loc>
-    
-    <lastmod>2024-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/software-realesr/</loc>
+    <loc>https://illusionlie.github.io/blog/girls/index.html</loc>
     
     <lastmod>2024-03-16</lastmod>
     
@@ -83,25 +56,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/girls/index.html</loc>
-    
-    <lastmod>2024-03-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/net-security/</loc>
-    
-    <lastmod>2024-03-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/links/index.html</loc>
+    <loc>https://illusionlie.github.io/blog/links/index.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -110,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/404.html</loc>
+    <loc>https://illusionlie.github.io/blog/404.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -119,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/about/site.html</loc>
+    <loc>https://illusionlie.github.io/blog/about/site.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -128,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/about/index.html</loc>
+    <loc>https://illusionlie.github.io/blog/categories/index.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -137,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/categories/index.html</loc>
+    <loc>https://illusionlie.github.io/blog/tags/index.html</loc>
     
     <lastmod>2024-03-14</lastmod>
     
@@ -146,16 +101,7 @@
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/index.html</loc>
-    
-    <lastmod>2024-03-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/posts/antisleep-script/</loc>
+    <loc>https://illusionlie.github.io/blog/posts/antisleep-script/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -165,100 +111,44 @@
   
 
   <url>
-    <loc>https://illusionlie.github.io/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://illusionlie.github.io/tags/Batch/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/tags/Script/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/Security/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/tags/Batch/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/PowerShell/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/tags/VBS/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/Script/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/tags/PowerShell/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://illusionlie.github.io/tags/VBS/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Tutorial/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Troubleshoot/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/LLM/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/AI/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Prompt/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Software/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Picture/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/tags/Site/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/tags/Security/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -266,43 +156,8 @@
 
   
   <url>
-    <loc>https://illusionlie.github.io/categories/Script/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/categories/Security/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/categories/Tutorial/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/categories/AI/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/categories/Software/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://illusionlie.github.io/categories/Site/</loc>
-    <lastmod>2024-05-27</lastmod>
+    <loc>https://illusionlie.github.io/blog/categories/Script/</loc>
+    <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>虚像谎言的博客</title>
-  <icon>https://illusionlie.github.io/icon.png</icon>
+  <title>虚像谎言的个人博客</title>
+  <icon>https://illusionlie.github.io/blog/icon.png</icon>
   <subtitle>不归途，不尽路</subtitle>
-  <link href="https://illusionlie.github.io/atom.xml" rel="self"/>
+  <link href="https://illusionlie.github.io/blog/atom.xml" rel="self"/>
   
-  <link href="https://illusionlie.github.io/"/>
-  <updated>2024-05-27T11:43:23.000Z</updated>
-  <id>https://illusionlie.github.io/</id>
+  <link href="https://illusionlie.github.io/blog/"/>
+  <updated>2024-03-29T13:58:04.000Z</updated>
+  <id>https://illusionlie.github.io/blog/</id>
   
   <author>
     <name>IllusionLie</name>
@@ -17,56 +17,9 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>便携软件网站推荐 - PortableApps</title>
-    <link href="https://illusionlie.github.io/posts/site-portableapps/"/>
-    <id>https://illusionlie.github.io/posts/site-portableapps/</id>
-    <published>2024-05-27T11:43:23.000Z</published>
-    <updated>2024-05-27T11:43:23.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;推荐一个便携软件网站, 网站是英文的, 但国内也能访问&lt;/p&gt;
-&lt;p&gt;官网: &lt;a href=&quot;https://portableapps.com/&quot;&gt;https://portableapps.com/&lt;/a&gt;&lt;br&gt;软件: &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Site" scheme="https://illusionlie.github.io/categories/Site/"/>
-    
-    
-    <category term="Site" scheme="https://illusionlie.github.io/tags/Site/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络各种&quot;疑难杂症&quot;帮助解答</title>
-    <link href="https://illusionlie.github.io/posts/net-problem-fix/"/>
-    <id>https://illusionlie.github.io/posts/net-problem-fix/</id>
-    <published>2024-04-05T11:35:19.000Z</published>
-    <updated>2024-04-19T11:27:19.000Z</updated>
-    
-    
-    <summary type="html">你可以在评论区补充更多！</summary>
-    
-    
-    
-    <category term="Tutorial" scheme="https://illusionlie.github.io/categories/Tutorial/"/>
-    
-    
-    <category term="Tutorial" scheme="https://illusionlie.github.io/tags/Tutorial/"/>
-    
-    <category term="Troubleshoot" scheme="https://illusionlie.github.io/tags/Troubleshoot/"/>
-    
-  </entry>
-  
-  <entry>
     <title>在批处理中使用MD5验证密码</title>
-    <link href="https://illusionlie.github.io/posts/md5verify-script/"/>
-    <id>https://illusionlie.github.io/posts/md5verify-script/</id>
+    <link href="https://illusionlie.github.io/blog/posts/md5verify-script/"/>
+    <id>https://illusionlie.github.io/blog/posts/md5verify-script/</id>
     <published>2024-03-29T10:23:04.000Z</published>
     <updated>2024-03-29T13:58:04.000Z</updated>
     
@@ -88,19 +41,19 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/categories/Script/"/>
+    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/tags/Batch/"/>
+    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
     
-    <category term="Security" scheme="https://illusionlie.github.io/tags/Security/"/>
+    <category term="Security" scheme="https://illusionlie.github.io/blog/tags/Security/"/>
     
   </entry>
   
   <entry>
     <title>使用批处理+PowerShell计算日期的相隔天数</title>
-    <link href="https://illusionlie.github.io/posts/date-calculate-script/"/>
-    <id>https://illusionlie.github.io/posts/date-calculate-script/</id>
+    <link href="https://illusionlie.github.io/blog/posts/date-calculate-script/"/>
+    <id>https://illusionlie.github.io/blog/posts/date-calculate-script/</id>
     <published>2024-03-27T10:21:13.000Z</published>
     <updated>2024-03-28T10:21:13.000Z</updated>
     
@@ -122,99 +75,19 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/categories/Script/"/>
+    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/tags/Batch/"/>
+    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
     
-    <category term="PowerShell" scheme="https://illusionlie.github.io/tags/PowerShell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>免费使用的AI语言模型对话平台-主观意见评价推荐</title>
-    <link href="https://illusionlie.github.io/posts/online-llm/"/>
-    <id>https://illusionlie.github.io/posts/online-llm/</id>
-    <published>2024-03-19T02:39:12.000Z</published>
-    <updated>2024-04-19T07:36:12.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;对于其中部分网站平台，请自行准备科学上网工具&lt;/p&gt;
-&lt;p&gt;本文中的推荐不分排名前后，这篇文章会持续更新&lt;/p&gt;
-&lt;p&gt;本文含有大量&lt;strong&gt;主观意见&lt;/strong&gt;，请以实际情况为准&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://illusionlie.github.io/categories/AI/"/>
-    
-    
-    <category term="LLM" scheme="https://illusionlie.github.io/tags/LLM/"/>
-    
-    <category term="AI" scheme="https://illusionlie.github.io/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件推荐-无损图片放大-Real-ESRGAN GUI</title>
-    <link href="https://illusionlie.github.io/posts/software-realesr/"/>
-    <id>https://illusionlie.github.io/posts/software-realesr/</id>
-    <published>2024-03-16T10:32:58.000Z</published>
-    <updated>2024-03-16T10:32:58.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;免责声明&lt;/strong&gt;：本文内容仅供参考，如有侵权，请及时与我联系，你可以在左侧侧边栏找到我的联系方式&lt;/p&gt;
-&lt;p&gt;Github&lt;strong&gt;相关页面&lt;/strong&gt;，&lt;strong&gt;下载&lt;/strong&gt;均在文章最底下&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/software-realesr/realesrgan-intro.webp&quot; alt=&quot;realesrgan-intro&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Software" scheme="https://illusionlie.github.io/categories/Software/"/>
-    
-    
-    <category term="Software" scheme="https://illusionlie.github.io/tags/Software/"/>
-    
-    <category term="Picture" scheme="https://illusionlie.github.io/tags/Picture/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全运维实训-50道例题</title>
-    <link href="https://illusionlie.github.io/posts/net-security/"/>
-    <id>https://illusionlie.github.io/posts/net-security/</id>
-    <published>2024-03-15T10:52:30.000Z</published>
-    <updated>2024-03-15T10:52:30.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本文中，包括提供的文件中的内容仅供学习使用，请勿瞎玩&lt;/p&gt;
-&lt;p&gt;如果造成自己或他人损失，虚像谎言概不负责&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;什么是网安？&quot;&gt;&lt;a href=&quot;#什么是网安？&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Security" scheme="https://illusionlie.github.io/categories/Security/"/>
-    
-    
-    <category term="Security" scheme="https://illusionlie.github.io/tags/Security/"/>
+    <category term="PowerShell" scheme="https://illusionlie.github.io/blog/tags/PowerShell/"/>
     
   </entry>
   
   <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
-    <link href="https://illusionlie.github.io/posts/antisleep-script/"/>
-    <id>https://illusionlie.github.io/posts/antisleep-script/</id>
+    <link href="https://illusionlie.github.io/blog/posts/antisleep-script/"/>
+    <id>https://illusionlie.github.io/blog/posts/antisleep-script/</id>
     <published>2024-03-10T09:04:29.000Z</published>
     <updated>2024-03-10T09:04:29.000Z</updated>
     
@@ -236,51 +109,14 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/categories/Script/"/>
+    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/tags/Batch/"/>
+    <category term="Script" scheme="https://illusionlie.github.io/blog/tags/Script/"/>
     
-    <category term="Script" scheme="https://illusionlie.github.io/tags/Script/"/>
+    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
     
-    <category term="VBS" scheme="https://illusionlie.github.io/tags/VBS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用提示词注入(Prompt Injection)攻击AI语言模型</title>
-    <link href="https://illusionlie.github.io/posts/prompt-injection/"/>
-    <id>https://illusionlie.github.io/posts/prompt-injection/</id>
-    <published>2024-03-09T08:58:56.000Z</published>
-    <updated>2024-03-18T13:47:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本文使用的提示词为网络上收集的内容，如果侵权请联系删除&lt;/p&gt;
-&lt;p&gt;本文并不鼓励或引导任何人以任何理由攻击语言模型&lt;/p&gt;
-&lt;p&gt;使用本文中的提示词造成的任何损失，损坏均由使用者个人承担&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;br&gt;
-
-&lt;hr&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="AI" scheme="https://illusionlie.github.io/categories/AI/"/>
-    
-    
-    <category term="LLM" scheme="https://illusionlie.github.io/tags/LLM/"/>
-    
-    <category term="AI" scheme="https://illusionlie.github.io/tags/AI/"/>
-    
-    <category term="Prompt" scheme="https://illusionlie.github.io/tags/Prompt/"/>
+    <category term="VBS" scheme="https://illusionlie.github.io/blog/tags/VBS/"/>
     
   </entry>
   
