@@ -6,7 +6,7 @@
   <link href="https://illusionlie.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://illusionlie.github.io/blog/"/>
-  <updated>2024-03-29T13:58:04.000Z</updated>
+  <updated>2024-07-31T10:12:23.000Z</updated>
   <id>https://illusionlie.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cloudflare WARP IP 优选脚本(改)</title>
+    <link href="https://illusionlie.github.io/blog/posts/cf-warp-ip-preference/"/>
+    <id>https://illusionlie.github.io/blog/posts/cf-warp-ip-preference/</id>
+    <published>2024-07-31T10:12:23.000Z</published>
+    <updated>2024-07-31T10:12:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p align=&quot;center&quot;&gt;
+  &lt;a href=&quot;https://github.com/illusionlie/warp-ip-auto-preference-script&quot;&gt;
+    &lt;img src=&quot;https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/cf-warp-ip-preference/wipap.webp&quot; alt=&quot;WIPAP sample image&quot; height=&quot;15%&quot;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;center&gt;WARP IP Auto-preference&lt;/center&gt;&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
+    
+    
+    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
+    
+  </entry>
   
   <entry>
     <title>在批处理中使用MD5验证密码</title>
@@ -35,7 +60,7 @@
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;This page</summary>
+&lt;p&gt;以下代码可能因操作系统版本不同导致差异</summary>
         
       
     
@@ -69,7 +94,7 @@
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;This page also have: &lt;a</summary>
+&lt;h2 id=&quot;代码内容&quot;&gt;&lt;a href=&quot;#代码内容&quot;</summary>
         
       
     
@@ -103,7 +128,7 @@
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;This page also have: &lt;a</summary>
+&lt;h2 id=&quot;开端&quot;&gt;&lt;a href=&quot;#开端&quot;</summary>
         
       
     
@@ -112,9 +137,9 @@
     <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
-    
     <category term="Script" scheme="https://illusionlie.github.io/blog/tags/Script/"/>
+    
+    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
     
     <category term="VBS" scheme="https://illusionlie.github.io/blog/tags/VBS/"/>
     
