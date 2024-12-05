@@ -6,7 +6,7 @@
   <link href="https://illusionlie.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://illusionlie.github.io/blog/"/>
-  <updated>2024-07-31T10:12:23.000Z</updated>
+  <updated>2024-12-05T08:38:51.000Z</updated>
   <id>https://illusionlie.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 油猴脚本 + IDM 实现多线程直链夸克网盘文件下载</title>
+    <link href="https://illusionlie.github.io/blog/posts/quark-boost/"/>
+    <id>https://illusionlie.github.io/blog/posts/quark-boost/</id>
+    <published>2024-12-05T08:38:51.000Z</published>
+    <updated>2024-12-05T08:38:51.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;众所周知, 夸克网盘的恶心程度可以说是和百度网盘媲美的, 几乎同样的:</summary>
+        
+      
+    
+    
+    
+    <category term="Chore" scheme="https://illusionlie.github.io/blog/categories/Chore/"/>
+    
+    
+    <category term="NetDisk" scheme="https://illusionlie.github.io/blog/tags/NetDisk/"/>
+    
+  </entry>
   
   <entry>
     <title>Cloudflare WARP IP 优选脚本(改)</title>

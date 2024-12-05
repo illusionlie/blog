@@ -173,4 +173,33 @@
         <tag>Security</tag>
       </tags>
   </entry>
+  <entry>
+    <title>使用 油猴脚本 + IDM 实现多线程直链夸克网盘文件下载</title>
+    <url>/blog/posts/quark-boost/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知, 夸克网盘的恶心程度可以说是和百度网盘媲美的, 几乎同样的: 限速、(几乎强制的)客户端下载要求、广告、会员、审查、爆链等等<br>然而, 通过使用油猴脚本 + IDM 来实现多线程直链下载夸克网盘文件, 尽管夸克网盘仍然会对每个线程进行限速, 但在多线程的情况下, 速度会明显提升<br>甚至于无需使用客户端, 直接在浏览器中下载, 这对于一些不想给电脑安装一个臃肿的客户端的用户来说, 是一个非常方便的选择</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>你需要:</p>
+<ul>
+<li>运行油猴脚本的浏览器扩展 (如 Tampermonkey)</li>
+<li>IDM (确保拓展 IDM Integration Module 已启用)</li>
+<li>夸克网盘账号</li>
+</ul>
+<p>有关于安装 Tampermonkey 等拓展的教程在网上有很多, 这里就不再赘述了, 可以自行搜索</p>
+<p>首先, 点击下面的链接, 前往 Greasy Fork 安装油猴脚本:<br><a href="https://greasyfork.org/scripts/449291">[（改）网盘直链下载助手]</a></p>
+<p>安装完成后, 前往 <a href="https://pan.quark.cn/list#/list/all">https://pan.quark.cn/list#/list/all</a> 并登录你的账号<br>此时, 你应该会看到上方”上传文件”按钮的左边会出现一个”点我点亮”的按钮<br><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/quark-boost/lightup.webp" alt="点我点亮" loading="lazy"></p>
+<p>随后点击下方的”直接点亮”按钮, 等待右上角显示”注入成功”后, 刷新页面<br>此时”点我点亮”按钮会变成”下载助手”</p>
+<p>现在, 选中你想要下载的文件, 点击”下载助手”按钮, 选择”API 下载”, 点击”直接下载(基于浏览器链接)”, 稍等一会, 便会调用 IDM 进行下载<br>如果 IDM 下载窗口并没有弹出, 检查以下几个原因:</p>
+<ul>
+<li>IDM 没有运行</li>
+<li>浏览器没有启用拓展 IDM Integration Module</li>
+<li>IDM 中并没有设置下载指定的文件类型 (很有可能)</li>
+</ul>
+<p>对于第三种情况, 打开 IDM, 点击”选项设置”, 在”文件类型”选项卡的”接管下载文件扩展名”中添加你要下载的文件类型, 如分卷压缩包”00*” (*代表通配符)</p>
+]]></content>
+      <categories>
+        <category>Chore</category>
+      </categories>
+      <tags>
+        <tag>NetDisk</tag>
+      </tags>
+  </entry>
 </search>
