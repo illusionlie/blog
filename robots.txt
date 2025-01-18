@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /tags/*
+Disallow: /search/
+Disallow: /search*
+Disallow: /categories/*
+Disallow: /friends/*
+Allow: /
+
+User-agent: Googlebot
+Allow: /sitemap.xml
+
+Sitemap: https://blog.illusionlie.com/sitemap.xml
