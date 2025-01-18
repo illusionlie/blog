@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>虚像谎言的个人博客</title>
-  <icon>https://illusionlie.github.io/blog/icon.png</icon>
+  <icon>https://blog.illusionlie.com/icon.png</icon>
   <subtitle>不归途，不尽路</subtitle>
-  <link href="https://illusionlie.github.io/blog/atom.xml" rel="self"/>
+  <link href="https://blog.illusionlie.com/atom.xml" rel="self"/>
   
-  <link href="https://illusionlie.github.io/blog/"/>
+  <link href="https://blog.illusionlie.com/"/>
   <updated>2024-12-05T08:38:51.000Z</updated>
-  <id>https://illusionlie.github.io/blog/</id>
+  <id>https://blog.illusionlie.com/</id>
   
   <author>
     <name>IllusionLie</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>使用 油猴脚本 + IDM 实现多线程直链夸克网盘文件下载</title>
-    <link href="https://illusionlie.github.io/blog/posts/quark-boost/"/>
-    <id>https://illusionlie.github.io/blog/posts/quark-boost/</id>
+    <link href="https://blog.illusionlie.com/posts/quark-boost/"/>
+    <id>https://blog.illusionlie.com/posts/quark-boost/</id>
     <published>2024-12-05T08:38:51.000Z</published>
     <updated>2024-12-05T08:38:51.000Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="Chore" scheme="https://illusionlie.github.io/blog/categories/Chore/"/>
+    <category term="Chore" scheme="https://blog.illusionlie.com/categories/Chore/"/>
     
     
-    <category term="NetDisk" scheme="https://illusionlie.github.io/blog/tags/NetDisk/"/>
+    <category term="NetDisk" scheme="https://blog.illusionlie.com/tags/NetDisk/"/>
     
   </entry>
   
   <entry>
     <title>Cloudflare WARP IP 优选脚本(改)</title>
-    <link href="https://illusionlie.github.io/blog/posts/cf-warp-ip-preference/"/>
-    <id>https://illusionlie.github.io/blog/posts/cf-warp-ip-preference/</id>
+    <link href="https://blog.illusionlie.com/posts/cf-warp-ip-preference/"/>
+    <id>https://blog.illusionlie.com/posts/cf-warp-ip-preference/</id>
     <published>2024-07-31T10:12:23.000Z</published>
     <updated>2024-07-31T10:12:23.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
+    <category term="Script" scheme="https://blog.illusionlie.com/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
+    <category term="Batch" scheme="https://blog.illusionlie.com/tags/Batch/"/>
     
   </entry>
   
   <entry>
     <title>在批处理中使用MD5验证密码</title>
-    <link href="https://illusionlie.github.io/blog/posts/md5verify-script/"/>
-    <id>https://illusionlie.github.io/blog/posts/md5verify-script/</id>
+    <link href="https://blog.illusionlie.com/posts/md5verify-script/"/>
+    <id>https://blog.illusionlie.com/posts/md5verify-script/</id>
     <published>2024-03-29T10:23:04.000Z</published>
     <updated>2024-03-29T13:58:04.000Z</updated>
     
@@ -91,19 +91,19 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
+    <category term="Script" scheme="https://blog.illusionlie.com/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
+    <category term="Batch" scheme="https://blog.illusionlie.com/tags/Batch/"/>
     
-    <category term="Security" scheme="https://illusionlie.github.io/blog/tags/Security/"/>
+    <category term="Security" scheme="https://blog.illusionlie.com/tags/Security/"/>
     
   </entry>
   
   <entry>
     <title>使用批处理+PowerShell计算日期的相隔天数</title>
-    <link href="https://illusionlie.github.io/blog/posts/date-calculate-script/"/>
-    <id>https://illusionlie.github.io/blog/posts/date-calculate-script/</id>
+    <link href="https://blog.illusionlie.com/posts/date-calculate-script/"/>
+    <id>https://blog.illusionlie.com/posts/date-calculate-script/</id>
     <published>2024-03-27T10:21:13.000Z</published>
     <updated>2024-03-28T10:21:13.000Z</updated>
     
@@ -125,19 +125,19 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
+    <category term="Script" scheme="https://blog.illusionlie.com/categories/Script/"/>
     
     
-    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
+    <category term="Batch" scheme="https://blog.illusionlie.com/tags/Batch/"/>
     
-    <category term="PowerShell" scheme="https://illusionlie.github.io/blog/tags/PowerShell/"/>
+    <category term="PowerShell" scheme="https://blog.illusionlie.com/tags/PowerShell/"/>
     
   </entry>
   
   <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
-    <link href="https://illusionlie.github.io/blog/posts/antisleep-script/"/>
-    <id>https://illusionlie.github.io/blog/posts/antisleep-script/</id>
+    <link href="https://blog.illusionlie.com/posts/antisleep-script/"/>
+    <id>https://blog.illusionlie.com/posts/antisleep-script/</id>
     <published>2024-03-10T09:04:29.000Z</published>
     <updated>2024-03-10T09:04:29.000Z</updated>
     
@@ -159,14 +159,14 @@
     
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/blog/categories/Script/"/>
+    <category term="Script" scheme="https://blog.illusionlie.com/categories/Script/"/>
     
     
-    <category term="Script" scheme="https://illusionlie.github.io/blog/tags/Script/"/>
+    <category term="Script" scheme="https://blog.illusionlie.com/tags/Script/"/>
     
-    <category term="Batch" scheme="https://illusionlie.github.io/blog/tags/Batch/"/>
+    <category term="Batch" scheme="https://blog.illusionlie.com/tags/Batch/"/>
     
-    <category term="VBS" scheme="https://illusionlie.github.io/blog/tags/VBS/"/>
+    <category term="VBS" scheme="https://blog.illusionlie.com/tags/VBS/"/>
     
   </entry>
   

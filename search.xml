@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
-    <url>/blog/posts/antisleep-script/</url>
+    <url>/posts/antisleep-script/</url>
     <content><![CDATA[<blockquote>
 <p>本文中的代码不一定能适应所有种类的Windows系统</p>
 <p>请自行测试后再做出结论，你可以在评论区留言</p>
@@ -72,7 +72,7 @@
   </entry>
   <entry>
     <title>Cloudflare WARP IP 优选脚本(改)</title>
-    <url>/blog/posts/cf-warp-ip-preference/</url>
+    <url>/posts/cf-warp-ip-preference/</url>
     <content><![CDATA[<p align="center">
   <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">
     <img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/cf-warp-ip-preference/wipap.webp" alt="WIPAP sample image" height="15%" loading="lazy">
@@ -105,7 +105,7 @@
   </entry>
   <entry>
     <title>使用批处理+PowerShell计算日期的相隔天数</title>
-    <url>/blog/posts/date-calculate-script/</url>
+    <url>/posts/date-calculate-script/</url>
     <content><![CDATA[<blockquote>
 <p>本文中的代码不一定能适应所有种类的Windows系统</p>
 <p>请自行测试后再做出结论，你可以在评论区留言</p>
@@ -133,7 +133,7 @@
   </entry>
   <entry>
     <title>在批处理中使用MD5验证密码</title>
-    <url>/blog/posts/md5verify-script/</url>
+    <url>/posts/md5verify-script/</url>
     <content><![CDATA[<blockquote>
 <p>本文中的代码<strong>不一定能</strong>适应所有种类的Windows系统</p>
 <p>请自行测试后再做出结论，你可以在评论区留言</p>
@@ -175,7 +175,7 @@
   </entry>
   <entry>
     <title>使用 油猴脚本 + IDM 实现多线程直链夸克网盘文件下载</title>
-    <url>/blog/posts/quark-boost/</url>
+    <url>/posts/quark-boost/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知, 夸克网盘的恶心程度可以说是和百度网盘媲美的, 几乎同样的: 限速、(几乎强制的)客户端下载要求、广告、会员、审查、爆链等等<br>然而, 通过使用油猴脚本 + IDM 来实现多线程直链下载夸克网盘文件, 尽管夸克网盘仍然会对每个线程进行限速, 但在多线程的情况下, 速度会明显提升<br>甚至于无需使用客户端, 直接在浏览器中下载, 这对于一些不想给电脑安装一个臃肿的客户端的用户来说, 是一个非常方便的选择</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>你需要:</p>
 <ul>
