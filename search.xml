@@ -24,7 +24,7 @@
 <h3 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h3><p>首先是第一行:<br><code>&#39; &amp; color 70 &amp; title AntiSleep &amp; mode con cols=30 lines=6 &amp; cls &amp; cscript.exe /nologo /e:vbscript &quot;%~f0&quot; &amp; exit</code></p>
 <p>其中’(单引号)，在VBS中的作用是<strong>注释</strong>，这意味着在作为VBS脚本处理时，整个第一行都将作为注释<strong>直接跳过</strong><br>在批处理中作为命令直接执行单引号<strong>没有作用</strong>，但批处理并不会因为单引号无法执行就退出，而是会<strong>处理’后面</strong>使用&amp;符号连接的命令</p>
 <p>&amp;在批处理中作为<strong>命令连接符</strong>，用于顺序执行多个命令，<strong>不管</strong>前一个命令是否成功执行<br>这意味着在作为批处理处理中，这条代码的单引号后面的命令都会继续执行</p>
-<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
+<p><code>color 70</code> 是将命令行(cmd)窗口的颜色设置为<strong>白底黑字</strong><br><img src="https://cdn.illusionlie.com/img/postimg/antisleep-script/cmd-color.jpg" alt="cmd-color" loading="lazy"><br><code>title AntiSleep</code> 是将命令行窗口的标题改为”<strong>Antisleep</strong>“<br><code>mode con cols=30 lines=6</code> 是将命令行窗口大小设置为 <strong>30 列</strong>和 <strong>6 行</strong><br><code>cls</code> 用于清空命令行窗口中<strong>输出的内容</strong><br><code>cscript.exe /nologo /e:vbscript &quot;%~f0&quot;</code> 其中: </p>
 <blockquote>
 <p><code>cscript.exe</code> 是 Windows 中用于<strong>运行 VBScript 脚本</strong>的命令行工具</p>
 <p><code>/nologo /e:vbscript</code> 是设置在执行时<strong>禁用显示</strong>CScript 的标志性标识与<strong>指定</strong>要执行的脚本<strong>类型</strong></p>
@@ -75,7 +75,7 @@
     <url>/posts/cf-warp-ip-preference/</url>
     <content><![CDATA[<p align="center">
   <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">
-    <img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/cf-warp-ip-preference/wipap.webp" alt="WIPAP sample image" height="15%" loading="lazy">
+    <img src="https://cdn.illusionlie.com/img/postimg/blog/cf-warp-ip-preference/wipap.webp" alt="WIPAP sample image" height="15%" loading="lazy">
   </a>
 </p>
 
@@ -156,11 +156,11 @@
 
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">:iLPassCheck</span><br><span class="line"><span class="built_in">set</span> typestr=</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;mshta vbscript:Execute(&quot;On Error Resume Next:Dim str,fso:str=InputBox(&quot;&quot;输入Battroll的启动密码&quot;&quot;,&quot;&quot;Battroll_PassCheck&quot;&quot;,&quot;&quot;&quot;&quot;):<span class="built_in">Set</span> fso=CreateObject(&quot;&quot;Scripting.FileSystemObject&quot;&quot;):fso.GetStandardStream(<span class="number">1</span>).Write str:<span class="built_in">Set</span> fso=Nothing:close&quot;^)&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typestr=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%typestr%</span>&quot;==&quot;&quot; <span class="keyword">exit</span></span><br><span class="line"><span class="built_in">echo</span>.<span class="variable">%typestr%</span> &gt; <span class="variable">%here%</span>\Pass.iL</span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;certutil -hashfile &quot;<span class="variable">%here%</span>\Pass.iL&quot; MD5 ^| <span class="built_in">findstr</span> /v &quot;[^^<span class="number">0</span>-<span class="number">9</span>a-z]&quot;&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;typemd5=<span class="variable">%%a</span>&quot;)</span><br><span class="line"><span class="built_in">del</span> /f /q Pass.iL&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">if</span> <span class="variable">%typemd5%</span>==<span class="variable">%iLPassword%</span> (<span class="keyword">goto</span> warn) <span class="keyword">else</span> (<span class="keyword">call</span> :iLPassCheckError)</span><br><span class="line"><span class="keyword">goto</span> iLPassCheck</span><br><span class="line">:iLPassCheckError</span><br><span class="line">mshta vbscript:msgbox(&quot;密码错误!&quot;,<span class="number">16</span>,&quot;Battroll_PassCheck&quot;)(window.close)</span><br><span class="line"><span class="keyword">goto</span> :eof</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
+<h3 id="样图"><a href="#样图" class="headerlink" title="样图"></a>样图</h3><p><img src="https://cdn.illusionlie.com/img/postimg/md5verify-script/battroll-passcheck.webp" alt="battroll-passcheck" loading="lazy"></p>
 <blockquote>
 <p>界面</p>
 </blockquote>
-<p><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver@latest/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
+<p><img src="https://cdn.illusionlie.com/img/postimg/md5verify-script/battroll-passerror.webp" alt="battroll-passerror" loading="lazy"></p>
 <blockquote>
 <p>错误界面</p>
 </blockquote>
@@ -185,7 +185,7 @@
 </ul>
 <p>有关于安装 Tampermonkey 等拓展的教程在网上有很多, 这里就不再赘述了, 可以自行搜索</p>
 <p>首先, 点击下面的链接, 前往 Greasy Fork 安装油猴脚本:<br><a href="https://greasyfork.org/scripts/449291">[（改）网盘直链下载助手]</a></p>
-<p>安装完成后, 前往 <a href="https://pan.quark.cn/list#/list/all">https://pan.quark.cn/list#/list/all</a> 并登录你的账号<br>此时, 你应该会看到上方”上传文件”按钮的左边会出现一个”点我点亮”的按钮<br><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/quark-boost/lightup.webp" alt="点我点亮" loading="lazy"></p>
+<p>安装完成后, 前往 <a href="https://pan.quark.cn/list#/list/all">https://pan.quark.cn/list#/list/all</a> 并登录你的账号<br>此时, 你应该会看到上方”上传文件”按钮的左边会出现一个”点我点亮”的按钮<br><img src="https://cdn.illusionlie.com/img/postimg/blog/quark-boost/lightup.webp" alt="点我点亮" loading="lazy"></p>
 <p>随后点击下方的”直接点亮”按钮, 等待右上角显示”注入成功”后, 刷新页面<br>此时”点我点亮”按钮会变成”下载助手”</p>
 <p>现在, 选中你想要下载的文件, 点击”下载助手”按钮, 选择”API 下载”, 点击”直接下载(基于浏览器链接)”, 稍等一会, 便会调用 IDM 进行下载<br>如果 IDM 下载窗口并没有弹出, 检查以下几个原因:</p>
 <ul>
@@ -200,6 +200,32 @@
       </categories>
       <tags>
         <tag>NetDisk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么我选择 Anydesk 而不是国内常用的 Todesk</title>
+    <url>/posts/why-anydesk-not-todesk/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>现在这个时代, 远程桌面的使用也越来越多了, 用到的最多的用处便是远程协助了。然而, 国内常用的 Todesk 却给我了一个非常不好的体验, 让我意识到”国产软件还是国产软件”这句话的体现。<br>无论是 Anydesk 还是 Todesk, 都有给高级用户的付费服务, 但通常来说除非专业用户, 否则是不会用到付费服务的。所以这篇文章中只会考虑免费功能的使用体验。</p>
+<h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>毫无疑问, 使用体验上 Anydesk 要比 Todesk 要好很多。<br>最主要的优势有三个:</p>
+<ol>
+<li><strong>开箱即用</strong><br>可以说在开箱即用上 Anydesk 是非常爽的, 这也是我认为它最大的优点, 先让我们假设一种情况: 你的一个电脑新手朋友需要你的远程协助。在这种情况下, 他没有远程桌面软件, 也不知道该如何选择。如果使用 Anydesk, 你只需要把 Anydesk 的二进制文件 (就一个文件) 发给他, 告诉他双击打开, 再让他把设备代码发过来, 你就可以直接控制他的电脑了。</li>
+</ol>
+<p>而 Todesk 呢, 你需要先让他下载并安装, 打开后还需要注册账号, 才能让你控制他的电脑。虽然听起来也还好, 但因为他是一个新手, 这对他来说可能就是一个小挑战了, 而且这也耗费了你们更多时间, 在隐私方面也是一个问题。</p>
+<ol start="2">
+<li><strong>轻便简洁</strong><br>虽然说如今的电脑普遍都有足够的存储空间, 但 Todesk 安装后直接占用了 140MB 的空间 (Geek Uninstaller 统计), 而 Anydesk 则只有 5MB 的单文件。虽然说 Anydesk 仍会向硬盘中写入一些其他数据, 但对于一个 <del><strong>赛博洁癖</strong></del> 普通用户来说, 这是可以接受的 (况且相比 Todesk 简直不要好了太多吧)。并且假设你不需要登录 Anydesk 账户的话, 你也可以把 Anydesk 拉去便携使用。</li>
+</ol>
+<p>包括 GUI 界面 Anydesk 也是非常简洁的, 没有多余的东西, 也没有多余的无用的功能。<br><img src="https://cdn.illusionlie.com/img/postimg/blog/why-anydesk-not-todesk/anydesk-gui.webp" alt="Anydesk GUI" loading="lazy"></p>
+<p><img src="https://cdn.illusionlie.com/img/postimg/blog/why-anydesk-not-todesk/todesk-gui.webp" alt="Todesk GUI" loading="lazy"></p>
+<ol start="3">
+<li><strong>控制</strong><br>在控制对方屏幕时, 两者都是只有在对方不动鼠标键盘的情况下才能控制对方, 但 Anydesk 可以在对方仍在使用鼠标键盘的情况下提醒和标记。对方操作时, 仍可看到你的光标, 当你点击时, 会在对方的屏幕显示提醒。Todesk 则没有这个功能。</li>
+</ol>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p>Anydesk 官网: <a href="https://anydesk.com/">https://anydesk.com</a><br>Todesk 官网: <a href="https://www.todesk.com/">https://www.todesk.com</a></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
       </tags>
   </entry>
 </search>
