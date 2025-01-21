@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Cloudflare WARP IP 优选脚本(改)</title>
-    <url>/posts/cf-warp-ip-preference/</url>
-    <content><![CDATA[<p align="center">
-  <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">
-    <img src="https://cdn.illusionlie.com/img/postimg/blog/cf-warp-ip-preference/wipap.webp" alt="WIPAP sample image" height="15%" loading="lazy">
-  </a>
-</p>
-
-<p><strong><center>WARP IP Auto-preference</center></strong></p>
-<span id="more"></span>
-
-<hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>WARP IP Auto-preference (以下简称为<code>这个脚本</code>)是一个用于优选 <strong>Cloudflare WARP</strong> IPv4&#x2F;v6 IP的批处理脚本<br>此脚本中的<strong>部分</strong>代码和使用的<strong>程序</strong>来自 MisakaNo 的项目 <a href="https://gitlab.com/Misaka-blog/warp-script/-/tree/main/files/warp-yxip">[原项目链接]</a></p>
-<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>在 <a href="https://community.cloudflare.com/t/2024-6-6/668305">此</a> 之前的时候, 优选 WARP 的 IP 的作用主要是<strong>加快连接速度</strong>和<strong>优化节点质量</strong><br>但是从 <a href="https://community.cloudflare.com/t/2024-6-6/668305">此</a> 之后, WARP 如果不进行优选 IP 就<strong>无法进行连接</strong><br>具体错误码为 <code>CF_HAPPY_EYEBALLS_FAILURE</code>, 根据 <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/troubleshooting/client-errors/#cf_happy_eyeballs_failure">官网的解释</a> 其实就是代表你<strong>连接不上</strong> WARP 的节点<br>这时候就需要进行优选了, 使用这个脚本可以帮助你 !</p>
-<p>虽然使用原项目的脚本就已经可以进行正常优选, 但由于 WARP 的 <strong>v4</strong> 节点质量稀烂 (以及被GFW阻止), 可能连续优选好几次才能找到一个可用的节点, 况且可能部分新手不会进行设置<br>于是本脚本就为此而生了(同时也是我懒得手动优选好几次还得再筛选和设置), 本脚本将会自动进行前面所说的操作, 而无需多余手动操作<br>本脚本会筛选所有 丢包率低于 50% <strong>和</strong>延迟低于 400ms 的结果, 并且支持自动设置</p>
-<p>由于脚本使用的是批处理进行编写, 你甚至可以直接右键编辑脚本中的设置</p>
-<p><strong>声明</strong></p>
-<blockquote>
-<p>根据测试, 很多时候即使设置了优选的 IP 也无法连上</p>
-<p>所以请多次尝试后再反馈 !</p>
-</blockquote>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>请前往 Github 进行查看和下载<br>项目地址: <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">[点击访问]</a><br>下载地址: <a href="https://github.com/illusionlie/warp-ip-auto-preference-script/releases">[点击访问]</a></p>
-<p>请先查看项目地址中的说明后再使用 !</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/cf-warp-ip-preference/ip.webp" alt="Example for WIPAP" loading="lazy"></p>
-]]></content>
-      <categories>
-        <category>Script</category>
-      </categories>
-      <tags>
-        <tag>Batch</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用批处理+VBS阻止电脑休眠</title>
     <url>/posts/antisleep-script/</url>
     <content><![CDATA[<blockquote>
@@ -98,9 +65,42 @@
         <category>Script</category>
       </categories>
       <tags>
-        <tag>Batch</tag>
         <tag>Script</tag>
+        <tag>Batch</tag>
         <tag>VBS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cloudflare WARP IP 优选脚本(改)</title>
+    <url>/posts/cf-warp-ip-preference/</url>
+    <content><![CDATA[<p align="center">
+  <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">
+    <img src="https://cdn.illusionlie.com/img/postimg/blog/cf-warp-ip-preference/wipap.webp" alt="WIPAP sample image" height="15%" loading="lazy">
+  </a>
+</p>
+
+<p><strong><center>WARP IP Auto-preference</center></strong></p>
+<span id="more"></span>
+
+<hr>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>WARP IP Auto-preference (以下简称为<code>这个脚本</code>)是一个用于优选 <strong>Cloudflare WARP</strong> IPv4&#x2F;v6 IP的批处理脚本<br>此脚本中的<strong>部分</strong>代码和使用的<strong>程序</strong>来自 MisakaNo 的项目 <a href="https://gitlab.com/Misaka-blog/warp-script/-/tree/main/files/warp-yxip">[原项目链接]</a></p>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>在 <a href="https://community.cloudflare.com/t/2024-6-6/668305">此</a> 之前的时候, 优选 WARP 的 IP 的作用主要是<strong>加快连接速度</strong>和<strong>优化节点质量</strong><br>但是从 <a href="https://community.cloudflare.com/t/2024-6-6/668305">此</a> 之后, WARP 如果不进行优选 IP 就<strong>无法进行连接</strong><br>具体错误码为 <code>CF_HAPPY_EYEBALLS_FAILURE</code>, 根据 <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/troubleshooting/client-errors/#cf_happy_eyeballs_failure">官网的解释</a> 其实就是代表你<strong>连接不上</strong> WARP 的节点<br>这时候就需要进行优选了, 使用这个脚本可以帮助你 !</p>
+<p>虽然使用原项目的脚本就已经可以进行正常优选, 但由于 WARP 的 <strong>v4</strong> 节点质量稀烂 (以及被GFW阻止), 可能连续优选好几次才能找到一个可用的节点, 况且可能部分新手不会进行设置<br>于是本脚本就为此而生了(同时也是我懒得手动优选好几次还得再筛选和设置), 本脚本将会自动进行前面所说的操作, 而无需多余手动操作<br>本脚本会筛选所有 丢包率低于 50% <strong>和</strong>延迟低于 400ms 的结果, 并且支持自动设置</p>
+<p>由于脚本使用的是批处理进行编写, 你甚至可以直接右键编辑脚本中的设置</p>
+<p><strong>声明</strong></p>
+<blockquote>
+<p>根据测试, 很多时候即使设置了优选的 IP 也无法连上</p>
+<p>所以请多次尝试后再反馈 !</p>
+</blockquote>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>请前往 Github 进行查看和下载<br>项目地址: <a href="https://github.com/illusionlie/warp-ip-auto-preference-script">[点击访问]</a><br>下载地址: <a href="https://github.com/illusionlie/warp-ip-auto-preference-script/releases">[点击访问]</a></p>
+<p>请先查看项目地址中的说明后再使用 !</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://gcore.jsdelivr.net/gh/illusionlie/jsDeliver/img/postimg/blog/cf-warp-ip-preference/ip.webp" alt="Example for WIPAP" loading="lazy"></p>
+]]></content>
+      <categories>
+        <category>Script</category>
+      </categories>
+      <tags>
+        <tag>Batch</tag>
       </tags>
   </entry>
   <entry>
