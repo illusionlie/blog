@@ -183,7 +183,10 @@ blog_live_time();
 </script><script src="https://fastly.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script><script src="/js/search/local-search.js" defer type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="搜索..." value=""></div><div class="search-result-container"></div></div><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
 mediumZoom(images)</script><style>.medium-zoom-image {
   z-index: 99;
-}</style><script src="/files/illusionlie-blog_sitewidget.js" defer></script><script src="/files/GalMenu.min.js" defer></script><script>document.addEventListener('DOMContentLoaded', function() {
+}</style><script src="/files/illusionlie-blog_sitewidget.js" defer></script><script src="/files/GalMenu.min.js" defer></script><script>let counter = 0;
+const maxCounter = 10;
+document.addEventListener('DOMContentLoaded', function(initgalMenu) {
+  if (typeof galMenu !== 'function') {if (counter > maxCounter) {return;} else {counter++;setTimeout(initgalMenu, 1000);}}
   galMenu('body', {
     menu:"galRing",
     click_to_close:true,
