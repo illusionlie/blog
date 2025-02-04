@@ -1,6 +1,6 @@
 /**
  *  @project IllusioinLie Site Widget JS
- *  @version 2.0.0
+ *  @version 3.0.0
  *  @author IllusionLie
  */
 var blogWidget = (function () {
@@ -69,109 +69,46 @@ function closeBanner() {
     document.cookie = "notice=true;" + "expires=" + d.toUTCString() + ";path=/;SameSite=Lax;secure;";
 }
 
-function popupStyle() {
-    const styleStatus = document.getElementById('popupStyle');
-    if (styleStatus) {
-        return;
-    }
-    const styleP = document.createElement('style');
-    styleP.innerHTML = `
-        .wrap {padding: 40px;text-align: center;}
-        .tsfpop {background: #428bca;border: #357ebd solid 1px;border-radius: 3px;color: #fff;display: inline-block;font-size: 14px;padding: 8px 15px;text-decoration: none;text-align: center;min-width: 60px;position: relative;transition: color 0.1s ease;}
-        .tsfpop:hover {background: #357ebd;}
-        .tsfpop.tsfpop-big {font-size: 18px;padding: 15px 20px;min-width: 100px;}
-        .tsfpop-close {color: #aaa;font-size: 30px;text-decoration: none;position: absolute;right: 15px;top: 0;cursor: pointer;}
-        .tsfpop-close:hover {color: #919191;}
-        .modalTSF {display: flex;justify-content: center;align-items: center;}
-        .modalTSF:before {content: "";display: none;background: rgba(0, 0, 0, 0.6);position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;}
-        .modalTSF.active:before {display: block;}
-        .modalTSF .modalTSF-dialog {background: #fefefe;border: #333 solid 1px;border-radius: 5px;margin-left: -200px;position: fixed;left: 50%;top: -50%;z-index: 11;max-width: 500px;overflow-y: auto;transform: translate(0, -500%);transition: transform 0.3s ease-out;}
-        .modalTSF.active .modalTSF-dialog {transform: translate(0, 0);top: 20%;}
-        @media (max-width: 768px) {
-            .modalTSF .modalTSF-dialog {margin-left: -150px;max-width: 300px;max-height: 68vh;}
-            .modalTSF-body {overflow-y: scroll;}
-        }
-        .modalTSF-body {padding: 15px;}
-        .modalTSF-header,
-        .modalTSF-footer {padding: 10px 20px;}
-        .modalTSF-header {border-bottom: #eee solid 1px;}
-        .modalTSF-header h2 {font-size: 20px;}
-        .modalTSF-footer {border-top: #eee solid 1px;text-align: right;}
-    `;
-    styleP.id = "popupStyle";
-    document.head.appendChild(styleP);
-}
-
 function tsfCelebration() {
-    if (document.getElementById('modalTSF-one') || document.getElementById('modalTSF-two')) {
-        setTimeout(tsfCelebration, 1000);
-    } else {
-        const co_script = document.createElement('script');
-        co_script.src = "https://gcore.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js";
-        co_script.onload = async function() {
-            try {
-                const confetti = new JSConfetti();
-                await confetti.addConfetti({
-                    confettiColors: ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF'],
-                    confettiNumber: 333,
-                    confettiRadius: 5,
-                });
-                popupC();
-            } catch (error) {
-                popupC();
-            }
-        };
-        co_script.onerror = function() {
-            popupC();
-        };
-    document.head.appendChild(co_script);
-    };
-    function popupC() {
-        if (document.getElementById('modalTSF-one')) {
-            setTimeout(popupC, 1000);
-        } else {
-            const createDate = new Date('2024-03-09');
-            let runYears = Math.floor((new Date() - createDate) / (1000 * 60 * 60 * 24 * 365));
-            popupStyle();
-            const popupContainer = document.createElement('div');
-            popupContainer.id = "popupC";
-            popupContainer.innerHTML = `
-                <div class="modalTSF" id="modalTSF-two" aria-hidden="true">
-                    <div class="modalTSF-dialog">
-                        <div class="modalTSF-header">
-                            <h2 style="color:black">虚像谎言Site Widget</h2>
-                            <a class="tsfpop-close" aria-hidden="false" onclick="blogWidget.closePopup();"> × </a>
-                        </div>
-                        <div class="modalTSF-body">
-                            <h5 style="color:black; font-weight:bold;"><span style="color:blue; font-weight:bold;"> 🎉 今天是该站点的建站${runYears}周年 ! 感谢各位的陪伴 ! </span></h5>
-                            <p style="color:black"><strong>可喜可贺, 可喜可贺</strong></p>
-                            <p style="color:black">2024/04/26 --> ${new Date().toLocaleDateString()}</p>
-                        </div>
-                        <div class="modalTSF-footer">
-                            <a class="tsfpop" onclick="blogWidget.closePopup();">我知道了</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            if (!document.getElementById('popupC')) {
-                document.body.appendChild(popupContainer);
-            }
-            document.getElementById('modalTSF-two').classList.add('active');
+    if (`; ${document.cookie}`.split(`; celebration=`).length === 2) {
+        if ((`; ${document.cookie}`.split(`; celebration=`).pop().split(';').shift()) == "true") {
+            return;
         }
     }
-}
-
-function closePopup() {
-    const popupC = document.getElementById('popupC');
-    if (popupC) {
-        popupC.classList.remove('active');
-        popupC.parentNode.removeChild(popupC);
+    const co_script = document.createElement('script');
+    co_script.src = "https://gcore.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js";
+    co_script.onload = async function() {
+        try {
+            const confetti = new JSConfetti();
+            await confetti.addConfetti({
+                confettiColors: ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF'],
+                confettiNumber: 333,
+                confettiRadius: 5,
+            });
+            popupC();
+        } catch (error) {
+            popupC();
+        }
+    };
+    co_script.onerror = function() {
+        popupC();
+    };
+    document.head.appendChild(co_script);
+    function popupC() {
+        const createDate = new Date('2024-03-09');
+        let runYears = Math.floor((new Date() - createDate) / (1000 * 60 * 60 * 24 * 365));
+        const popupC = new widgetPopup({
+            image: 'https://cdn.illusionlie.com/img/iL/webp/iL-circle.webp',
+            text: `
+                <h5 style="color:black; font-weight:bold;"><span style="color:blue; font-weight:bold;"> 🎉 今天是该站点的建站${runYears}周年 ! 感谢各位的陪伴 ! </span></h5>
+                <p style="color:black"><strong>可喜可贺, 可喜可贺</strong></p>
+                <p style="color:black">2024/04/26 --> ${new Date().toLocaleDateString()}</p>
+            `,
+        });
+        popupC.open();
+        document.cookie = "celebration=true; expires=" + new Date(Date.now() + 12 * 60 * 60 * 1000).toUTCString() + "; path=/; SameSite=Lax; secure;";
         return;
     }
-    document.cookie = "popuptime=true; expires=" + new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString() + "; path=/; SameSite=Lax; secure;";
-    const popupP = document.getElementById('modalTSF-one');
-    popupP.classList.remove('active');
-    popupP.parentNode.removeChild(popupP);
 }
 
 function checkCFcdn() {
@@ -205,6 +142,107 @@ function checkCFcdn() {
     request.send();
 };
 
+class widgetPopup {
+    constructor(options) {
+      this.options = options;
+      this.init();
+    }
+  
+    init() {
+      this.styleElement = document.createElement('style');
+      this.styleElement.innerHTML = `
+        .popup-mask {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);opacity: 0;visibility: hidden;transition: opacity 0.3s ease;z-index: 99998;}
+        .popup-container {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0.6);background: #fff;border-radius: 10px;overflow: hidden;opacity: 0.8;visibility: hidden;transition: opacity 0.3s ease, transform 0.3s ease;z-index: 99999;display: flex;flex-direction: column;max-height: 80%;max-width: 80%;min-width: 200px;width: 400px;}
+        .popup-content {padding: 20px;flex: 1;overflow-y: auto;text-align: center;}
+        .popup-footer {padding: 10px 20px;background: #f9f9f9;text-align: center;}
+        .popup-close-btn {padding: 10px 20px;background: #007BFF;color: #fff;border: none;border-radius: 5px;font-size: 16px;cursor: pointer;}
+        @media (max-width: 480px) {.popup-container {width: 300px;}}
+        @media (min-width: 481px) and (max-width: 768px) {.popup-container {width: 40%;}}
+        @media (min-width: 769px) and (max-width: 1024px) {.popup-container {width: 30%;}}
+        @media (min-width: 1025px) {.popup-container {width: 30%;height: 45%;}}
+      `;
+      document.head.appendChild(this.styleElement);
+      this.mask = document.createElement('div');
+      this.mask.className = 'popup-mask';
+      this.popup = document.createElement('div');
+      this.popup.className = 'popup-container';
+      this.content = document.createElement('div');
+      this.content.className = 'popup-content';
+      if (this.options.image) {
+        const img = document.createElement('img');
+        img.src = this.options.image;
+        img.style.cssText = `
+          max-width: 20%;
+          max-height: 20%;
+          width: auto;
+          height: auto;
+          display: block;
+          margin: 0 auto 20px auto;
+        `;
+        this.content.appendChild(img);
+      }
+      if (this.options.text) {
+        const text = document.createElement('div');
+        text.innerHTML = this.options.text;
+        text.style.cssText = `
+          font-size: 16px;
+          color: #333;
+          line-height: 1.5;
+        `;
+        this.content.appendChild(text);
+      }
+      this.footer = document.createElement('div');
+      this.footer.className = 'popup-footer';
+      const closeBtn = document.createElement('button');
+      closeBtn.innerText = '关闭';
+      closeBtn.className = 'popup-close-btn';
+      closeBtn.addEventListener('click', () => this.close());
+      this.footer.appendChild(closeBtn);
+      this.popup.appendChild(this.content);
+      this.popup.appendChild(this.footer);
+      document.body.appendChild(this.mask);
+      document.body.appendChild(this.popup);
+      window.addEventListener('resize', this.updatePosition.bind(this));
+      this.mask.addEventListener('click', () => this.close());
+      this.popup.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'opacity' && !this.isOpen) {
+          this.popup.style.visibility = 'hidden';
+          this.mask.style.opacity = '0';
+          this.mask.style.visibility = 'hidden';
+        }
+      });
+    }
+    open() {
+      this.isOpen = true;
+      this.mask.style.visibility = 'visible';
+      this.popup.style.visibility = 'visible';
+      this.mask.offsetHeight;
+      this.popup.offsetHeight;
+      this.mask.style.opacity = '0.8';
+      this.popup.style.opacity = '0.9';
+      this.popup.style.transform = 'translate(-50%, -50%) scale(1)';
+    }
+    close() {
+      this.isOpen = false;
+      this.popup.style.opacity = '0';
+      this.popup.style.transform = 'translate(-50%, -50%) scale(0.6)';
+  
+    }
+    updatePosition() {
+      this.popup.style.top = '50%';
+      this.popup.style.left = '50%';
+    }
+    destroy() {
+      window.removeEventListener('resize', this.updatePosition.bind(this));
+      this.mask.removeEventListener('click', () => this.close());
+      this.popup.removeEventListener('transitionend', this.transitionEndHandler);
+      this.mask.removeEventListener('transitionend', this.transitionEndHandler);
+      document.body.removeChild(this.mask);
+      document.body.removeChild(this.popup);
+      document.head.removeChild(this.styleElement);
+    }
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
     tsfWidgetGuard();
     checkCFcdn();
@@ -215,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', function(event) {
         if (event.keyCode === 123 || event.code === 'F12' || event.key === 'F12') {
           event.preventDefault();
+          event.stopPropagation();
         }
     });
     const celebraMonth = 3
@@ -226,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 return {
     Celebration: tsfCelebration,
-    closePopup: closePopup,
     closeBanner: closeBanner,
+    popup: widgetPopup,
 }
 })();
