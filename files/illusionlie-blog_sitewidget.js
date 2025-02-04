@@ -209,6 +209,7 @@ class widgetPopup {
           this.popup.style.visibility = 'hidden';
           this.mask.style.opacity = '0';
           this.mask.style.visibility = 'hidden';
+          this.destroy();
         }
       });
     }
