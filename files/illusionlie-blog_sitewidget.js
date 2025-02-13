@@ -9,23 +9,22 @@ let latestHeight;
 let latestWidth;
 
 function tsfWidgetGuard() {
-    return;
-    if (!(window.location.host.includes('theskyflame.pages.dev') || window.location.host.includes('theskyflame.org') || window.location.host.includes('localhost:4000'))) {
-        tsfEndLoad();
-    }
-    if (new Date() < new Date('2025-01-21')) {
-        tsfEndLoad();
-    }
-    if (((Math.abs(window.outerHeight - window.innerHeight) >= 250 ) || (210 <= Math.abs(window.outerWidth - window.innerWidth))) && !document.hidden) {
-        tsfEndLoad();
-    }
-
-    if (((Math.abs(window.innerHeight - latestHeight) >= 250) || (210 <= Math.abs(window.innerWidth - latestWidth))) && !document.hidden) {
-        tsfEndLoad();
-    }
-    latestHeight = window.innerHeight;
-    latestWidth = window.innerWidth;
-    setTimeout(tsfWidgetGuard, 300);
+  return;
+  if (!(window.location.host.includes('theskyflame.pages.dev') || window.location.host.includes('theskyflame.org') || window.location.host.includes('localhost:4000'))) {
+      tsfEndLoad();
+  }
+  if (new Date() < new Date('2025-01-21')) {
+      tsfEndLoad();
+  }
+  if (((Math.abs(window.outerHeight - window.innerHeight) >= 420 ) || (280 <= Math.abs(window.outerWidth - window.innerWidth))) && !document.hidden) {
+    tsfEndLoad();
+  }
+  if (((Math.abs(window.innerHeight - latestHeight) >= 420) || (280 <= Math.abs(window.innerWidth - latestWidth))) && !document.hidden) {
+      tsfEndLoad();
+  }
+  latestHeight = window.innerHeight;
+  latestWidth = window.innerWidth;
+  setTimeout(tsfWidgetGuard, 300);
 };
 
 async function tsfEndLoad() {
@@ -244,6 +243,81 @@ class widgetPopup {
     }
   }
 
+  async function getDownloadURL(downloadurl) {
+    const proxylist = [
+      'boost1.illusionlie.com',
+      'boost2.illusionlie.com',
+      'boost3.illusionlie.com',
+      'boost4.illusionlie.com',
+      'tsfcfex.pages.dev',
+      'tsfex2.pages.dev',
+      'tsfcfex3.pages.dev',
+      'tsfcfex4.pages.dev'
+    ];
+    let canAccess = false;
+    let successProxy = null;
+    for (const proxy of proxylist) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000);
+        const response = await fetch(`https://${proxy}/success.html`, { signal: controller.signal, mode: 'cors' });
+
+        clearTimeout(timeoutId);
+        if (response.status >= 200 && response.status < 300) {
+          canAccess = true;
+          successProxy = proxy;
+          clearTimeout(timeoutId);
+          break;
+        } else {
+          canAccess = false;
+          clearTimeout(timeoutId);
+        }
+
+      } catch (error) {
+        canAccess = false;
+      }
+    }
+    if (canAccess) {
+        window.open(`https://${successProxy}/${downloadurl}`, "_blank");
+    } else {
+        showMessagePopup("Failed to access the download URL. Please try again later.");
+    }
+
+    function showMessagePopup(message) {
+      const proxypopup = document.createElement('div');
+      proxypopup.style.position = 'fixed';
+      proxypopup.style.top = '50%';
+      proxypopup.style.left = '50%';
+      proxypopup.style.transform = 'translate(-50%, -50%)';
+      proxypopup.style.backgroundColor = 'white';
+      proxypopup.style.border = '1px solid black';
+      proxypopup.style.padding = '20px';
+      proxypopup.style.zIndex = '1000';
+      const lines = message.split('\n');
+      lines.forEach(line => {
+          const proxypopupText = document.createElement('p');
+          proxypopupText.textContent = line;
+          proxypopupText.setAttribute('style', 'color: black;');
+          proxypopup.appendChild(proxypopupText);
+      });
+      const popupClose = document.createElement('button');
+      popupClose.textContent = 'X';
+      popupClose.setAttribute('style', 'color: black;');
+      popupClose.style.position = 'absolute';
+      popupClose.style.top = '10px';
+      popupClose.style.right = '10px';
+      popupClose.style.cursor = 'pointer';
+      proxypopup.appendChild(popupClose);
+      document.body.appendChild(proxypopup);
+      popupClose.addEventListener('click', () => {
+          document.body.removeChild(proxypopup);
+      });
+    }
+    /*
+    const randomProxy = proxylist[Math.floor(Math.random() * proxylist.length)];
+    window.open(`https://${randomProxy}/${downloadurl}`, "_blank");*/
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     tsfWidgetGuard();
     checkCFcdn();
@@ -268,5 +342,6 @@ return {
     Celebration: tsfCelebration,
     closeBanner: closeBanner,
     popup: widgetPopup,
+    getDownloadURL: getDownloadURL
 }
 })();
