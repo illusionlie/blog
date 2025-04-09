@@ -99,9 +99,9 @@ function tsfCelebration() {
         const popupC = new widgetPopup({
             image: 'https://cdn.illusionlie.com/img/iL/webp/iL-circle.webp',
             text: `
-                <h5 style="color:black; font-weight:bold;"><span style="color:blue; font-weight:bold;"> 🎉 今天是该站点的建站${runYears}周年 ! 感谢各位的陪伴 ! </span></h5>
+                <h5 style="color:black; font-weight:bold;"><span style="color:blue; font-weight:bold;"> 🎉 今天是该站点的建站${runYears}周年 !</span></h5>
                 <p style="color:black"><strong>可喜可贺, 可喜可贺</strong></p>
-                <p style="color:black">2024/04/26 --> ${new Date().toLocaleDateString()}</p>
+                <p style="color:black">2024/03/09 --> ${new Date().toLocaleDateString()}</p>
             `,
         });
         popupC.open();
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const celebraMonth = 3
     const celebraDay = 9
-    if (new Date().getMonth() == celebraMonth && new Date().getDate() == celebraDay) {
+    if (new Date().getMonth() + 1 == celebraMonth && new Date().getDate() == celebraDay) {
         tsfCelebration();
     }
 
