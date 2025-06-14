@@ -36,9 +36,9 @@
   </entry>
   
   <entry>
-    <title>我的 LLM 通用系统提示词</title>
-    <link href="https://blog.illusionlie.com/posts/my-system-prompt/"/>
-    <id>https://blog.illusionlie.com/posts/my-system-prompt/</id>
+    <title>Codename: ReDefined-E</title>
+    <link href="https://blog.illusionlie.com/posts/ReDefined-E/"/>
+    <id>https://blog.illusionlie.com/posts/ReDefined-E/</id>
     <published>2025-03-12T09:56:48.000Z</published>
     <updated>2025-04-17T09:56:48.000Z</updated>
     
@@ -47,8 +47,8 @@
       
         
         
-    <summary type="html">&lt;p&gt;这是一个通用的，可做用户提示词的系统提示词&lt;br&gt;可以稳定提升回答质量，并使模型的回答更人性化&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+    <summary type="html">&lt;p&gt;ReDefined-E v8 by IllusionLie&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Project</summary>
         
       
     
